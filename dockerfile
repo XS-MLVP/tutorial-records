@@ -8,7 +8,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=C.UTF-8
 ENV LANGUAGE=C.UTF-8
 ENV LC_ALL=C.UTF-8
-
 # Use https for apt repositories
 RUN apt update && \
     apt install -y --no-install-recommends apt-transport-https ca-certificates && \
@@ -33,6 +32,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     sudo \
     wget \
     curl \
+    vim \
     software-properties-common \
     python3 \
     python3-pip \
@@ -57,13 +57,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Install Java (OpenJDK 17) and required PCRE2 dependency
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends vim && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-# Install SWIG (4.2.1)
+# Install SWIG (4.2.1)d
 RUN git clone https://github.com/swig/swig.git -b v4.2.1 --depth=1 /tmp/swig && \
     cd /tmp/swig && \
     ./autogen.sh && \
@@ -78,7 +72,9 @@ RUN wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/nul
     echo 'deb [signed-by=/usr/share/keyrings/kitware-archive-keyring.gpg] https://apt.kitware.com/ubuntu/ jammy main' | \
     tee /etc/apt/sources.list.d/kitware.list >/dev/null && \
     apt-get update && \
-    apt-get install -y --no-install-recommends cmake
+    apt-get install -y --no-install-recommends cmake && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 # Install Verilator (5.0 series latest version, e.g. v5.018)
 RUN git clone https://github.com/verilator/verilator -b v5.018 --depth=1 /tmp/verilator && \
@@ -97,6 +93,7 @@ RUN swig -version && \
     python3 --version
 
 # Install Picker
+ENV BUILD_XSPCOMM_SWIG=python,java
 RUN mkdir /workspace && \
     cd /workspace && \
     git clone https://github.com/XS-MLVP/picker.git --depth=1 && \
@@ -106,6 +103,7 @@ RUN mkdir /workspace && \
     cd picker && make init && \
     make -j$(nproc) && \
     make install && \
+    make clean && \
     chmod 755 /usr/local/bin -R 
 
 # set user and password
