@@ -104,7 +104,9 @@ RUN mkdir /workspace && \
     tar -xzf verible-v0.0-3979-g786edf03-linux-static-x86_64.tar.gz -C /usr/local/ --strip-components=1 && \
     rm verible-v0.0-3979-g786edf03-linux-static-x86_64.tar.gz && \
     cd picker && make init && \
-    make -j$(nproc) 
+    make -j$(nproc) && \
+    make install && \
+    chmod 755 /usr/local/bin -R 
 
 # set user and password
 RUN useradd -m -s /bin/bash user && \
