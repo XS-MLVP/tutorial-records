@@ -55,7 +55,7 @@ If you are running the container on a remote server, you can use the following c
 ```sh
 ssh -L 51202:localhost:51202 <your-server-user>@<your-remote-server-ip>
 ```
-> Note: This step is optional if you are running the container on your local machine, it's map server port to localhost for security reason.
+> Note: This step map server port to localhost for security reason, **no need for local laptop**.
 
 ### VSCode Remote Development
 
