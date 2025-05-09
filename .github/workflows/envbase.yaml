@@ -3,6 +3,10 @@ name: Basic Env Docker Build and Publish
 on:
   push:
     branches: [ "master" ]
+    paths:
+      - "docker/Dockerfile"
+      - "docker/Dockerfile.full"
+      - ".github/workflows/envbase.yaml"
   workflow_run:
     workflows: [ "envbase" ]
     branches: [ "master" ]

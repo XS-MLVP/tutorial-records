@@ -14,11 +14,14 @@ This repository contains everything needed to set up the Picker tool's complete 
 │   ├── build-scripts/       # Automated build utilities
 │   └── compose/             # (Optional) Docker-compose files
 ├── tutorials/               # Workshop materials
-│   ├── ppt/                 # Presentation slides
+│   ├── README.md            # ** IF YOU ARE IN TUTORIAL, READ THIS FIRST**
+│   ├── slides/              # Presentation slides
 │   └── code-samples/        # Demo scripts
 ├── LICENSE
 └── README.md                 # This document
 ```
+
+**If you are in the tutorial, please read the [README.md](./tutorials/README.md) in the tutorials directory first.**
 
 ## 🚀 Getting Started
 
