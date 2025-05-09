@@ -1,0 +1,10 @@
+*.*
+!*.py
+!*.md
+!Makefile
+!.gitignore
+!.gtkwaverc
+!pytest.ini
+!rtl/
+picker_out/
+!*.pdf
