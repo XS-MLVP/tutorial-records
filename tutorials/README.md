@@ -37,7 +37,7 @@ If you want to use ssh or vscode remote development, run this command in the con
 ```sh
 sudo service ssh start
 ```
-and go to the next section for SSH access. (no need to docker run again)
+and go to the next section for SSH access. **(no need to docker run again)**
 
 ### SSH Access
 
