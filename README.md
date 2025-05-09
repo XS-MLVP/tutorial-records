@@ -40,6 +40,28 @@ This repository contains everything needed to set up the Picker tool's complete 
     Ubuntu 22.04, Python 3.10 + essential development tools + additional frameworks (e.g. toffee, XSPdb, etc.)
     > Note: The full image is larger and may take longer to download, but it includes everything you need to get started with the UnityChip tutorial environment.
 
+3. How to run the image
+
+    Start with shell access:
+    ```sh
+    # 1. If shell is enough for you, run the image with the following command:
+    docker run -it --network host ghcr.io/xs-mlvp/envfull:latest
+    # 2. If you want to use ssh or vscode remote development, run this command in the container:
+    sudo service ssh start
+    ```
+    > Note: The `--network host` flag allows the container to use the host's network stack. This is useful for accessing services running on the host machine.
+
+    Start with SSH access:
+    ```sh
+    # 1. If you want to use ssh or vscode remote development, run the image with the following command:
+    docker run -itd --network host ghcr.io/xs-mlvp/envfull:latest sudo /usr/sbin/sshd -D
+    # 2. SSH into the container (security reason: /etc/ssh/sshd_config is set to only listen to localhost)
+    ssh -p 51202 user@localhost # password: user
+    # 3. (Optional) If you are running container on a remote server, you can use the following command port forwarding when connecting to the remote server:
+    ssh -L 51202:localhost:51202 <your-server-user>@<your-remote-server-ip>
+    ```
+    > Note: The container ssh port is hardcoded to 51202, so you need to specify this port when connecting. The default password is `user`. You can change it by modifying the Dockerfile or the sshd_config file in the container. The `-D` flag runs the SSH daemon in the foreground, which is necessary for the container to keep running.
+
 ### Build Your Own Image 🔨
 
 If you want to build your own image, you can use the provided Dockerfile. This is useful if you want to customize the environment or add additional tools.
