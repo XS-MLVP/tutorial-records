@@ -110,7 +110,9 @@ RUN mkdir /workspace && \
 RUN useradd -m -s /bin/bash user && \
     echo "user:user" | chpasswd && \
     adduser user sudo && \
-    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
+    chown user:user -R /workspace && \
+    chmod 755 /workspace
 
 # Switch to the new user
 USER user

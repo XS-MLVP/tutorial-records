@@ -1,0 +1,13 @@
+FROM ghcr.io/xs-mlvp/envbase:latest
+
+USER user
+WORKDIR /workspace
+
+RUN mkdir tutorial && \
+    cd tutorial && \
+    pip3 install pytoffee && \
+    git clone https://github.com/SFangYy/tutorial_code.git --depth=1 
+
+RUN git clone https://github.com/OpenXiangShan/XSPdb.git --depth=1 && \
+    cd XSPdb && \
+    pip3 install -r requirements.txt
