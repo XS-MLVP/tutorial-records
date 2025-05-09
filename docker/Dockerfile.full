@@ -10,4 +10,4 @@ RUN mkdir tutorial && \
 
 RUN git clone https://github.com/OpenXiangShan/XSPdb.git --depth=1 && \
     cd XSPdb && \
-    pip3 install -r requirements.txt
+    make init
