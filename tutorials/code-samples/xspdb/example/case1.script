@@ -1,0 +1,4 @@
+xload ready-to-run/spike-dasm
+xflash ready-to-run/xspdb_flash_init.bin
+xistep
+xistep
