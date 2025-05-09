@@ -1,0 +1,37 @@
+xflash ready-to-run/xspdb_flash_init.bin  # load lash
+xset_ireg mpc 0x800116b0
+xload_reg_file example/example.reg
+xload_instr_file 0x800116b0 example/example.ins
+
+#xwatch_commit_pc 0x800116b0
+#xwatch_commit_pc 0x800116d4
+#xset_freg ft0 0xffffffff7fc00001
+
+xistep
+
+# reserve 0x80011708 fround.s
+#xnop_insert 0x800116b0 0x80011708      # 0x80011708 is not modified
+#xnop_insert 0x8001170c 0x8001174a
+
+# reserve 0x8001170c froundnx.s
+#xnop_insert 0x800116b0 0x8001170c
+#xnop_insert 0x80011710 0x8001174a
+
+# reserve 0x800116e8: 53f15e40  froundnx.s ft2, ft9
+#xnop_insert 0x800116b0 0x800116e8
+#xnop_insert 0x800116ec 0x8001174a
+
+# 0x800116e8: 53f14e40   fround.s ft2, ft9
+# 0x40442153 -> xmem_write 0x800116e8 b'\x53\xf1\x4e\x40'
+
+xdasm 0x800116b0 2
+#xexport_bin 0x80011800 tmp/test_float
+xexport_bin 0x80011800 tmp/test_float 0x800116b0
+
+
+# test waveform on/off
+#xload ready-to-run/microbench.bin
+#xbreak SimTop_top.SimTop.timer eq 0x39000
+#xstep 100000000
+#xwave_on
+#xwave_off
