@@ -23,7 +23,7 @@ elif [[ $@ == *"scala"* ]]; then
 elif [[ $@ == *"golang"* ]]; then
     cp Adder/example.go picker_out_adder/Adder/golang/
 else
-    cp /Adder/example.cpp picker_out_adder/Adder/cpp/
+    cp Adder/example.cpp picker_out_adder/Adder/cpp/
 fi
 
 cd picker_out_adder/Adder && make EXAMPLE=ON
