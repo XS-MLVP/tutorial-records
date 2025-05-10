@@ -1,0 +1,352 @@
+{
+    "clock": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    },
+    "io": {
+        "empty": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "flush": {
+            "High": 1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "in": {
+            "req": {
+                "bits": {
+                    "addr": {
+                        "High": 31,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    },
+                    "cmd": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    },
+                    "size": {
+                        "High": 2,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    },
+                    "user": {
+                        "High": 15,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    },
+                    "wdata": {
+                        "High": 63,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    },
+                    "wmask": {
+                        "High": 7,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    }
+                },
+                "ready": {
+                    "High": -1,
+                    "Low": 0,
+                    "Pin": "output",
+                    "_": true
+                },
+                "valid": {
+                    "High": -1,
+                    "Low": 0,
+                    "Pin": "input",
+                    "_": true
+                }
+            },
+            "resp": {
+                "bits": {
+                    "cmd": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    },
+                    "rdata": {
+                        "High": 63,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    },
+                    "user": {
+                        "High": 15,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    }
+                },
+                "ready": {
+                    "High": -1,
+                    "Low": 0,
+                    "Pin": "input",
+                    "_": true
+                },
+                "valid": {
+                    "High": -1,
+                    "Low": 0,
+                    "Pin": "output",
+                    "_": true
+                }
+            }
+        },
+        "mmio": {
+            "req": {
+                "bits": {
+                    "addr": {
+                        "High": 31,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    },
+                    "cmd": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    },
+                    "size": {
+                        "High": 2,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    },
+                    "wdata": {
+                        "High": 63,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    },
+                    "wmask": {
+                        "High": 7,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    }
+                },
+                "ready": {
+                    "High": -1,
+                    "Low": 0,
+                    "Pin": "input",
+                    "_": true
+                },
+                "valid": {
+                    "High": -1,
+                    "Low": 0,
+                    "Pin": "output",
+                    "_": true
+                }
+            },
+            "resp": {
+                "bits": {
+                    "cmd": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    },
+                    "rdata": {
+                        "High": 63,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    }
+                },
+                "ready": {
+                    "High": -1,
+                    "Low": 0,
+                    "Pin": "output",
+                    "_": true
+                },
+                "valid": {
+                    "High": -1,
+                    "Low": 0,
+                    "Pin": "input",
+                    "_": true
+                }
+            }
+        },
+        "out": {
+            "coh": {
+                "req": {
+                    "bits": {
+                        "addr": {
+                            "High": 31,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        },
+                        "cmd": {
+                            "High": 3,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        },
+                        "size": {
+                            "High": 2,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        },
+                        "wdata": {
+                            "High": 63,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        },
+                        "wmask": {
+                            "High": 7,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        }
+                    },
+                    "ready": {
+                        "High": -1,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    },
+                    "valid": {
+                        "High": -1,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    }
+                },
+                "resp": {
+                    "bits": {
+                        "cmd": {
+                            "High": 3,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        },
+                        "rdata": {
+                            "High": 63,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        }
+                    },
+                    "ready": {
+                        "High": -1,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    },
+                    "valid": {
+                        "High": -1,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    }
+                }
+            },
+            "mem": {
+                "req": {
+                    "bits": {
+                        "addr": {
+                            "High": 31,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        },
+                        "cmd": {
+                            "High": 3,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        },
+                        "size": {
+                            "High": 2,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        },
+                        "wdata": {
+                            "High": 63,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        },
+                        "wmask": {
+                            "High": 7,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        }
+                    },
+                    "ready": {
+                        "High": -1,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    },
+                    "valid": {
+                        "High": -1,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    }
+                },
+                "resp": {
+                    "bits": {
+                        "cmd": {
+                            "High": 3,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        },
+                        "rdata": {
+                            "High": 63,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        }
+                    },
+                    "ready": {
+                        "High": -1,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    },
+                    "valid": {
+                        "High": -1,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    }
+                }
+            }
+        }
+    },
+    "reset": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    },
+    "victim_way_mask_valid": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "output",
+        "_": true
+    }
+}

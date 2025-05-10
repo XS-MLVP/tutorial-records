@@ -61,7 +61,7 @@ def is_block_ppl():     # MMIO request will block the pipeline
 
 
 def get_cov_grp_of_pass(dut: DUTCache):
-    g = CovGroup("CovGroup")
+    g = CovGroup("CovGroup pass")
     g.add_cover_point(dut,{"miss": is_cache_miss()}, name="Cache Miss")
     g.add_cover_point(dut,{"block": is_cache_miss_block()}, name = "Cache Miss Block")
     return g
