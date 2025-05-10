@@ -3,11 +3,18 @@ FROM ghcr.io/xs-mlvp/envbase:latest
 USER user
 WORKDIR /workspace
 
-RUN mkdir tutorial && \
-    cd tutorial && \
-    pip3 install pytoffee && \
-    git clone https://github.com/SFangYy/tutorial_code.git --depth=1 
+RUN pip3 install pytoffee && \
+    git clone https://github.com/XS-MLVP/tutorial-records.git --depth=1 && \
+    mv tutorial-records/tutorials/code-samples . && \
+    cd .. && \
+    rm -rf tutorial-records
+   
 
-RUN git clone https://github.com/OpenXiangShan/XSPdb.git --depth=1 && \
-    cd XSPdb && \
-    make init
+RUN cd code-samples && \
+    git clone https://github.com/OpenXiangShan/XSPdb.git --depth=1 xspdb && \
+    cd xspdb && \
+    make init && \
+    rm -rf XSPython example && \
+    wget https://github.com/XS-MLVP/tutorial-records/releases/download/v1.0.0/xspdb_with_bug.tar.gz && \
+    tar zxvf xspdb_with_bug.tar.gz && \
+    rm -rf xspdb_with_bug.tar.gz    
