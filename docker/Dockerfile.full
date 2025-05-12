@@ -12,10 +12,10 @@ RUN pip3 install toffee-test filelock && \
     cd .. && \
     rm -rf tutorial-records
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
     lcov && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    sudo apt-get clean && \
+    sudo rm -rf /var/lib/apt/lists/*
 
 RUN cd code-samples && \
     git clone https://github.com/OpenXiangShan/XSPdb.git --depth=1 xspdb && \
