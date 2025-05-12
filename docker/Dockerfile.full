@@ -4,12 +4,12 @@ USER user
 WORKDIR /workspace
 
 
-RUN echo 'export PATH="$HOME/.usr/local/bin:$PATH"' >> ~/.bashrc
+RUN echo 'export PATH="$HOME/.local/bin:$PATH"' >> /home/user/.bashrc
 
 RUN pip3 install toffee-test filelock && \
+    pip3 install pytoffee==0.2.3 && \
     git clone https://github.com/XS-MLVP/tutorial-records.git --depth=1 && \
     mv tutorial-records/tutorials/code-samples . && \
-    cd .. && \
     rm -rf tutorial-records
 
 RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
