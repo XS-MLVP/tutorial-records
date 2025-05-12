@@ -3,12 +3,19 @@ FROM ghcr.io/xs-mlvp/envbase:latest
 USER user
 WORKDIR /workspace
 
-RUN pip3 install pytoffee && \
+
+RUN echo 'export PATH="$HOME/.usr/local/bin:$PATH"' >> ~/.bashrc
+
+RUN pip3 install toffee-test filelock && \
     git clone https://github.com/XS-MLVP/tutorial-records.git --depth=1 && \
     mv tutorial-records/tutorials/code-samples . && \
     cd .. && \
     rm -rf tutorial-records
-   
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    lcov && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN cd code-samples && \
     git clone https://github.com/OpenXiangShan/XSPdb.git --depth=1 xspdb && \
