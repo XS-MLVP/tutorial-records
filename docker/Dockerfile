@@ -51,6 +51,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     autoconf \
     automake \
     libtool \
+    tree \
     openjdk-17-jdk \
     libpcre2-dev \
     help2man && \
