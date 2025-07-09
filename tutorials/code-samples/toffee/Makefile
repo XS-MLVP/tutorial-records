@@ -26,7 +26,7 @@ dut:
 wave:
 	$(GTKWAVE) -r .gtkwaverc $(NAME_L).$(WAVE_FORMAT)
 # Test
-test:
+test: dut
 	PYTHONPATH=.:./src pytest -sv --toffee-report
 
 clean:
