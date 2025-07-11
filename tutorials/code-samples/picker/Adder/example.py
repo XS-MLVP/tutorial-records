@@ -17,7 +17,7 @@ def main():
         dut.a.value, dut.b.value, dut.cin.value  = a, b, cin
 
         dut.Step(1)
-        print(f"[cycle {dut.xclock.clk}] a=0x{dut.a.value:x}, b=0x{dut.b.value:x}, cin=0x{dut.cin.value:x}, sum {as_uint(a+b+cin,128)}, dut_sum {as_uint(dut.sum.value,128)}")
+        print(f"[cycle {dut.xclock.clk}] a=0x{dut.a.value:x}, b=0x{dut.b.value:x}, cin=0x{dut.cin.value:x}, ref_sum={as_uint(a+b+cin,128)}, dut_sum={as_uint(dut.sum.value,128)}")
         assert as_uint(dut.sum.value,128) == as_uint(a + b + cin, 128), "sum mismatch"
 
     print("Test Passed, destroy UTAdder")
