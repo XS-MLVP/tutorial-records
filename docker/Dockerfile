@@ -97,12 +97,12 @@ RUN swig -version && \
 ENV BUILD_XSPCOMM_SWIG=python,java
 RUN mkdir /workspace && \
     cd /workspace && \
-    git clone https://github.com/XS-MLVP/picker.git --depth=1 && \
+    cd /workspace && git clone https://github.com/XS-MLVP/picker.git  && \
     wget https://github.com/chipsalliance/verible/releases/download/v0.0-3979-g786edf03/verible-v0.0-3979-g786edf03-linux-static-x86_64.tar.gz && \
     tar -xzf verible-v0.0-3979-g786edf03-linux-static-x86_64.tar.gz -C /usr/local/ --strip-components=1 && \
     rm verible-v0.0-3979-g786edf03-linux-static-x86_64.tar.gz && \
-    cd picker && make init && \
-    make -j$(nproc) && \
+    cd /workspace/picker && git checkout b3da72f && make init && \
+    make && \
     make install && \
     make clean && \
     chmod 755 /usr/local/bin -R 
