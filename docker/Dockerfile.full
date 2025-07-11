@@ -1,5 +1,4 @@
-#FROM ghcr.io/xs-mlvp/envbase:latest
-FROM base-env:latest
+FROM ghcr.io/xs-mlvp/envbase:latest
 
 USER user
 WORKDIR /workspace
