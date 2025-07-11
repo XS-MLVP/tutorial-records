@@ -1,8 +1,7 @@
-FROM tutorial_base
+FROM ghcr.io/xs-mlvp/envbase:latest
 
 USER user
 WORKDIR /workspace
-
 
 RUN echo 'export PATH="$HOME/.local/bin:$PATH"' >> /home/user/.bashrc
 

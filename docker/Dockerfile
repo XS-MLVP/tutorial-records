@@ -8,6 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=C.UTF-8
 ENV LANGUAGE=C.UTF-8
 ENV LC_ALL=C.UTF-8
+
 # Use https for apt repositories
 RUN apt update && \
     apt install -y --no-install-recommends apt-transport-https ca-certificates && \
