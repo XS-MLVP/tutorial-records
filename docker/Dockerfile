@@ -53,7 +53,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libtool \
     tree \
     openjdk-17-jdk \
+    lcov \
     libpcre2-dev \
+    gcc-riscv64-unknown-elf \
     help2man && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -128,6 +130,10 @@ RUN mkdir /var/run/sshd && \
 
 # Switch to the new user
 USER user
+
+RUN pip3 install toffee-test filelock && \
+    pip3 install pytoffee==0.2.3 
+ 
 # Set the default shell to bash
 SHELL ["/bin/bash", "-c"]
 # Set working directory
