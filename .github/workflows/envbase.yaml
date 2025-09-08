@@ -2,20 +2,20 @@ name: Basic Env Docker Build and Publish
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "docker" ]
     paths:
       - "docker/Dockerfile"
       - "docker/Dockerfile.full"
       - ".github/workflows/envbase.yaml"
   workflow_run:
     workflows: [ "envbase" ]
-    branches: [ "master" ]
+    branches: [ "docker" ]
     types: [ "completed" ]
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: xs-mlvp/envbase
-  FULL_IMAGE_NAME: xs-mlvp/envfull
+  IMAGE_NAME: xs-mlvp/envbase_docker
+  FULL_IMAGE_NAME: xs-mlvp/envfull_docker
   IMAGE_TAG: ${{ github.sha }}
 
 jobs:

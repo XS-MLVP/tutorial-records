@@ -110,32 +110,4 @@ RUN mkdir /workspace && \
     make clean && \
     chmod 755 /usr/local/bin -R 
 
-# set user and password
-RUN useradd -m -s /bin/bash user && \
-    echo "user:user" | chpasswd && \
-    adduser user sudo && \
-    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
-    chown user:user -R /workspace && \
-    chmod 755 /workspace
 
-# Set SSH autostart
-RUN mkdir /var/run/sshd && \
-    echo 'root:root' | chpasswd && \
-    sed -i 's|#PermitRootLogin prohibit-password|PermitRootLogin yes|' /etc/ssh/sshd_config && \
-    sed -i 's|#PasswordAuthentication yes|PasswordAuthentication yes|' /etc/ssh/sshd_config && \
-    sed -i 's|#PermitEmptyPasswords no|PermitEmptyPasswords yes|' /etc/ssh/sshd_config && \
-    sed -i 's|#Port 22|Port 51202|' /etc/ssh/sshd_config && \
-    # only listen on localhost
-    sed -i 's|#ListenAddress|ListenAddress 127.0.0.1 #|' /etc/ssh/sshd_config && \
-    ssh-keygen -A
-
-# Switch to the new user
-USER user
-
-RUN pip3 install toffee-test filelock && \
-    pip3 install pytoffee==0.2.3 
- 
-# Set the default shell to bash
-SHELL ["/bin/bash", "-c"]
-# Set working directory
-WORKDIR /workspace
