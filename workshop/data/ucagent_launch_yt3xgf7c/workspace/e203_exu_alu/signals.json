@@ -1,0 +1,546 @@
+{
+    "agu_icb": {
+        "cmd": {
+            "addr": {
+                "High": 31,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "back2agu": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "excl": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "itag": {
+                "High": 0,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "lock": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "read": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "ready": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "input",
+                "_": true
+            },
+            "size": {
+                "High": 1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "usign": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "valid": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "wdata": {
+                "High": 31,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "wmask": {
+                "High": 3,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            }
+        },
+        "rsp": {
+            "err": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "input",
+                "_": true
+            },
+            "excl_ok": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "input",
+                "_": true
+            },
+            "rdata": {
+                "High": 31,
+                "Low": 0,
+                "Pin": "input",
+                "_": true
+            },
+            "ready": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "valid": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "input",
+                "_": true
+            }
+        }
+    },
+    "amo_wait": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "output",
+        "_": true
+    },
+    "clk": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    },
+    "cmt_o": {
+        "badaddr": {
+            "High": 31,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "bjp": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true,
+            "prdt": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "rslv": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            }
+        },
+        "buserr": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "dret": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "ebreak": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "ecall": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "fencei": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "ifu": {
+            "buserr": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "ilegl": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "misalgn": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            }
+        },
+        "imm": {
+            "High": 31,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "instr": {
+            "High": 31,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "ld": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "misalgn": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "mret": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "pc_vld": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "ready": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "rv32": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "stamo": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "valid": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "wfi": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        }
+    },
+    "csr": {
+        "access_ilgl": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "ena": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "idx": {
+            "High": 11,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "rd_en": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "wr_en": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        }
+    },
+    "flush": {
+        "pulse": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "req": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        }
+    },
+    "i": {
+        "buserr": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "ilegl": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "imm": {
+            "High": 31,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "info": {
+            "High": 31,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "instr": {
+            "High": 31,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "itag": {
+            "High": 0,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "longpipe": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "misalgn": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "nice_cmt_off_ilgl": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "pc_vld": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "rdidx": {
+            "High": 4,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "rdwen": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "ready": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "rs1": {
+            "High": 31,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "rs2": {
+            "High": 31,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "valid": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        }
+    },
+    "mdv_nob2b": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    },
+    "nice": {
+        "longp_wbck": {
+            "ready": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "input",
+                "_": true
+            },
+            "valid": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            }
+        },
+        "o_itag": {
+            "High": 0,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "req": {
+            "instr": {
+                "High": 31,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "ready": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "input",
+                "_": true
+            },
+            "rs1": {
+                "High": 31,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "rs2": {
+                "High": 31,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "valid": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            }
+        },
+        "rsp_multicyc": {
+            "ready": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "valid": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "input",
+                "_": true
+            }
+        },
+        "xs_off": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        }
+    },
+    "nonflush_cmt_ena": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    },
+    "oitf_empty": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    },
+    "read_csr_dat": {
+        "High": 31,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    },
+    "rst_n": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    },
+    "wbck": {
+        "csr_dat": {
+            "High": 31,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        },
+        "o": {
+            "rdidx": {
+                "High": 4,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "ready": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "input",
+                "_": true
+            },
+            "valid": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "wdat": {
+                "High": 31,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            }
+        }
+    }
+}

@@ -6,6 +6,9 @@ on:
     paths:
       - "docker/Dockerfile"
       - "docker/Dockerfile.full"
+      - "docker/Dockerfile.workshop"
+      - "docker/start_demo.sh"
+      - "workshop/data/**"
       - ".github/workflows/envbase.yaml"
   workflow_run:
     workflows: [ "envbase" ]
@@ -85,3 +88,38 @@ jobs:
             ${{ env.REGISTRY }}/${{ env.FULL_IMAGE_NAME }}:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
+
+  build-and-push-workshop:
+    runs-on: ubuntu-latest
+    # Optional: depends on full image if we use it as base, 
+    # but here we use ucagent:latest which is built from main repo.
+    # To be safe, we can run it after build-and-push-full if we want to ensure base layers are available
+    needs: build-and-push-full
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Workshop image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./docker/Dockerfile.workshop
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/xs-mlvp/workshop:latest
+            ${{ env.REGISTRY }}/xs-mlvp/workshop:${{ github.sha }}

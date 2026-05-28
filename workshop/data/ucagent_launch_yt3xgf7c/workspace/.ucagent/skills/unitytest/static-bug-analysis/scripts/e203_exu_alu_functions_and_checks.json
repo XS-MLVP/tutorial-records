@@ -1,0 +1,192 @@
+{
+  "FG-API": {
+    "FC-RESET": {
+      "CK-RESET-ASSERT": {},
+      "CK-RESET-RELEASE": {},
+      "CK-RESET-DEFAULT-INPUT": {}
+    },
+    "FC-ISSUE-STEP": {
+      "CK-ISSUE-HANDSHAKE": {},
+      "CK-STEP-BACKPRESSURE-WAIT": {},
+      "CK-SINGLE-TRANSACTION-CAPTURE": {}
+    },
+    "FC-OBSERVE-OUTPUT": {
+      "CK-WBCK-SNAPSHOT": {},
+      "CK-COMMIT-SNAPSHOT": {},
+      "CK-SIDEBAND-SNAPSHOT": {}
+    }
+  },
+  "FG-DISPATCH": {
+    "FC-DECODE-ROUTE": {
+      "CK-ROUTE-ALU": {},
+      "CK-ROUTE-SUBMODULE": {},
+      "CK-ROUTE-MUTEX": {}
+    },
+    "FC-READY-BACKPRESSURE": {
+      "CK-READY-PROPAGATE": {},
+      "CK-STALL-HOLD": {},
+      "CK-VALID-READY-COMPLETE": {}
+    },
+    "FC-LONGPIPE-CLASSIFY": {
+      "CK-LONGPIPE-SHORTPATH": {},
+      "CK-LONGPIPE-AGU": {},
+      "CK-LONGPIPE-MDV-NICE": {}
+    }
+  },
+  "FG-ALU": {
+    "FC-ARITHMETIC": {
+      "CK-ARITH-ADD": {},
+      "CK-ARITH-SUB": {},
+      "CK-ARITH-IMM": {}
+    },
+    "FC-LOGIC-SHIFT": {
+      "CK-LOGIC-BITWISE": {},
+      "CK-SHIFT-LEFT-RIGHT": {},
+      "CK-SHIFT-AMOUNT-BOUND": {}
+    },
+    "FC-COMPARE": {
+      "CK-CMP-EQ-NE": {},
+      "CK-CMP-SIGNED": {},
+      "CK-CMP-UNSIGNED": {}
+    }
+  },
+  "FG-BRANCH-JUMP": {
+    "FC-COND-BRANCH": {
+      "CK-BRANCH-TAKEN": {},
+      "CK-BRANCH-NOTTAKEN": {},
+      "CK-BRANCH-SIGNED-UNSIGNED": {}
+    },
+    "FC-JUMP-LINK": {
+      "CK-JAL-WBCK": {},
+      "CK-JALR-WBCK": {},
+      "CK-JUMP-PC-CONTEXT": {}
+    },
+    "FC-BJP-COMMIT": {
+      "CK-BJP-COMMIT-FLAGS": {},
+      "CK-BJP-PRDT-RSLV": {},
+      "CK-SYSRET-FENCEI": {}
+    }
+  },
+  "FG-CSR": {
+    "FC-CSR-READ": {
+      "CK-CSR-RD-ENABLE": {},
+      "CK-CSR-RD-DATA": {},
+      "CK-CSR-RD-NORD": {}
+    },
+    "FC-CSR-WRITE": {
+      "CK-CSR-WR-ENABLE": {},
+      "CK-CSR-WDATA-FORM": {},
+      "CK-CSR-RMW": {}
+    },
+    "FC-CSR-ILLEGAL": {
+      "CK-CSR-ILLEGAL-ERR": {},
+      "CK-CSR-ILLEGAL-SUPPRESS": {},
+      "CK-CSR-ILLEGAL-COMMIT": {}
+    },
+    "FC-CSR-NICE": {
+      "CK-NICE-CSR-REQ": {},
+      "CK-NICE-CSR-RSP": {},
+      "CK-NICE-CSR-BYPASS": {}
+    }
+  },
+  "FG-AGU-LSU": {
+    "FC-LOAD": {
+      "CK-LOAD-CMD": {},
+      "CK-LOAD-RSP-WBCK": {},
+      "CK-LOAD-USIGN-SIZE": {}
+    },
+    "FC-STORE": {
+      "CK-STORE-CMD": {},
+      "CK-STORE-WMASK": {},
+      "CK-STORE-NO-WBCK": {}
+    },
+    "FC-AMO": {
+      "CK-AMO-EXCL-CMD": {},
+      "CK-AMO-ALU-RESULT": {},
+      "CK-AMO-WAIT-CLEAR": {}
+    },
+    "FC-ICB-HANDSHAKE": {
+      "CK-ICB-CMD-HOLD": {},
+      "CK-ICB-RSP-READY": {},
+      "CK-ITAG-BACK2AGU": {}
+    },
+    "FC-AGU-EXCEPTION": {
+      "CK-AGU-MISALIGN": {},
+      "CK-AGU-BUSERR": {},
+      "CK-AGU-BADADDR": {}
+    }
+  },
+  "FG-WBCK-COMMIT": {
+    "FC-WBCK-DATA": {
+      "CK-WBCK-VALID-DATA": {},
+      "CK-WBCK-RDIDX": {},
+      "CK-WBCK-BACKPRESSURE-HOLD": {}
+    },
+    "FC-COMMIT-INFO": {
+      "CK-COMMIT-CONTEXT": {},
+      "CK-COMMIT-MEM-ATTR": {},
+      "CK-COMMIT-EXCP-ATTR": {}
+    },
+    "FC-RESULT-ARBITRATION": {
+      "CK-ARBIT-UNIQUE-SOURCE": {},
+      "CK-ARBIT-READY-GATING": {},
+      "CK-ARBIT-DATA-CONSISTENCY": {}
+    }
+  },
+  "FG-EXCEPTION-FLUSH": {
+    "FC-IFU-EXCEPTION": {
+      "CK-IFU-ILEGL": {},
+      "CK-IFU-BUSERR": {},
+      "CK-IFU-MISALIGN": {}
+    },
+    "FC-EXEC-EXCEPTION": {
+      "CK-EXEC-MISALIGN": {},
+      "CK-EXEC-BUSERR": {},
+      "CK-EXEC-CSR-NICE": {}
+    },
+    "FC-FLUSH-KILL": {
+      "CK-FLUSH-ISSUE-KILL": {},
+      "CK-FLUSH-LONGPIPE-KILL": {},
+      "CK-FLUSH-PULSE-TRANSIENT": {}
+    },
+    "FC-NONFLUSH-COMMIT": {
+      "CK-NONFLUSH-CMT-ALLOW": {},
+      "CK-NONFLUSH-CMT-BLOCK": {},
+      "CK-NONFLUSH-EXCP-INTERLOCK": {}
+    }
+  },
+  "FG-MULDIV": {
+    "FC-MULDIV-ISSUE": {
+      "CK-MDV-ISSUE-READY": {},
+      "CK-MDV-DECODE-ROUTE": {},
+      "CK-MDV-NONMDV-MUTE": {}
+    },
+    "FC-MULDIV-B2B-LIMIT": {
+      "CK-MDV-NOB2B-BLOCK": {},
+      "CK-MDV-NOB2B-ALLOW": {},
+      "CK-MDV-BUSY-HOLD": {}
+    },
+    "FC-MULDIV-LONGPIPE": {
+      "CK-MDV-LONGPIPE-FLAG": {},
+      "CK-MDV-WBCK-COMPLETE": {},
+      "CK-MDV-CMT-COHERENCE": {}
+    }
+  },
+  "FG-NICE": {
+    "FC-NICE-REQUEST": {
+      "CK-NICE-REQ-VALID": {},
+      "CK-NICE-REQ-PAYLOAD": {},
+      "CK-NICE-REQ-BACKPRESSURE": {}
+    },
+    "FC-NICE-MULTICYCLE": {
+      "CK-NICE-MCYC-READY": {},
+      "CK-NICE-ITAG-WBCK": {},
+      "CK-NICE-LONGPIPE-FLAG": {}
+    },
+    "FC-NICE-OFF-ILLEGAL": {
+      "CK-NICE-OFF-BLOCK": {},
+      "CK-NICE-ILLEGAL-ERR": {},
+      "CK-NICE-NORMAL-BYPASS": {}
+    }
+  }
+}

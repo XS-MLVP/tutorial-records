@@ -1,0 +1,24 @@
+# UCAgent Workshop Docker Image
+ARG BASE_IMAGE=localhost/lucagent:latest
+FROM ${BASE_IMAGE}
+
+# Set environment variables
+ENV SUMMIT_DATA_DIR=/workspace/UCAgent/summit_examples
+
+# Copy workshop data to the expected location
+# Context should be the root of the tutorial-records repository
+COPY workshop/data/ ${SUMMIT_DATA_DIR}/
+
+# Copy and setup startup script
+COPY docker/start_demo.sh /workspace/UCAgent/start_demo.sh
+RUN chmod +x /workspace/UCAgent/start_demo.sh
+
+# Expose ports for Web UI and Agents
+# 8800: Master Web UI
+# 8000, 8001: Agent Web Consoles
+# 8765, 8766: Agent CMD APIs
+# 8818, 8819: Agent Web Terminals
+EXPOSE 8800 8000 8001 8765 8766 8818 8819
+
+# Set the startup script as the default command
+CMD ["/workspace/UCAgent/start_demo.sh"]

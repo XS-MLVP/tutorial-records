@@ -1,0 +1,91 @@
+#Makefile for e203_exu_alu
+
+export SIMULATOR = verilator
+export TRACE := fst
+export PROJECT := e203_exu_alu
+export TARGET := UT_e203_exu_alu
+export VERBOSE := OFF
+export EXAMPLE := OFF
+export TLANG := python
+export SIMULATOR_FLAGS := 
+export CFLAGS := 
+export COVERAGE := ON
+export CHECKPOINTS := OFF
+export VPI := OFF
+export RW_TYPE := MEM_DIRECT
+NPROC := $(shell (nproc 2>/dev/null || sysctl -n hw.ncpu) 2>/dev/null)
+
+ifeq ($(SIMULATOR), verilator)
+MEM_DIRECT_TARGET_FILE := build/DPIe203_exu_alu/Ve203_exu_alu___024root.h
+endif
+ifeq ($(SIMULATOR), gsim)
+MEM_DIRECT_TARGET_FILE := build/_SRC/e203_exu_alu.h
+endif
+
+all: release 
+
+compile:
+	mkdir -p build
+	cp pli.tab build/pli.tab
+	@echo -n "[TIME LOG] verilator generate START: "  && date +%s.%3N
+	cmake . -Bbuild -DSIMULATOR=$(SIMULATOR) -DTRACE=$(TRACE) -DPROJECT=$(PROJECT) -DCMAKE_BUILD_PARALLEL=$(NPROC) -DRW_TYPE=$(RW_TYPE)
+	@echo -n "[TIME LOG] verilator generate END: " && date +%s.%3N
+	cmake --build build --config release --parallel $(NPROC)
+	@echo -n "[TIME LOG] verilator build END: " && date +%s.%3N
+
+ifeq ($(RW_TYPE), MEM_DIRECT)
+ifdef MEM_DIRECT_TARGET_FILE
+	@echo "MEM_DIRECT_TARGET_FILE: ${MEM_DIRECT_TARGET_FILE}"
+# file exsit check with Makefile
+ifeq ($(wildcard ${MEM_DIRECT_TARGET_FILE}),)
+	@echo -n "[TIME LOG] mem_direct export START: " && date +%s.%3N
+	@rm -rf mem_direct
+	@/home/sfangyy/.local/bin/picker export ${MEM_DIRECT_TARGET_FILE} \
+		--source_dir /home/sfangyy/.local/share/picker/template/mem_direct --target_dir ./mem_direct \
+		--source_module_name e203_exu_alu --sim verilator
+	@echo -n "[TIME LOG] mem_direct export END: " && date +%s.%3N
+endif
+	@echo -n "[TIME LOG] mem_direct gen START: " && date +%s.%3N
+	@cd mem_direct && make -j$(NPROC) TOP_NAME=e203_exu_alu
+	@./mem_direct/export.bin > mem_direct/e203_exu_alu_offset.yaml
+	@rm -rf mem_direct_tmp
+	@echo -n "[TIME LOG] mem_direct gen END: " && date +%s.%3N
+endif
+endif
+
+release: compile
+	@cp -r build/${TARGET} .
+	@cp build/_SRC/*.h ${TARGET}/ 2>/dev/null|| true
+	@cp build/_SRC/*.hpp ${TARGET}/ 2>/dev/null|| true
+	@cp *.hpp ${TARGET}/
+	@cp mem_direct/e203_exu_alu_offset.yaml ${TARGET}/e203_exu_alu_offset.yaml 2>/dev/null|| true
+	@make -f mk/${TLANG}.mk
+	
+
+ifeq ($(VERBOSE), OFF) # if VERBOSE is OFF
+	@rm -rf build cmake cpp mk python java scala golang lua CMakeLists.txt dut_base.* 2>/dev/null|| true
+	@rm -rf ${TARGET}.cpp filelist.f *.fst 2>/dev/null|| true
+	@rm -rf mem_direct
+	@mv ${TARGET}/*.v ${TARGET}/*.sv . 2>/dev/null|| true
+	@cd ${TARGET} && make purge
+ifeq ($(COVERAGE), OFF)
+	@rm Makefile
+	@rm *.v *.sv
+endif
+endif
+
+coverage:
+ifeq ($(COVERAGE), ON)
+ifeq ($(SIMULATOR), verilator)
+	@rm -rf coverage/
+	@verilator_coverage -write-info coverage.info ./V${PROJECT}_coverage.dat
+	@genhtml coverage.info --output-directory coverage
+else
+# TODO: add vcs?
+	@echo $(SIMULATOR) TBD
+endif
+else
+	@echo coverage is not on
+endif
+
+clean:

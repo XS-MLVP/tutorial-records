@@ -1,0 +1,37 @@
+{
+    "version": "0.9.1.source-code",
+    "seed": 469338,
+    "stage_index": 0,
+    "all_completed": false,
+    "time_begin": 1779938748.801526,
+    "time_end": null,
+    "is_agent_exit": false,
+    "stages_info": {
+        "0": {
+            "task": {
+                "title": "root-空白模式",
+                "description": [],
+                "reference_files": {},
+                "output_files": []
+            },
+            "section_index": "",
+            "checker": [],
+            "reached": true,
+            "is_completed": false,
+            "check_pass": false,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 8429.259273767471,
+            "meta_data": {
+                "commit": {
+                    "hash": "70e1f0bb23aabc541490f219c250875c2e97544c",
+                    "message": "root:\n\nInitial commit for history version control."
+                }
+            }
+        }
+    },
+    "is_wait_human_check": false
+}

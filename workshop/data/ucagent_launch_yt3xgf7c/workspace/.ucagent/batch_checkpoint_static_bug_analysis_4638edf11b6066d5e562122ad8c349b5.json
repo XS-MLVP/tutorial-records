@@ -1,0 +1,37 @@
+{
+    "source_task_list": [
+        "e203_exu_alu_RTL/config.v",
+        "e203_exu_alu_RTL/e203_defines.v",
+        "e203_exu_alu_RTL/e203_exu_alu.v",
+        "e203_exu_alu_RTL/e203_exu_alu_bjp.v",
+        "e203_exu_alu_RTL/e203_exu_alu_csrctrl.v",
+        "e203_exu_alu_RTL/e203_exu_alu_dpath.v",
+        "e203_exu_alu_RTL/e203_exu_alu_lsuagu.v",
+        "e203_exu_alu_RTL/e203_exu_alu_muldiv.v",
+        "e203_exu_alu_RTL/e203_exu_alu_rglr.v",
+        "e203_exu_alu_RTL/e203_exu_nice.v",
+        "e203_exu_alu_RTL/sirv_gnrl_bufs.v",
+        "e203_exu_alu_RTL/sirv_gnrl_dffs.v",
+        "e203_exu_alu_RTL/sirv_gnrl_xchecker.v"
+    ],
+    "gen_task_list": [
+        "e203_exu_alu_RTL/config.v",
+        "e203_exu_alu_RTL/e203_defines.v",
+        "e203_exu_alu_RTL/e203_exu_alu.v",
+        "e203_exu_alu_RTL/e203_exu_alu_bjp.v",
+        "e203_exu_alu_RTL/e203_exu_alu_csrctrl.v",
+        "e203_exu_alu_RTL/e203_exu_alu_dpath.v",
+        "e203_exu_alu_RTL/e203_exu_alu_lsuagu.v",
+        "e203_exu_alu_RTL/e203_exu_alu_muldiv.v",
+        "e203_exu_alu_RTL/e203_exu_alu_rglr.v",
+        "e203_exu_alu_RTL/e203_exu_nice.v",
+        "e203_exu_alu_RTL/sirv_gnrl_bufs.v",
+        "e203_exu_alu_RTL/sirv_gnrl_dffs.v",
+        "e203_exu_alu_RTL/sirv_gnrl_xchecker.v"
+    ],
+    "tbd_task_list": [],
+    "cmp_task_list": [],
+    "checker_name": "UnityChipBatchCheckerStaticBug",
+    "task_name": "RTL_file_to_analyze",
+    "stage_title": "4-static_bug_analysis-RTL源码静态Bug分析[13/13]"
+}

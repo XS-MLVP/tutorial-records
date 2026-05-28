@@ -1,0 +1,13 @@
+e203_defines.v
+e203_exu_alu.v
+config.v
+e203_exu_alu_bjp.v
+e203_exu_alu_csrctrl.v
+e203_exu_alu_dpath.v
+e203_exu_alu_lsuagu.v
+e203_exu_alu_muldiv.v
+e203_exu_alu_rglr.v
+e203_exu_nice.v
+sirv_gnrl_bufs.v
+sirv_gnrl_dffs.v
+sirv_gnrl_xchecker.v
