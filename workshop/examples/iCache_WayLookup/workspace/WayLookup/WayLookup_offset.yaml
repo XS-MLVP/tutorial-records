@@ -1,0 +1,5831 @@
+variables:
+  - name: WayLookup_top.clock
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 0
+  - name: WayLookup_top.reset
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 1
+  - name: WayLookup_top.io_flush
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 2
+  - name: WayLookup_top.io_read_ready
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 3
+  - name: WayLookup_top.io_read_valid
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 4
+  - name: WayLookup_top.io_read_bits_entry_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 5
+  - name: WayLookup_top.io_read_bits_entry_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 6
+  - name: WayLookup_top.io_read_bits_entry_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 7
+  - name: WayLookup_top.io_read_bits_entry_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 8
+  - name: WayLookup_top.io_read_bits_entry_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 9
+  - name: WayLookup_top.io_read_bits_entry_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 10
+  - name: WayLookup_top.io_read_bits_entry_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 11
+  - name: WayLookup_top.io_read_bits_entry_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 12
+  - name: WayLookup_top.io_read_bits_entry_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 13
+  - name: WayLookup_top.io_read_bits_entry_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 14
+  - name: WayLookup_top.io_read_bits_gpf_isForVSnonLeafPTE
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 15
+  - name: WayLookup_top.io_write_ready
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 16
+  - name: WayLookup_top.io_write_valid
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 17
+  - name: WayLookup_top.io_write_bits_entry_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 18
+  - name: WayLookup_top.io_write_bits_entry_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 19
+  - name: WayLookup_top.io_write_bits_entry_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 20
+  - name: WayLookup_top.io_write_bits_entry_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 21
+  - name: WayLookup_top.io_write_bits_entry_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 22
+  - name: WayLookup_top.io_write_bits_entry_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 23
+  - name: WayLookup_top.io_write_bits_entry_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 24
+  - name: WayLookup_top.io_write_bits_entry_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 25
+  - name: WayLookup_top.io_write_bits_entry_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 26
+  - name: WayLookup_top.io_write_bits_entry_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 27
+  - name: WayLookup_top.io_write_bits_gpf_isForVSnonLeafPTE
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 28
+  - name: WayLookup_top.io_update_valid
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 29
+  - name: WayLookup_top.io_update_bits_vSetIdx
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 30
+  - name: WayLookup_top.io_update_bits_waymask
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 31
+  - name: WayLookup_top.io_update_bits_corrupt
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 32
+  - name: WayLookup_top.__Vtogcov__clock
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 33
+  - name: WayLookup_top.__Vtogcov__reset
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 34
+  - name: WayLookup_top.__Vtogcov__io_flush
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 35
+  - name: WayLookup_top.__Vtogcov__io_read_ready
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 36
+  - name: WayLookup_top.__Vtogcov__io_read_valid
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 37
+  - name: WayLookup_top.__Vtogcov__io_read_bits_entry_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 38
+  - name: WayLookup_top.__Vtogcov__io_read_bits_entry_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 39
+  - name: WayLookup_top.__Vtogcov__io_read_bits_entry_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 40
+  - name: WayLookup_top.__Vtogcov__io_read_bits_entry_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 41
+  - name: WayLookup_top.__Vtogcov__io_read_bits_entry_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 42
+  - name: WayLookup_top.__Vtogcov__io_read_bits_entry_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 43
+  - name: WayLookup_top.__Vtogcov__io_read_bits_entry_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 44
+  - name: WayLookup_top.__Vtogcov__io_read_bits_entry_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 45
+  - name: WayLookup_top.__Vtogcov__io_read_bits_entry_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 46
+  - name: WayLookup_top.__Vtogcov__io_read_bits_entry_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 47
+  - name: WayLookup_top.__Vtogcov__io_read_bits_gpf_isForVSnonLeafPTE
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 48
+  - name: WayLookup_top.__Vtogcov__io_write_ready
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 49
+  - name: WayLookup_top.__Vtogcov__io_write_valid
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 50
+  - name: WayLookup_top.__Vtogcov__io_write_bits_entry_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 51
+  - name: WayLookup_top.__Vtogcov__io_write_bits_entry_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 52
+  - name: WayLookup_top.__Vtogcov__io_write_bits_entry_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 53
+  - name: WayLookup_top.__Vtogcov__io_write_bits_entry_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 54
+  - name: WayLookup_top.__Vtogcov__io_write_bits_entry_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 55
+  - name: WayLookup_top.__Vtogcov__io_write_bits_entry_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 56
+  - name: WayLookup_top.__Vtogcov__io_write_bits_entry_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 57
+  - name: WayLookup_top.__Vtogcov__io_write_bits_entry_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 58
+  - name: WayLookup_top.__Vtogcov__io_write_bits_entry_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 59
+  - name: WayLookup_top.__Vtogcov__io_write_bits_entry_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 60
+  - name: WayLookup_top.__Vtogcov__io_write_bits_gpf_isForVSnonLeafPTE
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 61
+  - name: WayLookup_top.__Vtogcov__io_update_valid
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 62
+  - name: WayLookup_top.__Vtogcov__io_update_bits_vSetIdx
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 63
+  - name: WayLookup_top.__Vtogcov__io_update_bits_waymask
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 64
+  - name: WayLookup_top.__Vtogcov__io_update_bits_corrupt
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 65
+  - name: WayLookup_top.WayLookup.__VlemCond_13
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 66
+  - name: WayLookup_top.WayLookup.__VlemCond_11
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 67
+  - name: WayLookup_top.WayLookup.__VlemCond_10
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 68
+  - name: WayLookup_top.WayLookup.__VlemCond_9
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 69
+  - name: WayLookup_top.WayLookup.__VlemCond_8
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 70
+  - name: WayLookup_top.WayLookup.__VlemCond_7
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 71
+  - name: WayLookup_top.WayLookup.__VlemCond_6
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 72
+  - name: WayLookup_top.WayLookup.__VlemCond_3
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 73
+  - name: WayLookup_top.WayLookup.__VlemCond_2
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 74
+  - name: WayLookup_top.WayLookup.__VlemCond_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 75
+  - name: WayLookup_top.WayLookup.__VlemCond_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 76
+  - name: WayLookup_top.WayLookup.entries_0_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 77
+  - name: WayLookup_top.WayLookup.entries_0_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 78
+  - name: WayLookup_top.WayLookup.entries_0_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 79
+  - name: WayLookup_top.WayLookup.entries_0_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 80
+  - name: WayLookup_top.WayLookup.entries_0_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 81
+  - name: WayLookup_top.WayLookup.entries_0_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 82
+  - name: WayLookup_top.WayLookup.entries_0_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 83
+  - name: WayLookup_top.WayLookup.entries_0_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 84
+  - name: WayLookup_top.WayLookup.entries_0_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 85
+  - name: WayLookup_top.WayLookup.entries_0_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 86
+  - name: WayLookup_top.WayLookup.entries_1_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 87
+  - name: WayLookup_top.WayLookup.entries_1_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 88
+  - name: WayLookup_top.WayLookup.entries_1_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 89
+  - name: WayLookup_top.WayLookup.entries_1_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 90
+  - name: WayLookup_top.WayLookup.entries_1_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 91
+  - name: WayLookup_top.WayLookup.entries_1_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 92
+  - name: WayLookup_top.WayLookup.entries_1_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 93
+  - name: WayLookup_top.WayLookup.entries_1_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 94
+  - name: WayLookup_top.WayLookup.entries_1_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 95
+  - name: WayLookup_top.WayLookup.entries_1_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 96
+  - name: WayLookup_top.WayLookup.entries_2_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 97
+  - name: WayLookup_top.WayLookup.entries_2_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 98
+  - name: WayLookup_top.WayLookup.entries_2_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 99
+  - name: WayLookup_top.WayLookup.entries_2_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 100
+  - name: WayLookup_top.WayLookup.entries_2_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 101
+  - name: WayLookup_top.WayLookup.entries_2_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 102
+  - name: WayLookup_top.WayLookup.entries_2_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 103
+  - name: WayLookup_top.WayLookup.entries_2_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 104
+  - name: WayLookup_top.WayLookup.entries_2_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 105
+  - name: WayLookup_top.WayLookup.entries_2_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 106
+  - name: WayLookup_top.WayLookup.entries_3_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 107
+  - name: WayLookup_top.WayLookup.entries_3_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 108
+  - name: WayLookup_top.WayLookup.entries_3_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 109
+  - name: WayLookup_top.WayLookup.entries_3_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 110
+  - name: WayLookup_top.WayLookup.entries_3_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 111
+  - name: WayLookup_top.WayLookup.entries_3_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 112
+  - name: WayLookup_top.WayLookup.entries_3_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 113
+  - name: WayLookup_top.WayLookup.entries_3_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 114
+  - name: WayLookup_top.WayLookup.entries_3_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 115
+  - name: WayLookup_top.WayLookup.entries_3_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 116
+  - name: WayLookup_top.WayLookup.entries_4_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 117
+  - name: WayLookup_top.WayLookup.entries_4_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 118
+  - name: WayLookup_top.WayLookup.entries_4_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 119
+  - name: WayLookup_top.WayLookup.entries_4_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 120
+  - name: WayLookup_top.WayLookup.entries_4_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 121
+  - name: WayLookup_top.WayLookup.entries_4_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 122
+  - name: WayLookup_top.WayLookup.entries_4_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 123
+  - name: WayLookup_top.WayLookup.entries_4_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 124
+  - name: WayLookup_top.WayLookup.entries_4_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 125
+  - name: WayLookup_top.WayLookup.entries_4_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 126
+  - name: WayLookup_top.WayLookup.entries_5_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 127
+  - name: WayLookup_top.WayLookup.entries_5_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 128
+  - name: WayLookup_top.WayLookup.entries_5_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 129
+  - name: WayLookup_top.WayLookup.entries_5_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 130
+  - name: WayLookup_top.WayLookup.entries_5_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 131
+  - name: WayLookup_top.WayLookup.entries_5_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 132
+  - name: WayLookup_top.WayLookup.entries_5_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 133
+  - name: WayLookup_top.WayLookup.entries_5_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 134
+  - name: WayLookup_top.WayLookup.entries_5_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 135
+  - name: WayLookup_top.WayLookup.entries_5_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 136
+  - name: WayLookup_top.WayLookup.entries_6_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 137
+  - name: WayLookup_top.WayLookup.entries_6_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 138
+  - name: WayLookup_top.WayLookup.entries_6_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 139
+  - name: WayLookup_top.WayLookup.entries_6_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 140
+  - name: WayLookup_top.WayLookup.entries_6_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 141
+  - name: WayLookup_top.WayLookup.entries_6_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 142
+  - name: WayLookup_top.WayLookup.entries_6_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 143
+  - name: WayLookup_top.WayLookup.entries_6_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 144
+  - name: WayLookup_top.WayLookup.entries_6_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 145
+  - name: WayLookup_top.WayLookup.entries_6_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 146
+  - name: WayLookup_top.WayLookup.entries_7_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 147
+  - name: WayLookup_top.WayLookup.entries_7_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 148
+  - name: WayLookup_top.WayLookup.entries_7_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 149
+  - name: WayLookup_top.WayLookup.entries_7_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 150
+  - name: WayLookup_top.WayLookup.entries_7_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 151
+  - name: WayLookup_top.WayLookup.entries_7_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 152
+  - name: WayLookup_top.WayLookup.entries_7_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 153
+  - name: WayLookup_top.WayLookup.entries_7_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 154
+  - name: WayLookup_top.WayLookup.entries_7_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 155
+  - name: WayLookup_top.WayLookup.entries_7_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 156
+  - name: WayLookup_top.WayLookup.entries_8_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 157
+  - name: WayLookup_top.WayLookup.entries_8_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 158
+  - name: WayLookup_top.WayLookup.entries_8_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 159
+  - name: WayLookup_top.WayLookup.entries_8_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 160
+  - name: WayLookup_top.WayLookup.entries_8_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 161
+  - name: WayLookup_top.WayLookup.entries_8_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 162
+  - name: WayLookup_top.WayLookup.entries_8_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 163
+  - name: WayLookup_top.WayLookup.entries_8_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 164
+  - name: WayLookup_top.WayLookup.entries_8_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 165
+  - name: WayLookup_top.WayLookup.entries_8_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 166
+  - name: WayLookup_top.WayLookup.entries_9_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 167
+  - name: WayLookup_top.WayLookup.entries_9_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 168
+  - name: WayLookup_top.WayLookup.entries_9_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 169
+  - name: WayLookup_top.WayLookup.entries_9_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 170
+  - name: WayLookup_top.WayLookup.entries_9_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 171
+  - name: WayLookup_top.WayLookup.entries_9_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 172
+  - name: WayLookup_top.WayLookup.entries_9_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 173
+  - name: WayLookup_top.WayLookup.entries_9_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 174
+  - name: WayLookup_top.WayLookup.entries_9_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 175
+  - name: WayLookup_top.WayLookup.entries_9_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 176
+  - name: WayLookup_top.WayLookup.entries_10_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 177
+  - name: WayLookup_top.WayLookup.entries_10_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 178
+  - name: WayLookup_top.WayLookup.entries_10_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 179
+  - name: WayLookup_top.WayLookup.entries_10_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 180
+  - name: WayLookup_top.WayLookup.entries_10_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 181
+  - name: WayLookup_top.WayLookup.entries_10_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 182
+  - name: WayLookup_top.WayLookup.entries_10_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 183
+  - name: WayLookup_top.WayLookup.entries_10_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 184
+  - name: WayLookup_top.WayLookup.entries_10_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 185
+  - name: WayLookup_top.WayLookup.entries_10_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 186
+  - name: WayLookup_top.WayLookup.entries_11_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 187
+  - name: WayLookup_top.WayLookup.entries_11_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 188
+  - name: WayLookup_top.WayLookup.entries_11_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 189
+  - name: WayLookup_top.WayLookup.entries_11_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 190
+  - name: WayLookup_top.WayLookup.entries_11_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 191
+  - name: WayLookup_top.WayLookup.entries_11_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 192
+  - name: WayLookup_top.WayLookup.entries_11_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 193
+  - name: WayLookup_top.WayLookup.entries_11_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 194
+  - name: WayLookup_top.WayLookup.entries_11_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 195
+  - name: WayLookup_top.WayLookup.entries_11_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 196
+  - name: WayLookup_top.WayLookup.entries_12_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 197
+  - name: WayLookup_top.WayLookup.entries_12_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 198
+  - name: WayLookup_top.WayLookup.entries_12_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 199
+  - name: WayLookup_top.WayLookup.entries_12_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 200
+  - name: WayLookup_top.WayLookup.entries_12_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 201
+  - name: WayLookup_top.WayLookup.entries_12_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 202
+  - name: WayLookup_top.WayLookup.entries_12_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 203
+  - name: WayLookup_top.WayLookup.entries_12_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 204
+  - name: WayLookup_top.WayLookup.entries_12_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 205
+  - name: WayLookup_top.WayLookup.entries_12_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 206
+  - name: WayLookup_top.WayLookup.entries_13_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 207
+  - name: WayLookup_top.WayLookup.entries_13_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 208
+  - name: WayLookup_top.WayLookup.entries_13_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 209
+  - name: WayLookup_top.WayLookup.entries_13_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 210
+  - name: WayLookup_top.WayLookup.entries_13_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 211
+  - name: WayLookup_top.WayLookup.entries_13_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 212
+  - name: WayLookup_top.WayLookup.entries_13_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 213
+  - name: WayLookup_top.WayLookup.entries_13_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 214
+  - name: WayLookup_top.WayLookup.entries_13_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 215
+  - name: WayLookup_top.WayLookup.entries_13_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 216
+  - name: WayLookup_top.WayLookup.entries_14_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 217
+  - name: WayLookup_top.WayLookup.entries_14_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 218
+  - name: WayLookup_top.WayLookup.entries_14_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 219
+  - name: WayLookup_top.WayLookup.entries_14_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 220
+  - name: WayLookup_top.WayLookup.entries_14_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 221
+  - name: WayLookup_top.WayLookup.entries_14_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 222
+  - name: WayLookup_top.WayLookup.entries_14_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 223
+  - name: WayLookup_top.WayLookup.entries_14_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 224
+  - name: WayLookup_top.WayLookup.entries_14_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 225
+  - name: WayLookup_top.WayLookup.entries_14_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 226
+  - name: WayLookup_top.WayLookup.entries_15_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 227
+  - name: WayLookup_top.WayLookup.entries_15_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 228
+  - name: WayLookup_top.WayLookup.entries_15_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 229
+  - name: WayLookup_top.WayLookup.entries_15_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 230
+  - name: WayLookup_top.WayLookup.entries_15_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 231
+  - name: WayLookup_top.WayLookup.entries_15_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 232
+  - name: WayLookup_top.WayLookup.entries_15_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 233
+  - name: WayLookup_top.WayLookup.entries_15_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 234
+  - name: WayLookup_top.WayLookup.entries_15_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 235
+  - name: WayLookup_top.WayLookup.entries_15_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 236
+  - name: WayLookup_top.WayLookup.entries_16_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 237
+  - name: WayLookup_top.WayLookup.entries_16_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 238
+  - name: WayLookup_top.WayLookup.entries_16_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 239
+  - name: WayLookup_top.WayLookup.entries_16_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 240
+  - name: WayLookup_top.WayLookup.entries_16_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 241
+  - name: WayLookup_top.WayLookup.entries_16_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 242
+  - name: WayLookup_top.WayLookup.entries_16_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 243
+  - name: WayLookup_top.WayLookup.entries_16_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 244
+  - name: WayLookup_top.WayLookup.entries_16_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 245
+  - name: WayLookup_top.WayLookup.entries_16_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 246
+  - name: WayLookup_top.WayLookup.entries_17_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 247
+  - name: WayLookup_top.WayLookup.entries_17_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 248
+  - name: WayLookup_top.WayLookup.entries_17_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 249
+  - name: WayLookup_top.WayLookup.entries_17_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 250
+  - name: WayLookup_top.WayLookup.entries_17_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 251
+  - name: WayLookup_top.WayLookup.entries_17_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 252
+  - name: WayLookup_top.WayLookup.entries_17_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 253
+  - name: WayLookup_top.WayLookup.entries_17_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 254
+  - name: WayLookup_top.WayLookup.entries_17_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 255
+  - name: WayLookup_top.WayLookup.entries_17_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 256
+  - name: WayLookup_top.WayLookup.entries_18_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 257
+  - name: WayLookup_top.WayLookup.entries_18_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 258
+  - name: WayLookup_top.WayLookup.entries_18_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 259
+  - name: WayLookup_top.WayLookup.entries_18_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 260
+  - name: WayLookup_top.WayLookup.entries_18_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 261
+  - name: WayLookup_top.WayLookup.entries_18_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 262
+  - name: WayLookup_top.WayLookup.entries_18_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 263
+  - name: WayLookup_top.WayLookup.entries_18_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 264
+  - name: WayLookup_top.WayLookup.entries_18_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 265
+  - name: WayLookup_top.WayLookup.entries_18_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 266
+  - name: WayLookup_top.WayLookup.entries_19_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 267
+  - name: WayLookup_top.WayLookup.entries_19_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 268
+  - name: WayLookup_top.WayLookup.entries_19_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 269
+  - name: WayLookup_top.WayLookup.entries_19_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 270
+  - name: WayLookup_top.WayLookup.entries_19_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 271
+  - name: WayLookup_top.WayLookup.entries_19_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 272
+  - name: WayLookup_top.WayLookup.entries_19_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 273
+  - name: WayLookup_top.WayLookup.entries_19_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 274
+  - name: WayLookup_top.WayLookup.entries_19_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 275
+  - name: WayLookup_top.WayLookup.entries_19_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 276
+  - name: WayLookup_top.WayLookup.entries_20_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 277
+  - name: WayLookup_top.WayLookup.entries_20_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 278
+  - name: WayLookup_top.WayLookup.entries_20_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 279
+  - name: WayLookup_top.WayLookup.entries_20_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 280
+  - name: WayLookup_top.WayLookup.entries_20_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 281
+  - name: WayLookup_top.WayLookup.entries_20_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 282
+  - name: WayLookup_top.WayLookup.entries_20_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 283
+  - name: WayLookup_top.WayLookup.entries_20_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 284
+  - name: WayLookup_top.WayLookup.entries_20_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 285
+  - name: WayLookup_top.WayLookup.entries_20_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 286
+  - name: WayLookup_top.WayLookup.entries_21_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 287
+  - name: WayLookup_top.WayLookup.entries_21_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 288
+  - name: WayLookup_top.WayLookup.entries_21_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 289
+  - name: WayLookup_top.WayLookup.entries_21_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 290
+  - name: WayLookup_top.WayLookup.entries_21_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 291
+  - name: WayLookup_top.WayLookup.entries_21_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 292
+  - name: WayLookup_top.WayLookup.entries_21_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 293
+  - name: WayLookup_top.WayLookup.entries_21_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 294
+  - name: WayLookup_top.WayLookup.entries_21_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 295
+  - name: WayLookup_top.WayLookup.entries_21_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 296
+  - name: WayLookup_top.WayLookup.entries_22_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 297
+  - name: WayLookup_top.WayLookup.entries_22_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 298
+  - name: WayLookup_top.WayLookup.entries_22_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 299
+  - name: WayLookup_top.WayLookup.entries_22_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 300
+  - name: WayLookup_top.WayLookup.entries_22_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 301
+  - name: WayLookup_top.WayLookup.entries_22_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 302
+  - name: WayLookup_top.WayLookup.entries_22_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 303
+  - name: WayLookup_top.WayLookup.entries_22_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 304
+  - name: WayLookup_top.WayLookup.entries_22_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 305
+  - name: WayLookup_top.WayLookup.entries_22_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 306
+  - name: WayLookup_top.WayLookup.entries_23_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 307
+  - name: WayLookup_top.WayLookup.entries_23_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 308
+  - name: WayLookup_top.WayLookup.entries_23_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 309
+  - name: WayLookup_top.WayLookup.entries_23_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 310
+  - name: WayLookup_top.WayLookup.entries_23_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 311
+  - name: WayLookup_top.WayLookup.entries_23_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 312
+  - name: WayLookup_top.WayLookup.entries_23_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 313
+  - name: WayLookup_top.WayLookup.entries_23_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 314
+  - name: WayLookup_top.WayLookup.entries_23_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 315
+  - name: WayLookup_top.WayLookup.entries_23_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 316
+  - name: WayLookup_top.WayLookup.entries_24_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 317
+  - name: WayLookup_top.WayLookup.entries_24_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 318
+  - name: WayLookup_top.WayLookup.entries_24_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 319
+  - name: WayLookup_top.WayLookup.entries_24_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 320
+  - name: WayLookup_top.WayLookup.entries_24_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 321
+  - name: WayLookup_top.WayLookup.entries_24_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 322
+  - name: WayLookup_top.WayLookup.entries_24_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 323
+  - name: WayLookup_top.WayLookup.entries_24_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 324
+  - name: WayLookup_top.WayLookup.entries_24_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 325
+  - name: WayLookup_top.WayLookup.entries_24_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 326
+  - name: WayLookup_top.WayLookup.entries_25_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 327
+  - name: WayLookup_top.WayLookup.entries_25_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 328
+  - name: WayLookup_top.WayLookup.entries_25_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 329
+  - name: WayLookup_top.WayLookup.entries_25_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 330
+  - name: WayLookup_top.WayLookup.entries_25_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 331
+  - name: WayLookup_top.WayLookup.entries_25_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 332
+  - name: WayLookup_top.WayLookup.entries_25_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 333
+  - name: WayLookup_top.WayLookup.entries_25_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 334
+  - name: WayLookup_top.WayLookup.entries_25_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 335
+  - name: WayLookup_top.WayLookup.entries_25_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 336
+  - name: WayLookup_top.WayLookup.entries_26_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 337
+  - name: WayLookup_top.WayLookup.entries_26_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 338
+  - name: WayLookup_top.WayLookup.entries_26_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 339
+  - name: WayLookup_top.WayLookup.entries_26_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 340
+  - name: WayLookup_top.WayLookup.entries_26_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 341
+  - name: WayLookup_top.WayLookup.entries_26_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 342
+  - name: WayLookup_top.WayLookup.entries_26_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 343
+  - name: WayLookup_top.WayLookup.entries_26_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 344
+  - name: WayLookup_top.WayLookup.entries_26_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 345
+  - name: WayLookup_top.WayLookup.entries_26_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 346
+  - name: WayLookup_top.WayLookup.entries_27_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 347
+  - name: WayLookup_top.WayLookup.entries_27_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 348
+  - name: WayLookup_top.WayLookup.entries_27_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 349
+  - name: WayLookup_top.WayLookup.entries_27_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 350
+  - name: WayLookup_top.WayLookup.entries_27_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 351
+  - name: WayLookup_top.WayLookup.entries_27_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 352
+  - name: WayLookup_top.WayLookup.entries_27_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 353
+  - name: WayLookup_top.WayLookup.entries_27_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 354
+  - name: WayLookup_top.WayLookup.entries_27_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 355
+  - name: WayLookup_top.WayLookup.entries_27_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 356
+  - name: WayLookup_top.WayLookup.entries_28_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 357
+  - name: WayLookup_top.WayLookup.entries_28_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 358
+  - name: WayLookup_top.WayLookup.entries_28_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 359
+  - name: WayLookup_top.WayLookup.entries_28_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 360
+  - name: WayLookup_top.WayLookup.entries_28_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 361
+  - name: WayLookup_top.WayLookup.entries_28_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 362
+  - name: WayLookup_top.WayLookup.entries_28_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 363
+  - name: WayLookup_top.WayLookup.entries_28_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 364
+  - name: WayLookup_top.WayLookup.entries_28_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 365
+  - name: WayLookup_top.WayLookup.entries_28_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 366
+  - name: WayLookup_top.WayLookup.entries_29_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 367
+  - name: WayLookup_top.WayLookup.entries_29_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 368
+  - name: WayLookup_top.WayLookup.entries_29_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 369
+  - name: WayLookup_top.WayLookup.entries_29_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 370
+  - name: WayLookup_top.WayLookup.entries_29_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 371
+  - name: WayLookup_top.WayLookup.entries_29_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 372
+  - name: WayLookup_top.WayLookup.entries_29_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 373
+  - name: WayLookup_top.WayLookup.entries_29_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 374
+  - name: WayLookup_top.WayLookup.entries_29_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 375
+  - name: WayLookup_top.WayLookup.entries_29_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 376
+  - name: WayLookup_top.WayLookup.entries_30_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 377
+  - name: WayLookup_top.WayLookup.entries_30_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 378
+  - name: WayLookup_top.WayLookup.entries_30_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 379
+  - name: WayLookup_top.WayLookup.entries_30_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 380
+  - name: WayLookup_top.WayLookup.entries_30_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 381
+  - name: WayLookup_top.WayLookup.entries_30_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 382
+  - name: WayLookup_top.WayLookup.entries_30_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 383
+  - name: WayLookup_top.WayLookup.entries_30_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 384
+  - name: WayLookup_top.WayLookup.entries_30_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 385
+  - name: WayLookup_top.WayLookup.entries_30_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 386
+  - name: WayLookup_top.WayLookup.entries_31_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 387
+  - name: WayLookup_top.WayLookup.entries_31_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 388
+  - name: WayLookup_top.WayLookup.entries_31_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 389
+  - name: WayLookup_top.WayLookup.entries_31_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 390
+  - name: WayLookup_top.WayLookup.entries_31_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 391
+  - name: WayLookup_top.WayLookup.entries_31_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 392
+  - name: WayLookup_top.WayLookup.entries_31_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 393
+  - name: WayLookup_top.WayLookup.entries_31_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 394
+  - name: WayLookup_top.WayLookup.entries_31_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 395
+  - name: WayLookup_top.WayLookup.entries_31_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 396
+  - name: WayLookup_top.WayLookup.readPtr_flag
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 397
+  - name: WayLookup_top.WayLookup.readPtr_value
+    type: CData
+    mem_bytes: 1
+    rtl_width: 5
+    offset: 398
+  - name: WayLookup_top.WayLookup.writePtr_flag
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 399
+  - name: WayLookup_top.WayLookup.writePtr_value
+    type: CData
+    mem_bytes: 1
+    rtl_width: 5
+    offset: 400
+  - name: WayLookup_top.WayLookup._gpf_hit_T_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 6
+    offset: 401
+  - name: WayLookup_top.WayLookup.empty
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 402
+  - name: WayLookup_top.WayLookup.gpf_entry_valid
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 403
+  - name: WayLookup_top.WayLookup.gpf_entry_bits_isForVSnonLeafPTE
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 404
+  - name: WayLookup_top.WayLookup.gpfPtr_flag
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 405
+  - name: WayLookup_top.WayLookup.gpfPtr_value
+    type: CData
+    mem_bytes: 1
+    rtl_width: 5
+    offset: 406
+  - name: WayLookup_top.WayLookup.gpf_hit
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 407
+  - name: WayLookup_top.WayLookup.can_bypass
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 408
+  - name: WayLookup_top.WayLookup.io_read_valid_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 409
+  - name: WayLookup_top.WayLookup._gpf_entry_valid_T
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 410
+  - name: WayLookup_top.WayLookup.io_write_ready_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 411
+  - name: WayLookup_top.WayLookup.vset_same
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 412
+  - name: WayLookup_top.WayLookup.vset_same_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 413
+  - name: WayLookup_top.WayLookup.vset_same_2
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 414
+  - name: WayLookup_top.WayLookup.vset_same_3
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 415
+  - name: WayLookup_top.WayLookup.vset_same_4
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 416
+  - name: WayLookup_top.WayLookup.vset_same_5
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 417
+  - name: WayLookup_top.WayLookup.vset_same_6
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 418
+  - name: WayLookup_top.WayLookup.vset_same_7
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 419
+  - name: WayLookup_top.WayLookup.vset_same_8
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 420
+  - name: WayLookup_top.WayLookup.vset_same_9
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 421
+  - name: WayLookup_top.WayLookup.vset_same_10
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 422
+  - name: WayLookup_top.WayLookup.vset_same_11
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 423
+  - name: WayLookup_top.WayLookup.vset_same_12
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 424
+  - name: WayLookup_top.WayLookup.vset_same_13
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 425
+  - name: WayLookup_top.WayLookup.vset_same_14
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 426
+  - name: WayLookup_top.WayLookup.vset_same_15
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 427
+  - name: WayLookup_top.WayLookup.vset_same_16
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 428
+  - name: WayLookup_top.WayLookup.vset_same_17
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 429
+  - name: WayLookup_top.WayLookup.vset_same_18
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 430
+  - name: WayLookup_top.WayLookup.vset_same_19
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 431
+  - name: WayLookup_top.WayLookup.vset_same_20
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 432
+  - name: WayLookup_top.WayLookup.vset_same_21
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 433
+  - name: WayLookup_top.WayLookup.vset_same_22
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 434
+  - name: WayLookup_top.WayLookup.vset_same_23
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 435
+  - name: WayLookup_top.WayLookup.vset_same_24
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 436
+  - name: WayLookup_top.WayLookup.vset_same_25
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 437
+  - name: WayLookup_top.WayLookup.vset_same_26
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 438
+  - name: WayLookup_top.WayLookup.vset_same_27
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 439
+  - name: WayLookup_top.WayLookup.vset_same_28
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 440
+  - name: WayLookup_top.WayLookup.vset_same_29
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 441
+  - name: WayLookup_top.WayLookup.vset_same_30
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 442
+  - name: WayLookup_top.WayLookup.vset_same_31
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 443
+  - name: WayLookup_top.WayLookup.vset_same_32
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 444
+  - name: WayLookup_top.WayLookup.vset_same_33
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 445
+  - name: WayLookup_top.WayLookup.vset_same_34
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 446
+  - name: WayLookup_top.WayLookup.vset_same_35
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 447
+  - name: WayLookup_top.WayLookup.vset_same_36
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 448
+  - name: WayLookup_top.WayLookup.vset_same_37
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 449
+  - name: WayLookup_top.WayLookup.vset_same_38
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 450
+  - name: WayLookup_top.WayLookup.vset_same_39
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 451
+  - name: WayLookup_top.WayLookup.vset_same_40
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 452
+  - name: WayLookup_top.WayLookup.vset_same_41
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 453
+  - name: WayLookup_top.WayLookup.vset_same_42
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 454
+  - name: WayLookup_top.WayLookup.vset_same_43
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 455
+  - name: WayLookup_top.WayLookup.vset_same_44
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 456
+  - name: WayLookup_top.WayLookup.vset_same_45
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 457
+  - name: WayLookup_top.WayLookup.vset_same_46
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 458
+  - name: WayLookup_top.WayLookup.vset_same_47
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 459
+  - name: WayLookup_top.WayLookup.vset_same_48
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 460
+  - name: WayLookup_top.WayLookup.vset_same_49
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 461
+  - name: WayLookup_top.WayLookup.vset_same_50
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 462
+  - name: WayLookup_top.WayLookup.vset_same_51
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 463
+  - name: WayLookup_top.WayLookup.vset_same_52
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 464
+  - name: WayLookup_top.WayLookup.vset_same_53
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 465
+  - name: WayLookup_top.WayLookup.vset_same_54
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 466
+  - name: WayLookup_top.WayLookup.vset_same_55
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 467
+  - name: WayLookup_top.WayLookup.vset_same_56
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 468
+  - name: WayLookup_top.WayLookup.vset_same_57
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 469
+  - name: WayLookup_top.WayLookup.vset_same_58
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 470
+  - name: WayLookup_top.WayLookup.vset_same_59
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 471
+  - name: WayLookup_top.WayLookup.vset_same_60
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 472
+  - name: WayLookup_top.WayLookup.vset_same_61
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 473
+  - name: WayLookup_top.WayLookup.vset_same_62
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 474
+  - name: WayLookup_top.WayLookup.vset_same_63
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 475
+  - name: WayLookup_top.WayLookup._GEN_11
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 476
+  - name: WayLookup_top.WayLookup.ptag_same
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 477
+  - name: WayLookup_top.WayLookup.ptag_same_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 478
+  - name: WayLookup_top.WayLookup.ptag_same_2
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 479
+  - name: WayLookup_top.WayLookup.ptag_same_3
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 480
+  - name: WayLookup_top.WayLookup.ptag_same_4
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 481
+  - name: WayLookup_top.WayLookup.ptag_same_5
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 482
+  - name: WayLookup_top.WayLookup.ptag_same_6
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 483
+  - name: WayLookup_top.WayLookup.ptag_same_7
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 484
+  - name: WayLookup_top.WayLookup.ptag_same_8
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 485
+  - name: WayLookup_top.WayLookup.ptag_same_9
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 486
+  - name: WayLookup_top.WayLookup.ptag_same_10
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 487
+  - name: WayLookup_top.WayLookup.ptag_same_11
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 488
+  - name: WayLookup_top.WayLookup.ptag_same_12
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 489
+  - name: WayLookup_top.WayLookup.ptag_same_13
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 490
+  - name: WayLookup_top.WayLookup.ptag_same_14
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 491
+  - name: WayLookup_top.WayLookup.ptag_same_15
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 492
+  - name: WayLookup_top.WayLookup.ptag_same_16
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 493
+  - name: WayLookup_top.WayLookup.ptag_same_17
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 494
+  - name: WayLookup_top.WayLookup.ptag_same_18
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 495
+  - name: WayLookup_top.WayLookup.ptag_same_19
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 496
+  - name: WayLookup_top.WayLookup.ptag_same_20
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 497
+  - name: WayLookup_top.WayLookup.ptag_same_21
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 498
+  - name: WayLookup_top.WayLookup.ptag_same_22
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 499
+  - name: WayLookup_top.WayLookup.ptag_same_23
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 500
+  - name: WayLookup_top.WayLookup.ptag_same_24
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 501
+  - name: WayLookup_top.WayLookup.ptag_same_25
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 502
+  - name: WayLookup_top.WayLookup.ptag_same_26
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 503
+  - name: WayLookup_top.WayLookup.ptag_same_27
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 504
+  - name: WayLookup_top.WayLookup.ptag_same_28
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 505
+  - name: WayLookup_top.WayLookup.ptag_same_29
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 506
+  - name: WayLookup_top.WayLookup.ptag_same_30
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 507
+  - name: WayLookup_top.WayLookup.ptag_same_31
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 508
+  - name: WayLookup_top.WayLookup.ptag_same_32
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 509
+  - name: WayLookup_top.WayLookup.ptag_same_33
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 510
+  - name: WayLookup_top.WayLookup.ptag_same_34
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 511
+  - name: WayLookup_top.WayLookup.ptag_same_35
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 512
+  - name: WayLookup_top.WayLookup.ptag_same_36
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 513
+  - name: WayLookup_top.WayLookup.ptag_same_37
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 514
+  - name: WayLookup_top.WayLookup.ptag_same_38
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 515
+  - name: WayLookup_top.WayLookup.ptag_same_39
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 516
+  - name: WayLookup_top.WayLookup.ptag_same_40
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 517
+  - name: WayLookup_top.WayLookup.ptag_same_41
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 518
+  - name: WayLookup_top.WayLookup.ptag_same_42
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 519
+  - name: WayLookup_top.WayLookup.ptag_same_43
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 520
+  - name: WayLookup_top.WayLookup.ptag_same_44
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 521
+  - name: WayLookup_top.WayLookup.ptag_same_45
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 522
+  - name: WayLookup_top.WayLookup.ptag_same_46
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 523
+  - name: WayLookup_top.WayLookup.ptag_same_47
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 524
+  - name: WayLookup_top.WayLookup.ptag_same_48
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 525
+  - name: WayLookup_top.WayLookup.ptag_same_49
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 526
+  - name: WayLookup_top.WayLookup.ptag_same_50
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 527
+  - name: WayLookup_top.WayLookup.ptag_same_51
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 528
+  - name: WayLookup_top.WayLookup.ptag_same_52
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 529
+  - name: WayLookup_top.WayLookup.ptag_same_53
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 530
+  - name: WayLookup_top.WayLookup.ptag_same_54
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 531
+  - name: WayLookup_top.WayLookup.ptag_same_55
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 532
+  - name: WayLookup_top.WayLookup.ptag_same_56
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 533
+  - name: WayLookup_top.WayLookup.ptag_same_57
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 534
+  - name: WayLookup_top.WayLookup.ptag_same_58
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 535
+  - name: WayLookup_top.WayLookup.ptag_same_59
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 536
+  - name: WayLookup_top.WayLookup.ptag_same_60
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 537
+  - name: WayLookup_top.WayLookup.ptag_same_61
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 538
+  - name: WayLookup_top.WayLookup.ptag_same_62
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 539
+  - name: WayLookup_top.WayLookup.ptag_same_63
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 540
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_0_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 541
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_0_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 542
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_0_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 543
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_0_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 544
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_0_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 545
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_0_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 546
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_0_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 547
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_0_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 548
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_0_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 549
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_0_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 550
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_1_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 551
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_1_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 552
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_1_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 553
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_1_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 554
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_1_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 555
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_1_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 556
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_1_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 557
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_1_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 558
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_1_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 559
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_1_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 560
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_2_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 561
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_2_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 562
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_2_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 563
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_2_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 564
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_2_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 565
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_2_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 566
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_2_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 567
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_2_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 568
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_2_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 569
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_2_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 570
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_3_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 571
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_3_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 572
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_3_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 573
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_3_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 574
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_3_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 575
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_3_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 576
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_3_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 577
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_3_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 578
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_3_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 579
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_3_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 580
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_4_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 581
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_4_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 582
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_4_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 583
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_4_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 584
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_4_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 585
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_4_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 586
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_4_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 587
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_4_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 588
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_4_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 589
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_4_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 590
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_5_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 591
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_5_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 592
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_5_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 593
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_5_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 594
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_5_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 595
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_5_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 596
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_5_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 597
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_5_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 598
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_5_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 599
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_5_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 600
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_6_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 601
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_6_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 602
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_6_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 603
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_6_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 604
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_6_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 605
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_6_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 606
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_6_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 607
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_6_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 608
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_6_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 609
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_6_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 610
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_7_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 611
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_7_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 612
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_7_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 613
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_7_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 614
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_7_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 615
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_7_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 616
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_7_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 617
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_7_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 618
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_7_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 619
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_7_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 620
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_8_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 621
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_8_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 622
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_8_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 623
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_8_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 624
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_8_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 625
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_8_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 626
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_8_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 627
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_8_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 628
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_8_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 629
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_8_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 630
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_9_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 631
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_9_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 632
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_9_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 633
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_9_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 634
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_9_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 635
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_9_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 636
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_9_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 637
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_9_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 638
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_9_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 639
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_9_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 640
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_10_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 641
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_10_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 642
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_10_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 643
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_10_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 644
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_10_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 645
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_10_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 646
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_10_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 647
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_10_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 648
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_10_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 649
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_10_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 650
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_11_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 651
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_11_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 652
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_11_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 653
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_11_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 654
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_11_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 655
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_11_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 656
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_11_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 657
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_11_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 658
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_11_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 659
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_11_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 660
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_12_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 661
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_12_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 662
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_12_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 663
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_12_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 664
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_12_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 665
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_12_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 666
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_12_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 667
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_12_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 668
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_12_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 669
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_12_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 670
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_13_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 671
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_13_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 672
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_13_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 673
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_13_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 674
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_13_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 675
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_13_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 676
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_13_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 677
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_13_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 678
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_13_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 679
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_13_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 680
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_14_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 681
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_14_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 682
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_14_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 683
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_14_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 684
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_14_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 685
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_14_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 686
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_14_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 687
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_14_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 688
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_14_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 689
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_14_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 690
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_15_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 691
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_15_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 692
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_15_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 693
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_15_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 694
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_15_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 695
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_15_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 696
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_15_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 697
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_15_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 698
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_15_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 699
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_15_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 700
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_16_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 701
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_16_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 702
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_16_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 703
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_16_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 704
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_16_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 705
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_16_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 706
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_16_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 707
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_16_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 708
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_16_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 709
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_16_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 710
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_17_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 711
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_17_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 712
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_17_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 713
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_17_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 714
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_17_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 715
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_17_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 716
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_17_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 717
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_17_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 718
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_17_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 719
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_17_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 720
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_18_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 721
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_18_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 722
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_18_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 723
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_18_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 724
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_18_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 725
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_18_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 726
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_18_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 727
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_18_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 728
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_18_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 729
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_18_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 730
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_19_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 731
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_19_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 732
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_19_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 733
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_19_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 734
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_19_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 735
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_19_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 736
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_19_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 737
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_19_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 738
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_19_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 739
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_19_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 740
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_20_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 741
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_20_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 742
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_20_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 743
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_20_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 744
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_20_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 745
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_20_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 746
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_20_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 747
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_20_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 748
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_20_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 749
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_20_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 750
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_21_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 751
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_21_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 752
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_21_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 753
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_21_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 754
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_21_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 755
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_21_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 756
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_21_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 757
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_21_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 758
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_21_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 759
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_21_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 760
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_22_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 761
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_22_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 762
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_22_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 763
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_22_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 764
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_22_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 765
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_22_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 766
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_22_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 767
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_22_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 768
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_22_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 769
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_22_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 770
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_23_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 771
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_23_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 772
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_23_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 773
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_23_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 774
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_23_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 775
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_23_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 776
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_23_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 777
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_23_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 778
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_23_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 779
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_23_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 780
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_24_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 781
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_24_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 782
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_24_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 783
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_24_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 784
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_24_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 785
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_24_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 786
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_24_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 787
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_24_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 788
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_24_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 789
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_24_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 790
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_25_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 791
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_25_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 792
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_25_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 793
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_25_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 794
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_25_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 795
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_25_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 796
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_25_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 797
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_25_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 798
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_25_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 799
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_25_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 800
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_26_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 801
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_26_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 802
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_26_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 803
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_26_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 804
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_26_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 805
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_26_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 806
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_26_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 807
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_26_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 808
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_26_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 809
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_26_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 810
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_27_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 811
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_27_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 812
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_27_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 813
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_27_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 814
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_27_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 815
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_27_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 816
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_27_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 817
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_27_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 818
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_27_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 819
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_27_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 820
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_28_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 821
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_28_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 822
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_28_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 823
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_28_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 824
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_28_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 825
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_28_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 826
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_28_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 827
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_28_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 828
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_28_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 829
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_28_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 830
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_29_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 831
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_29_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 832
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_29_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 833
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_29_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 834
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_29_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 835
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_29_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 836
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_29_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 837
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_29_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 838
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_29_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 839
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_29_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 840
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_30_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 841
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_30_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 842
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_30_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 843
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_30_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 844
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_30_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 845
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_30_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 846
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_30_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 847
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_30_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 848
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_30_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 849
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_30_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 850
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_31_vSetIdx_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 851
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_31_vSetIdx_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 8
+    offset: 852
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_31_waymask_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 853
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_31_waymask_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 4
+    offset: 854
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_31_itlb_exception_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 855
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_31_itlb_exception_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 856
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_31_itlb_pbmt_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 857
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_31_itlb_pbmt_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 2
+    offset: 858
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_31_meta_codes_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 859
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_31_meta_codes_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 860
+  - name: WayLookup_top.WayLookup.__Vtogcov__readPtr_flag
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 861
+  - name: WayLookup_top.WayLookup.__Vtogcov__readPtr_value
+    type: CData
+    mem_bytes: 1
+    rtl_width: 5
+    offset: 862
+  - name: WayLookup_top.WayLookup.__Vtogcov__writePtr_flag
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 863
+  - name: WayLookup_top.WayLookup.__Vtogcov__writePtr_value
+    type: CData
+    mem_bytes: 1
+    rtl_width: 5
+    offset: 864
+  - name: WayLookup_top.WayLookup.__Vtogcov__empty
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 865
+  - name: WayLookup_top.WayLookup.__Vtogcov__gpf_entry_valid
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 866
+  - name: WayLookup_top.WayLookup.__Vtogcov__gpf_entry_bits_isForVSnonLeafPTE
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 867
+  - name: WayLookup_top.WayLookup.__Vtogcov__gpfPtr_flag
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 868
+  - name: WayLookup_top.WayLookup.__Vtogcov__gpfPtr_value
+    type: CData
+    mem_bytes: 1
+    rtl_width: 5
+    offset: 869
+  - name: WayLookup_top.WayLookup.__Vtogcov__gpf_hit
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 870
+  - name: WayLookup_top.WayLookup.__Vtogcov__can_bypass
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 871
+  - name: WayLookup_top.WayLookup.__Vtogcov__io_read_valid_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 872
+  - name: WayLookup_top.WayLookup.__Vtogcov__io_write_ready_0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 873
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 874
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 875
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_2
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 876
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_3
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 877
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_4
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 878
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_5
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 879
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_6
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 880
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_7
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 881
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_8
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 882
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_9
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 883
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_10
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 884
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_11
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 885
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_12
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 886
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_13
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 887
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_14
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 888
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_15
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 889
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_16
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 890
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_17
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 891
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_18
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 892
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_19
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 893
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_20
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 894
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_21
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 895
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_22
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 896
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_23
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 897
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_24
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 898
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_25
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 899
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_26
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 900
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_27
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 901
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_28
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 902
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_29
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 903
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_30
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 904
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_31
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 905
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_32
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 906
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_33
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 907
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_34
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 908
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_35
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 909
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_36
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 910
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_37
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 911
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_38
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 912
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_39
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 913
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_40
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 914
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_41
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 915
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_42
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 916
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_43
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 917
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_44
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 918
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_45
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 919
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_46
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 920
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_47
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 921
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_48
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 922
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_49
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 923
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_50
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 924
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_51
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 925
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_52
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 926
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_53
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 927
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_54
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 928
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_55
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 929
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_56
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 930
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_57
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 931
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_58
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 932
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_59
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 933
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_60
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 934
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_61
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 935
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_62
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 936
+  - name: WayLookup_top.WayLookup.__Vtogcov__vset_same_63
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 937
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 938
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 939
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_2
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 940
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_3
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 941
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_4
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 942
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_5
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 943
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_6
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 944
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_7
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 945
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_8
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 946
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_9
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 947
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_10
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 948
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_11
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 949
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_12
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 950
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_13
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 951
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_14
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 952
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_15
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 953
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_16
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 954
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_17
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 955
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_18
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 956
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_19
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 957
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_20
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 958
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_21
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 959
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_22
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 960
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_23
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 961
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_24
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 962
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_25
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 963
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_26
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 964
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_27
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 965
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_28
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 966
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_29
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 967
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_30
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 968
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_31
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 969
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_32
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 970
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_33
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 971
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_34
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 972
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_35
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 973
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_36
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 974
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_37
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 975
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_38
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 976
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_39
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 977
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_40
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 978
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_41
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 979
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_42
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 980
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_43
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 981
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_44
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 982
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_45
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 983
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_46
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 984
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_47
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 985
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_48
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 986
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_49
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 987
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_50
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 988
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_51
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 989
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_52
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 990
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_53
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 991
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_54
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 992
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_55
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 993
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_56
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 994
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_57
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 995
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_58
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 996
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_59
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 997
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_60
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 998
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_61
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 999
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_62
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 1000
+  - name: WayLookup_top.WayLookup.__Vtogcov__ptag_same_63
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 1001
+  - name: __Vdpi_export_trigger
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 1002
+  - name: __VdfgRegularize_h6e95ff9d_0_1
+    type: CData
+    mem_bytes: 1
+    rtl_width: 6
+    offset: 1003
+  - name: __VstlFirstIteration
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 1004
+  - name: __VstlPhaseResult
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 1005
+  - name: __VicoFirstIteration
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 1006
+  - name: __VicoPhaseResult
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 1007
+  - name: __Vtrigprevexpr___TOP__WayLookup_top.clock__0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 1008
+  - name: __Vtrigprevexpr___TOP__WayLookup_top.reset__0
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 1009
+  - name: __VactPhaseResult
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 1010
+  - name: __VnbaPhaseResult
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    offset: 1011
+  - name: __VactIterCount
+    type: IData
+    mem_bytes: 4
+    rtl_width: 32
+    offset: 1012
+  - name: WayLookup_top.io_read_bits_entry_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1016
+  - name: WayLookup_top.io_read_bits_entry_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1024
+  - name: WayLookup_top.io_read_bits_gpf_gpaddr
+    type: QData
+    mem_bytes: 8
+    rtl_width: 56
+    offset: 1032
+  - name: WayLookup_top.io_write_bits_entry_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1040
+  - name: WayLookup_top.io_write_bits_entry_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1048
+  - name: WayLookup_top.io_write_bits_gpf_gpaddr
+    type: QData
+    mem_bytes: 8
+    rtl_width: 56
+    offset: 1056
+  - name: WayLookup_top.io_update_bits_blkPaddr
+    type: QData
+    mem_bytes: 8
+    rtl_width: 42
+    offset: 1064
+  - name: WayLookup_top.__Vtogcov__io_read_bits_entry_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1072
+  - name: WayLookup_top.__Vtogcov__io_read_bits_entry_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1080
+  - name: WayLookup_top.__Vtogcov__io_read_bits_gpf_gpaddr
+    type: QData
+    mem_bytes: 8
+    rtl_width: 56
+    offset: 1088
+  - name: WayLookup_top.__Vtogcov__io_write_bits_entry_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1096
+  - name: WayLookup_top.__Vtogcov__io_write_bits_entry_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1104
+  - name: WayLookup_top.__Vtogcov__io_write_bits_gpf_gpaddr
+    type: QData
+    mem_bytes: 8
+    rtl_width: 56
+    offset: 1112
+  - name: WayLookup_top.__Vtogcov__io_update_bits_blkPaddr
+    type: QData
+    mem_bytes: 8
+    rtl_width: 42
+    offset: 1120
+  - name: WayLookup_top.WayLookup.__VlemCond_12
+    type: QData
+    mem_bytes: 8
+    rtl_width: 56
+    offset: 1128
+  - name: WayLookup_top.WayLookup.__VlemCond_5
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1136
+  - name: WayLookup_top.WayLookup.__VlemCond_4
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1144
+  - name: WayLookup_top.WayLookup.entries_0_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1152
+  - name: WayLookup_top.WayLookup.entries_0_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1160
+  - name: WayLookup_top.WayLookup.entries_1_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1168
+  - name: WayLookup_top.WayLookup.entries_1_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1176
+  - name: WayLookup_top.WayLookup.entries_2_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1184
+  - name: WayLookup_top.WayLookup.entries_2_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1192
+  - name: WayLookup_top.WayLookup.entries_3_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1200
+  - name: WayLookup_top.WayLookup.entries_3_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1208
+  - name: WayLookup_top.WayLookup.entries_4_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1216
+  - name: WayLookup_top.WayLookup.entries_4_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1224
+  - name: WayLookup_top.WayLookup.entries_5_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1232
+  - name: WayLookup_top.WayLookup.entries_5_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1240
+  - name: WayLookup_top.WayLookup.entries_6_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1248
+  - name: WayLookup_top.WayLookup.entries_6_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1256
+  - name: WayLookup_top.WayLookup.entries_7_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1264
+  - name: WayLookup_top.WayLookup.entries_7_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1272
+  - name: WayLookup_top.WayLookup.entries_8_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1280
+  - name: WayLookup_top.WayLookup.entries_8_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1288
+  - name: WayLookup_top.WayLookup.entries_9_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1296
+  - name: WayLookup_top.WayLookup.entries_9_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1304
+  - name: WayLookup_top.WayLookup.entries_10_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1312
+  - name: WayLookup_top.WayLookup.entries_10_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1320
+  - name: WayLookup_top.WayLookup.entries_11_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1328
+  - name: WayLookup_top.WayLookup.entries_11_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1336
+  - name: WayLookup_top.WayLookup.entries_12_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1344
+  - name: WayLookup_top.WayLookup.entries_12_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1352
+  - name: WayLookup_top.WayLookup.entries_13_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1360
+  - name: WayLookup_top.WayLookup.entries_13_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1368
+  - name: WayLookup_top.WayLookup.entries_14_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1376
+  - name: WayLookup_top.WayLookup.entries_14_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1384
+  - name: WayLookup_top.WayLookup.entries_15_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1392
+  - name: WayLookup_top.WayLookup.entries_15_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1400
+  - name: WayLookup_top.WayLookup.entries_16_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1408
+  - name: WayLookup_top.WayLookup.entries_16_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1416
+  - name: WayLookup_top.WayLookup.entries_17_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1424
+  - name: WayLookup_top.WayLookup.entries_17_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1432
+  - name: WayLookup_top.WayLookup.entries_18_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1440
+  - name: WayLookup_top.WayLookup.entries_18_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1448
+  - name: WayLookup_top.WayLookup.entries_19_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1456
+  - name: WayLookup_top.WayLookup.entries_19_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1464
+  - name: WayLookup_top.WayLookup.entries_20_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1472
+  - name: WayLookup_top.WayLookup.entries_20_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1480
+  - name: WayLookup_top.WayLookup.entries_21_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1488
+  - name: WayLookup_top.WayLookup.entries_21_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1496
+  - name: WayLookup_top.WayLookup.entries_22_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1504
+  - name: WayLookup_top.WayLookup.entries_22_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1512
+  - name: WayLookup_top.WayLookup.entries_23_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1520
+  - name: WayLookup_top.WayLookup.entries_23_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1528
+  - name: WayLookup_top.WayLookup.entries_24_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1536
+  - name: WayLookup_top.WayLookup.entries_24_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1544
+  - name: WayLookup_top.WayLookup.entries_25_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1552
+  - name: WayLookup_top.WayLookup.entries_25_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1560
+  - name: WayLookup_top.WayLookup.entries_26_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1568
+  - name: WayLookup_top.WayLookup.entries_26_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1576
+  - name: WayLookup_top.WayLookup.entries_27_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1584
+  - name: WayLookup_top.WayLookup.entries_27_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1592
+  - name: WayLookup_top.WayLookup.entries_28_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1600
+  - name: WayLookup_top.WayLookup.entries_28_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1608
+  - name: WayLookup_top.WayLookup.entries_29_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1616
+  - name: WayLookup_top.WayLookup.entries_29_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1624
+  - name: WayLookup_top.WayLookup.entries_30_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1632
+  - name: WayLookup_top.WayLookup.entries_30_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1640
+  - name: WayLookup_top.WayLookup.entries_31_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1648
+  - name: WayLookup_top.WayLookup.entries_31_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1656
+  - name: WayLookup_top.WayLookup.gpf_entry_bits_gpaddr
+    type: QData
+    mem_bytes: 8
+    rtl_width: 56
+    offset: 1664
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_0_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1672
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_0_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1680
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_1_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1688
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_1_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1696
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_2_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1704
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_2_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1712
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_3_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1720
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_3_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1728
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_4_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1736
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_4_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1744
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_5_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1752
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_5_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1760
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_6_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1768
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_6_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1776
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_7_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1784
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_7_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1792
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_8_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1800
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_8_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1808
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_9_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1816
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_9_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1824
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_10_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1832
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_10_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1840
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_11_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1848
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_11_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1856
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_12_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1864
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_12_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1872
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_13_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1880
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_13_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1888
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_14_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1896
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_14_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1904
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_15_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1912
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_15_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1920
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_16_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1928
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_16_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1936
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_17_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1944
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_17_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1952
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_18_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1960
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_18_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1968
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_19_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1976
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_19_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1984
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_20_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 1992
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_20_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2000
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_21_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2008
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_21_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2016
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_22_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2024
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_22_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2032
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_23_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2040
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_23_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2048
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_24_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2056
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_24_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2064
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_25_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2072
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_25_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2080
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_26_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2088
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_26_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2096
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_27_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2104
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_27_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2112
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_28_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2120
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_28_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2128
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_29_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2136
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_29_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2144
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_30_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2152
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_30_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2160
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_31_ptag_0
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2168
+  - name: WayLookup_top.WayLookup.__Vtogcov__entries_31_ptag_1
+    type: QData
+    mem_bytes: 8
+    rtl_width: 36
+    offset: 2176
+  - name: WayLookup_top.WayLookup.__Vtogcov__gpf_entry_bits_gpaddr
+    type: QData
+    mem_bytes: 8
+    rtl_width: 56
+    offset: 2184
+  - name: __VstlTriggered
+    type: QData
+    mem_bytes: 8
+    rtl_width: 64
+    array_size: 1
+    offset: 2192
+  - name: __VicoTriggered
+    type: QData
+    mem_bytes: 8
+    rtl_width: 64
+    array_size: 1
+    offset: 2200
+  - name: __VactTriggered
+    type: QData
+    mem_bytes: 8
+    rtl_width: 64
+    array_size: 2
+    offset: 2208
+  - name: __VnbaTriggered
+    type: QData
+    mem_bytes: 8
+    rtl_width: 64
+    array_size: 2
+    offset: 2224
+  - name: __Vm_traceActivity
+    type: CData
+    mem_bytes: 1
+    rtl_width: 1
+    array_size: 4
+    offset: 2240

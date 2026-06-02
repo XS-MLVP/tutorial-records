@@ -1,0 +1,106 @@
+{
+  "description": "Code coverage summary. `data` field contains uncovered lines",
+  "simulator": "verilator",
+  "overview": {
+    "total": {
+      "line": 2293,
+      "toggle": 7980,
+      "branch": 494,
+      "expr": 314
+    },
+    "miss": {
+      "line": 393,
+      "toggle": 0,
+      "branch": 1,
+      "expr": 1
+    }
+  },
+  "uncovered": {
+    "schema": {
+      "file_path": {
+        "total": [
+          "line",
+          "toggle",
+          "branch",
+          "expr"
+        ],
+        "miss": [
+          "line",
+          "toggle",
+          "branch",
+          "expr"
+        ],
+        "modules": {
+          "module_name": {
+            "total": [
+              "line",
+              "toggle",
+              "branch",
+              "expr"
+            ],
+            "miss": [
+              "line",
+              "toggle",
+              "branch",
+              "expr"
+            ],
+            "line": [
+              "lines"
+            ],
+            "toggle": [
+              "lines"
+            ],
+            "branch": [
+              "lines"
+            ],
+            "expr": [
+              "lines"
+            ]
+          }
+        }
+      }
+    },
+    "data": {
+      "/home/sfangyy/work/UCAgent/output/workspace_WayLookup/WayLookup/WayLookup.v": {
+        "total": {
+          "line": 2293,
+          "toggle": 7980,
+          "branch": 494,
+          "expr": 314
+        },
+        "miss": {
+          "line": 393,
+          "toggle": 0,
+          "branch": 1,
+          "expr": 1
+        },
+        "modules": {
+          "WayLookup": {
+            "total": {
+              "line": 2293,
+              "toggle": 7980,
+              "branch": 494,
+              "expr": 314
+            },
+            "miss": {
+              "line": 393,
+              "toggle": 0,
+              "branch": 1,
+              "expr": 1
+            },
+            "line": [
+              "3051-3443"
+            ],
+            "toggle": [],
+            "branch": [
+              "3050-3443"
+            ],
+            "expr": [
+              "2635-2635"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,16 +1,20 @@
 # UCAgent Workshop Docker Image
-ARG BASE_IMAGE=localhost/lucagent:latest
+ARG BASE_IMAGE=ghcr.io/xs-mlvp/ucagent:latest
 FROM ${BASE_IMAGE}
+
+# Set the timezone to Italy
+ENV TZ=Europe/Rome
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Set environment variables
 ENV SUMMIT_DATA_DIR=/workspace/UCAgent/summit_examples
 
 # Copy workshop data to the expected location
 # Context should be the root of the tutorial-records repository
-COPY workshop/data/ ${SUMMIT_DATA_DIR}/
+COPY workshop/examples/ ${SUMMIT_DATA_DIR}/
 
 # Copy and setup startup script
-COPY docker/start_demo.sh /workspace/UCAgent/start_demo.sh
+COPY workshop/start_demo.sh /workspace/UCAgent/start_demo.sh
 RUN chmod +x /workspace/UCAgent/start_demo.sh
 
 # Expose ports for Web UI and Agents

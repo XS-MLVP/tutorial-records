@@ -1,0 +1,2181 @@
+{
+    "version": "0.9.1.source-code",
+    "seed": 721622,
+    "stage_index": 28,
+    "all_completed": true,
+    "time_begin": 1780464243.4471548,
+    "time_end": 1780470603.0200355,
+    "is_agent_exit": true,
+    "stages_info": {
+        "0": {
+            "task": {
+                "title": "1-requirement_analysis_and_planning",
+                "description": [
+                    "WayLookup/README.md",
+                    "unity_test/WayLookup_verification_needs_and_plan.md"
+                ],
+                "reference_files": {
+                    "WayLookup/README.md": "Readed"
+                },
+                "output_files": [
+                    "unity_test/WayLookup_verification_needs_and_plan.md"
+                ],
+                "skill_list": {}
+            },
+            "section_index": "1",
+            "checker": [
+                "Check the markdown file format.",
+                "Check if the specified file exists."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 285.05751299858093,
+            "meta_data": {
+                "commit": {
+                    "hash": "b05e00076ad431ed1e45b61739b2b66440f10a5e",
+                    "message": "1-requirement_analysis_and_planning:\n\nStage completed."
+                },
+                "journal": "已使用 ReadTextFile 阅读 WayLookup/README.md，梳理 WayLookup 的 FIFO 队列、flush、读写、bypass、GPF 管理和 MissUnit update 等验证需求。已创建 unity_test/WayLookup_verification_needs_and_plan.md，内容包含验证范围、输入输出、验证目标、风险点、验证策略、交付物和完成标准，文档主体为中文。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerMarkdownFileFormat",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": {
+                            "message": "UnityChipCheckerMarkdownFileFormat check pass."
+                        }
+                    },
+                    {
+                        "name": "OrginFileMustExistChecker",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": "File exist check passed."
+                    }
+                ]
+            }
+        },
+        "1": {
+            "task": {
+                "title": "2-dut_function_understanding",
+                "description": [
+                    "WayLookup/README.md",
+                    "WayLookup/__init__.py",
+                    "unity_test/WayLookup_basic_info.md"
+                ],
+                "reference_files": {
+                    "WayLookup/README.md": "Readed",
+                    "WayLookup/__init__.py": "Readed"
+                },
+                "output_files": [
+                    "unity_test/WayLookup_basic_info.md"
+                ],
+                "skill_list": {}
+            },
+            "section_index": "2",
+            "checker": [
+                "Check the markdown file format."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 117.02554178237915,
+            "meta_data": {
+                "journal": "已使用 ReadTextFile 阅读 WayLookup/README.md 和 WayLookup/__init__.py。确认 WayLookup 为含 clock/reset 的时序 FIFO 模块，真实端口包括 flush、read ready-valid、write ready-valid、update valid-only，以及两路 entry 字段和单份 gpf 字段。已创建 unity_test/WayLookup_basic_info.md，整理模块类型、功能概述、端口方向/位宽、关键位宽和后续验证关注点。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerMarkdownFileFormat",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": {
+                            "message": "UnityChipCheckerMarkdownFileFormat check pass."
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "c8e61e50158d7c25bc67a0360e1e39285b24f1ac",
+                    "message": "2-dut_function_understanding:\n\nStage completed."
+                }
+            }
+        },
+        "2": {
+            "task": {
+                "title": "3.1-dut_function_grouping",
+                "description": [],
+                "reference_files": {},
+                "output_files": [],
+                "skill_list": {
+                    "functions-and-checks": [
+                        "Listed",
+                        "Read",
+                        "Used"
+                    ]
+                },
+                "upper_task": {
+                    "title": "3-functional_specification_analysis",
+                    "description": [
+                        "WayLookup/",
+                        "unity_test/WayLookup_functions_and_checks.md",
+                        "Guide_Doc/dut_functions_and_checks.md"
+                    ],
+                    "reference_files": {
+                        "WayLookup/README.md": "Readed",
+                        "WayLookup/__init__.py": "Readed",
+                        "Guide_Doc/dut_functions_and_checks.md": "Readed"
+                    },
+                    "output_files": [
+                        "unity_test/WayLookup_functions_and_checks.md"
+                    ],
+                    "skill_list": {
+                        "functions-and-checks": [
+                            "Listed",
+                            "Read",
+                            "Used"
+                        ]
+                    }
+                }
+            },
+            "section_index": "3.1",
+            "checker": [
+                "Check the label structure in the documentation file."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 177.94870400428772,
+            "meta_data": {
+                "skill_usage": {
+                    "functions-and-checks": {
+                        "list": true,
+                        "read": true,
+                        "use": true
+                    }
+                },
+                "journal": "已阅读 functions-and-checks 技能文档、WayLookup/README.md、WayLookup/__init__.py 和 Guide_Doc/dut_functions_and_checks.md。先修正 functions_and_checks 文档基础框架标题以满足技能脚本要求，未手工插入 FG/FC/CK 标签。通过 RunSkillScript 调用 update.py 以 MODE=FG 插入 8 个功能分组：FG-API、FG-FLUSH、FG-FIFO、FG-READ、FG-WRITE、FG-GPF、FG-UPDATE、FG-PRIORITY。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerLabelStructure",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": {
+                            "message": "UnityChipCheckerLabelStructure check FG pass.",
+                            "FG_count": 8
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "06f82cab3d5e1a5fc1cce0488ef8d3c571f76d22",
+                    "message": "3.1-dut_function_grouping:\n\nStage completed."
+                }
+            }
+        },
+        "3": {
+            "task": {
+                "title": "3.2-function_point_definition[25]",
+                "description": [
+                    "- <FG-*>, <FC-*>, <CK-*>"
+                ],
+                "reference_files": {},
+                "output_files": [],
+                "skill_list": {
+                    "functions-and-checks": [
+                        "Listed",
+                        "Read",
+                        "Used"
+                    ]
+                },
+                "upper_task": {
+                    "title": "3-functional_specification_analysis",
+                    "description": [
+                        "WayLookup/",
+                        "unity_test/WayLookup_functions_and_checks.md",
+                        "Guide_Doc/dut_functions_and_checks.md"
+                    ],
+                    "reference_files": {
+                        "WayLookup/README.md": "Readed",
+                        "WayLookup/__init__.py": "Readed",
+                        "Guide_Doc/dut_functions_and_checks.md": "Readed"
+                    },
+                    "output_files": [
+                        "unity_test/WayLookup_functions_and_checks.md"
+                    ],
+                    "skill_list": {
+                        "functions-and-checks": [
+                            "Listed",
+                            "Read",
+                            "Used"
+                        ]
+                    }
+                }
+            },
+            "section_index": "3.2",
+            "checker": [
+                "Check the label structure in the documentation file."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 77.68959283828735,
+            "meta_data": {
+                "skill_usage": {
+                    "functions-and-checks": {
+                        "list": true,
+                        "read": true,
+                        "use": true
+                    }
+                },
+                "journal": "已在 3.2 阶段重新读取 functions-and-checks 技能文档和当前 functions_and_checks 文档。通过 RunSkillScript 调用 update.py MODE=FC，在 8 个 FG 下插入 25 个具体功能点：API 2 个、FLUSH 3 个、FIFO 3 个、READ 3 个、WRITE 3 个、GPF 4 个、UPDATE 4 个、PRIORITY 3 个。本阶段未添加 CK，符合技能层级约束。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerLabelStructure",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": {
+                            "message": "UnityChipCheckerLabelStructure check FC pass.",
+                            "FC_count": 25
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "cb355dbd9b78dbc52fb3d3ec1f52cba9799ad393",
+                    "message": "3.2-function_point_definition:\n\nStage completed."
+                }
+            }
+        },
+        "4": {
+            "task": {
+                "title": "3.3-check_point_design[65]",
+                "description": [],
+                "reference_files": {},
+                "output_files": [],
+                "skill_list": {
+                    "functions-and-checks": [
+                        "Listed",
+                        "Read",
+                        "Used"
+                    ]
+                },
+                "upper_task": {
+                    "title": "3-functional_specification_analysis",
+                    "description": [
+                        "WayLookup/",
+                        "unity_test/WayLookup_functions_and_checks.md",
+                        "Guide_Doc/dut_functions_and_checks.md"
+                    ],
+                    "reference_files": {
+                        "WayLookup/README.md": "Readed",
+                        "WayLookup/__init__.py": "Readed",
+                        "Guide_Doc/dut_functions_and_checks.md": "Readed"
+                    },
+                    "output_files": [
+                        "unity_test/WayLookup_functions_and_checks.md"
+                    ],
+                    "skill_list": {
+                        "functions-and-checks": [
+                            "Listed",
+                            "Read",
+                            "Used"
+                        ]
+                    }
+                }
+            },
+            "section_index": "3.3",
+            "checker": [
+                "Check the label structure in the documentation file."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 183.4267222881317,
+            "meta_data": {
+                "skill_usage": {
+                    "functions-and-checks": {
+                        "list": true,
+                        "read": true,
+                        "use": true
+                    }
+                },
+                "journal": "已在 3.3 阶段读取 functions-and-checks 技能文档和当前 functions_and_checks 文档。通过 RunSkillScript 调用 update.py MODE=CK，为 25 个 FC 插入可测 CK，共覆盖 API、reset/flush、FIFO 顺序/空满/回绕、read 正常/空/bypass、write 正常/阻塞/字段保持、GPF 检测/保存/清除/stall、update 命中/冲突/corrupt/选择性以及优先级组合场景。所有 CK 以公开端口和后续 API 可观测行为为判据。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerLabelStructure",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": {
+                            "message": "UnityChipCheckerLabelStructure check CK pass.",
+                            "CK_count": 65
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "8f8934139d3b6ad06ab338b7d8c218998402ca0d",
+                    "message": "3.3-check_point_design:\n\nStage completed."
+                }
+            }
+        },
+        "5": {
+            "task": {
+                "title": "3-functional_specification_analysis",
+                "description": [
+                    "WayLookup/",
+                    "unity_test/WayLookup_functions_and_checks.md",
+                    "Guide_Doc/dut_functions_and_checks.md"
+                ],
+                "reference_files": {
+                    "WayLookup/README.md": "Readed",
+                    "WayLookup/__init__.py": "Readed",
+                    "Guide_Doc/dut_functions_and_checks.md": "Readed"
+                },
+                "output_files": [
+                    "unity_test/WayLookup_functions_and_checks.md"
+                ],
+                "skill_list": {
+                    "functions-and-checks": [
+                        "Listed",
+                        "Read",
+                        "Used"
+                    ]
+                },
+                "notes": "You have complete this stage's submissions (3.1-dut_function_grouping-DUT功能分组与层次划分[8], 3.2-function_point_definition-具体功能点识别与定义[25], 3.3-check_point_design-检测点设计与定义[65]), now you need to check this stage is complete or not."
+            },
+            "section_index": "3",
+            "checker": [],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 1,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 105.02924966812134,
+            "meta_data": {
+                "skill_usage": {
+                    "functions-and-checks": {
+                        "list": true,
+                        "read": true,
+                        "use": true
+                    }
+                },
+                "journal": "功能规格分析父阶段已按 checker 要求在当前阶段重新使用 ReadTextFile 阅读 WayLookup/README.md、WayLookup/__init__.py、Guide_Doc/dut_functions_and_checks.md，并阅读 functions-and-checks 技能文档。最终 WayLookup_functions_and_checks.md 包含 8 个 FG、25 个 FC、65 个 CK，覆盖需求文档中全部主要功能和边界条件。",
+                "llm_fail_suggestion": {
+                    "check_info": {
+                        "error": "You need use tool `ReadTextFile` to read and understand the reference files",
+                        "files_need_read": [
+                            "WayLookup/README.md (Not readed, need ReadTextFile('WayLookup/README.md'))",
+                            "WayLookup/__init__.py (Not readed, need ReadTextFile('WayLookup/__init__.py'))",
+                            "Guide_Doc/dut_functions_and_checks.md (Not readed, need ReadTextFile('Guide_Doc/dut_functions_and_checks.md'))"
+                        ]
+                    },
+                    "check_pass": false
+                },
+                "llm_pass_suggestion": [],
+                "commit": {
+                    "hash": "8f8934139d3b6ad06ab338b7d8c218998402ca0d",
+                    "message": "3-functional_specification_analysis:\n\nStage completed."
+                }
+            }
+        },
+        "6": {
+            "task": {
+                "title": "4-static_bug_analysis",
+                "description": [
+                    "RTLBugunity_test/WayLookup_static_bug_analysis.md"
+                ],
+                "reference_files": {
+                    "unity_test/WayLookup_functions_and_checks.md": "Readed",
+                    "Guide_Doc/dut_bug_analysis.md": "Readed"
+                },
+                "output_files": [
+                    "unity_test/WayLookup_static_bug_analysis.md"
+                ],
+                "skill_list": {
+                    "static-bug-analysis": [
+                        "Listed",
+                        "Read",
+                        "Used"
+                    ]
+                }
+            },
+            "section_index": "4",
+            "checker": [
+                "Drive batch static bug analysis."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 158.34954810142517,
+            "meta_data": {
+                "skill_usage": {
+                    "static-bug-analysis": {
+                        "list": true,
+                        "read": true,
+                        "use": true
+                    }
+                },
+                "journal": "已阅读 static-bug-analysis 技能、unity_test/WayLookup_functions_and_checks.md、Guide_Doc/dut_bug_analysis.md、WayLookup_RTL/WayLookup.scala，并抽查生成 Verilog 的对应 read/write ready-valid 逻辑。静态分析发现 1 个中置信度潜在问题：Scala 289-314 行 read bypass/read.valid 只使用 io.write.valid，未显式考虑 io.write.ready，可能在写未被接受时让 read 端观察到未入队数据。已通过 recordbug.py 记录为 BG-STATIC-001-BYPASS-VALID-NO-READY，并在批次进度中标记 Scala 1 个疑似 Bug、生成 Verilog 0 个独立 Bug。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipBatchCheckerStaticBug",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": {
+                            "success": "Congratulations! 1 RTL_file_to_analyze in this batch have been completed. All RTL_file_to_analyze are done, complete success.",
+                            "note": [
+                                "Analyzed files updated from document.",
+                                "Added: WayLookup_RTL/WayLookup.scala, WayLookup_RTL/WayLookup.v"
+                            ],
+                            "current_batch": [],
+                            "progress": "2/2",
+                            "remaining_files": 0,
+                            "analyzed_files": 2,
+                            "analysis_progress": "2/2",
+                            "task": []
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "b647ab854e1f8b3d14d57ef999f897801827e2ae",
+                    "message": "4-static_bug_analysis:\n\nStage completed."
+                }
+            }
+        },
+        "7": {
+            "task": {
+                "title": "5.1-dut_creation_implementation",
+                "description": [
+                    "unity_test/tests/WayLookup_api.pycreate_dut(request)DUT",
+                    "DUT/",
+                    "dut.SetCoverage"
+                ],
+                "reference_files": {
+                    "Guide_Doc/dut_function_coverage_def.md": "Readed",
+                    "Guide_Doc/dut_fixture.md": "Readed"
+                },
+                "output_files": [],
+                "skill_list": {},
+                "upper_task": {
+                    "title": "5-dut_wrapper_implementation",
+                    "description": [
+                        "dut fixture -",
+                        "unity_test/tests/WayLookup_api.py",
+                        "Guide_Doc/dut_fixture.md"
+                    ],
+                    "reference_files": {},
+                    "output_files": [
+                        "unity_test/tests/WayLookup_api.py"
+                    ],
+                    "skill_list": {}
+                }
+            },
+            "section_index": "5.1",
+            "checker": [
+                "Check the DUT creation function for correctness."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 76.57984256744385,
+            "meta_data": {
+                "journal": "已阅读 Guide_Doc/dut_function_coverage_def.md、Guide_Doc/dut_fixture.md 和 unity_test/tests/WayLookup_api.py。根据 WayLookup 为时序模块的事实，修改 create_dut(request)：保留测试模板 fake DUT 分支，实例化 DUTWayLookup，设置 get_coverage_data_path(request, new_path=True) 得到的覆盖率文件，调用 dut.InitClock(\"clock\") 绑定时钟，并未驱动任何功能输入引脚。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerDutCreation",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": {
+                            "message": "UnityChipCheckerDutCreation check for unity_test/tests/WayLookup_api.py passed."
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "8c32b5be2d2ee8473fb4ef912e713bb509d3d102",
+                    "message": "5.1-dut_creation_implementation:\n\nStage completed."
+                }
+            }
+        },
+        "8": {
+            "task": {
+                "title": "5.2-pytest_fixture_dut_implementation",
+                "description": [
+                    "dut fixtureget_coverage_data_path(request, new_path=False) set_line_coverage"
+                ],
+                "reference_files": {
+                    "Guide_Doc/dut_fixture.md": "Readed"
+                },
+                "output_files": [],
+                "skill_list": {},
+                "upper_task": {
+                    "title": "5-dut_wrapper_implementation",
+                    "description": [
+                        "dut fixture -",
+                        "unity_test/tests/WayLookup_api.py",
+                        "Guide_Doc/dut_fixture.md"
+                    ],
+                    "reference_files": {},
+                    "output_files": [
+                        "unity_test/tests/WayLookup_api.py"
+                    ],
+                    "skill_list": {}
+                }
+            },
+            "section_index": "5.2",
+            "checker": [
+                "Check the fixture implementation for correctness."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 55.490134716033936,
+            "meta_data": {
+                "journal": "已阅读 Guide_Doc/dut_fixture.md 和 unity_test/tests/WayLookup_api.py。现有 dut fixture 为 function scope，调用 create_dut(request) 创建 DUT，获取功能覆盖组，注册 StepRis 采样，将 fc_cover 绑定到 DUT；teardown 阶段调用 set_func_coverage，并使用 get_coverage_data_path(request, new_path=False) 将已有覆盖率文件传递给 set_line_coverage，随后设置报告信息、清空覆盖组并调用 dut.Finish()。本阶段无需额外修改。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerDutFixture",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": {
+                            "message": "UnityChipCheckerDutFixture fixture check for unity_test/tests/WayLookup_api.py passed."
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "8c32b5be2d2ee8473fb4ef912e713bb509d3d102",
+                    "message": "5.2-pytest_fixture_dut_implementation:\n\nStage completed."
+                }
+            }
+        },
+        "9": {
+            "task": {
+                "title": "5-dut_wrapper_implementation",
+                "description": [
+                    "dut fixture -",
+                    "unity_test/tests/WayLookup_api.py",
+                    "Guide_Doc/dut_fixture.md"
+                ],
+                "reference_files": {},
+                "output_files": [
+                    "unity_test/tests/WayLookup_api.py"
+                ],
+                "skill_list": {},
+                "notes": "You have complete this stage's submissions (5.1-dut_creation_implementation-DUT创建函数实现, 5.2-pytest_fixture_dut_implementation-dut fixture实现), now you need to check this stage is complete or not."
+            },
+            "section_index": "5",
+            "checker": [],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 42.845481872558594,
+            "meta_data": {
+                "journal": "DUT 封装父阶段汇总：unity_test/tests/WayLookup_api.py 已实现 create_dut(request)，支持 fake DUT、DUTWayLookup 实例化、覆盖率路径设置和 clock 绑定；dut fixture 为 function scope，负责功能覆盖组采样、fc_cover 绑定、set_func_coverage、set_line_coverage、报告信息、覆盖组清理和 dut.Finish()。",
+                "llm_pass_suggestion": [],
+                "commit": {
+                    "hash": "8c32b5be2d2ee8473fb4ef912e713bb509d3d102",
+                    "message": "5-dut_wrapper_implementation:\n\nStage completed."
+                }
+            }
+        },
+        "10": {
+            "task": {
+                "title": "6.1-coverage_group_creation",
+                "description": [],
+                "reference_files": {
+                    "Guide_Doc/dut_function_coverage_def.md": "Readed"
+                },
+                "output_files": [],
+                "skill_list": {},
+                "upper_task": {
+                    "title": "6-coverage_model_implementation",
+                    "description": [
+                        "unity_test/WayLookup_functions_and_checks.md",
+                        "Guide_Doc/dut_function_coverage_def.md",
+                        "unity_test/tests/WayLookup_function_coverage_def.py",
+                        "dut(dutdut.a.value)"
+                    ],
+                    "reference_files": {},
+                    "output_files": [
+                        "unity_test/tests/WayLookup_function_coverage_def.py"
+                    ],
+                    "skill_list": {}
+                }
+            },
+            "section_index": "6.1",
+            "checker": [
+                "Check the functional coverage groups against the documentation."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 83.94752144813538,
+            "meta_data": {
+                "journal": "已阅读 Guide_Doc/dut_function_coverage_def.md、unity_test/WayLookup_functions_and_checks.md 和现有 WayLookup_function_coverage_def.py。已将模板替换为覆盖组基础框架，定义 FG_NAMES 包含 8 个功能分组：FG-API、FG-FLUSH、FG-FIFO、FG-READ、FG-WRITE、FG-GPF、FG-UPDATE、FG-PRIORITY；get_coverage_groups(dut) 返回对应 fc.CovGroup 列表。当前阶段未添加 watch_point，符合 6.1 只创建覆盖组的要求。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerCoverageGroup",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": "All coverage checks [FG] passed."
+                    }
+                ],
+                "commit": {
+                    "hash": "442885388930ed8a6ec58a888df87eb9e6517a80",
+                    "message": "6.1-coverage_group_creation:\n\nStage completed."
+                }
+            }
+        },
+        "11": {
+            "task": {
+                "title": "6.2.1-implemente_function_checks_in_batch[65/65]",
+                "description": [
+                    "unity_test/WayLookup_functions_and_checks.md",
+                    "/65",
+                    "- dut(dutdut.a.value)"
+                ],
+                "reference_files": {
+                    "Guide_Doc/dut_function_coverage_def.md": "Readed"
+                },
+                "output_files": [],
+                "skill_list": {},
+                "upper_task": {
+                    "title": "6.2-coverage_point_implementation",
+                    "description": [],
+                    "reference_files": {},
+                    "output_files": [],
+                    "skill_list": {}
+                }
+            },
+            "section_index": "6.2.1",
+            "checker": [
+                "Check the functional coverage groups against the documentation."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 1,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 405.92230439186096,
+            "meta_data": {
+                "llm_fail_suggestion": {
+                    "check_info": [
+                        {
+                            "name": "UnityChipCheckerCoverageGroupBatchImplementation",
+                            "count_pass": 0,
+                            "count_fail": 1,
+                            "count_check": 4,
+                            "last_msg": {
+                                "success": "Congratulations! 20 check_points in this batch have been completed. Now the next 5 check_points: FG-WRITE/FC-WRITE-FIELDS/CK-WRITE-FIELDS-LANE0, FG-WRITE/FC-WRITE-FIELDS/CK-WRITE-FIELDS-LANE1, FG-WRITE/FC-WRITE-FIELDS/CK-WRITE-GPF-FIELDS, FG-WRITE/FC-WRITE-NORMAL/CK-WRITE-FIRE-STORES, FG-WRITE/FC-WRITE-NORMAL/CK-WRITE-READY-EMPTY need to be completed. Please implement the check points in its related coverage groups follow the guid documents. Process status: 60/65",
+                                "note": [
+                                    "Completed CK points changed.",
+                                    "Added: FG-READ/FC-READ-BYPASS/CK-BYPASS-NO-QUEUE-LEFT, FG-READ/FC-READ-BYPASS/CK-BYPASS-READ-NOT-READY, FG-READ/FC-READ-EMPTY/CK-READ-EMPTY-NO-WRITE, FG-READ/FC-READ-EMPTY/CK-READ-EMPTY-READY-IGNORED, FG-READ/FC-READ-NORMAL/CK-READ-BITS-NORMAL, FG-READ/FC-READ-NORMAL/CK-READ-FIRE-ADVANCE, FG-READ/FC-READ-NORMAL/CK-READ-VALID-NONEMPTY, FG-UPDATE/FC-UPDATE-CONFLICT/CK-UPDATE-CONFLICT-LANE0, FG-UPDATE/FC-UPDATE-CONFLICT/CK-UPDATE-CONFLICT-LANE1, FG-UPDATE/FC-UPDATE-CONFLICT/CK-UPDATE-NO-CONFLICT-WAY, FG-UPDATE/FC-UPDATE-CORRUPT/CK-UPDATE-CORRUPT-CONFLICT, FG-UPDATE/FC-UPDATE-CORRUPT/CK-UPDATE-CORRUPT-HIT, FG-UPDATE/FC-UPDATE-HIT/CK-UPDATE-HIT-LANE0, FG-UPDATE/FC-UPDATE-HIT/CK-UPDATE-HIT-LANE1, FG-UPDATE/FC-UPDATE-HIT/CK-UPDATE-HIT-META, FG-UPDATE/FC-UPDATE-SELECTIVE/CK-UPDATE-MULTI-ENTRY, FG-UPDATE/FC-UPDATE-SELECTIVE/CK-UPDATE-SELECT-PTAG, FG-UPDATE/FC-UPDATE-SELECTIVE/CK-UPDATE-SELECT-VSET, FG-WRITE/FC-WRITE-BLOCK/CK-WRITE-BLOCK-FULL, FG-WRITE/FC-WRITE-BLOCK/CK-WRITE-BLOCK-GPF"
+                                ]
+                            }
+                        }
+                    ],
+                    "check_pass": false,
+                    "action": "Please fix the issues reported in 'check_info.last_msg.error' according to the suggestions, and then use the `Check` tool again to re-validate your work."
+                },
+                "journal": "已完成 6.2.1 全部 65 个功能覆盖检查点实现。使用 ReadTextFile 阅读阶段参考文档、功能点文档、DUT API、端口定义与 Scala RTL 片段。修改 unity_test/tests/WayLookup_function_coverage_def.py：为 8 个 FG 添加全部 25 个 FC 的 watch_point 和 65 个 CK 检查函数；检查函数均传递 dut 对象引用，基于公开输入输出端口判断，不访问内部信号。覆盖 API、reset/flush、FIFO、read、write、GPF、update、priority 各功能分组。已运行 python -m py_compile 通过；Check 确认全部 65 个 CK 已完成。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerCoverageGroupBatchImplementation",
+                        "count_pass": 2,
+                        "count_fail": 1,
+                        "count_check": 6,
+                        "last_msg": "Complete success."
+                    }
+                ],
+                "commit": {
+                    "hash": "684b9631b31d2968840f0165165ec53bf320be22",
+                    "message": "6.2.1-implemente_function_checks_in_batch:\n\nStage completed."
+                }
+            }
+        },
+        "12": {
+            "task": {
+                "title": "6.2-coverage_point_implementation",
+                "description": [],
+                "reference_files": {},
+                "output_files": [],
+                "skill_list": {},
+                "upper_task": {
+                    "title": "6-coverage_model_implementation",
+                    "description": [
+                        "unity_test/WayLookup_functions_and_checks.md",
+                        "Guide_Doc/dut_function_coverage_def.md",
+                        "unity_test/tests/WayLookup_function_coverage_def.py",
+                        "dut(dutdut.a.value)"
+                    ],
+                    "reference_files": {},
+                    "output_files": [
+                        "unity_test/tests/WayLookup_function_coverage_def.py"
+                    ],
+                    "skill_list": {}
+                },
+                "notes": "You have complete this stage's submissions (6.2.1-implemente_function_checks_in_batch-分批功能点检查函数实现[65/65]), now you need to check this stage is complete or not."
+            },
+            "section_index": "6.2",
+            "checker": [
+                "Check the functional coverage groups against the documentation."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 28.68765616416931,
+            "meta_data": {
+                "journal": "6.2 覆盖率检查点实现父阶段收敛：子阶段 6.2.1 已完成全部 65 个 CK，unity_test/tests/WayLookup_function_coverage_def.py 中 8 个 FG、25 个 FC 均已添加 watch_point 和检查函数。检查函数传入 dut 引用，基于公开端口采样，包含中文注释和公共辅助函数，满足完整覆盖率定义要求。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerCoverageGroup",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": "All coverage checks [FC,CK] passed."
+                    }
+                ],
+                "commit": {
+                    "hash": "684b9631b31d2968840f0165165ec53bf320be22",
+                    "message": "6.2-coverage_point_implementation:\n\nStage completed."
+                }
+            }
+        },
+        "13": {
+            "task": {
+                "title": "6-coverage_model_implementation",
+                "description": [
+                    "unity_test/WayLookup_functions_and_checks.md",
+                    "Guide_Doc/dut_function_coverage_def.md",
+                    "unity_test/tests/WayLookup_function_coverage_def.py",
+                    "dut(dutdut.a.value)"
+                ],
+                "reference_files": {},
+                "output_files": [
+                    "unity_test/tests/WayLookup_function_coverage_def.py"
+                ],
+                "skill_list": {},
+                "notes": "You have complete this stage's submissions (6.1-coverage_group_creation-功能覆盖组创建, 6.2-coverage_point_implementation-覆盖率检查点实现), now you need to check this stage is complete or not."
+            },
+            "section_index": "6",
+            "checker": [],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 34.62527012825012,
+            "meta_data": {
+                "journal": "6 覆盖率模型实现父阶段完成：已读取 unity_test/tests/WayLookup_function_coverage_def.py 并确认覆盖模型包含 8 个 CovGroup、25 个 watch_point 和 65 个 CK 检查函数；get_coverage_groups(dut) 创建覆盖组并初始化全部检查函数。前序 6.1、6.2 均已通过 checker，当前文件语法检查通过。",
+                "llm_pass_suggestion": [],
+                "commit": {
+                    "hash": "684b9631b31d2968840f0165165ec53bf320be22",
+                    "message": "6-coverage_model_implementation:\n\nStage completed."
+                }
+            }
+        },
+        "14": {
+            "task": {
+                "title": "7.1-human_check_env_specificationenv",
+                "description": [
+                    ". env",
+                    ". envMock",
+                    ". env",
+                    ". envunity_test/WayLookup_env_specification.md",
+                    ". Guide_Doc/env_spec_template.mdunity_test/WayLookup_env_spec_<component_name>.md",
+                    ". env",
+                    "- env fixture"
+                ],
+                "reference_files": {
+                    "Guide_Doc/env_spec_template.md": "Not Read",
+                    "Guide_Doc/dut_fixture.md": "Not Read",
+                    "Guide_Doc/dut_mock.md": "Not Read"
+                },
+                "output_files": [
+                    "unity_test/WayLookup_env_specification.md",
+                    "unity_test/WayLookup_env_spec_*.md"
+                ],
+                "skill_list": {},
+                "upper_task": {
+                    "title": "7-test_environment_implementation",
+                    "description": [
+                        ". WayLookup",
+                        ". toffee.Bundlefrom_prefix",
+                        ". toffee.Bundlefrom_dict",
+                        ". MockWayLookup",
+                        ". env fixtureMock",
+                        ". env fixture"
+                    ],
+                    "reference_files": {},
+                    "output_files": [],
+                    "skill_list": {}
+                }
+            },
+            "section_index": "7.1",
+            "checker": [
+                "Perform a human-in-the-loop check.\n\n        Returns:\n            Tuple[bool, str]: A tuple where the first element is a boolean indicating success or failure,\n                              and the second element is a message string."
+            ],
+            "reached": false,
+            "is_completed": false,
+            "check_pass": false,
+            "fail_count": 0,
+            "is_skipped": true,
+            "needs_human_check": true,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 0.0,
+            "meta_data": {}
+        },
+        "15": {
+            "task": {
+                "title": "7.2-bundle_wrapper_design",
+                "description": [
+                    "toffee.Bundlefrom_prefix",
+                    "toffee.Bundlefrom_dict",
+                    "- toffee.Signalbinddut",
+                    "- toffee.Signalsbinddut"
+                ],
+                "reference_files": {
+                    "WayLookup/__init__.py": "Readed",
+                    "Guide_Doc/dut_fixture.md": "Readed"
+                },
+                "output_files": [],
+                "skill_list": {},
+                "upper_task": {
+                    "title": "7-test_environment_implementation",
+                    "description": [
+                        ". WayLookup",
+                        ". toffee.Bundlefrom_prefix",
+                        ". toffee.Bundlefrom_dict",
+                        ". MockWayLookup",
+                        ". env fixtureMock",
+                        ". env fixture"
+                    ],
+                    "reference_files": {},
+                    "output_files": [],
+                    "skill_list": {}
+                }
+            },
+            "section_index": "7.2",
+            "checker": [
+                "Check the Bundle wrapper implementation for correctness."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 101.29272174835205,
+            "meta_data": {
+                "journal": "7.2 引脚封装设计完成。已用 ReadTextFile 阅读 WayLookup/__init__.py 与 Guide_Doc/dut_fixture.md。修改 unity_test/tests/WayLookup_api.py：新增 WayLookupControlBundle、WayLookupReadyValidBundle、WayLookupEntryBundle、WayLookupGPFBundle、WayLookupUpdateBundle；WayLookupEnv 中按 control/read/read_entry/read_gpf/write/write_entry/write_gpf/update 分组使用 from_prefix/from_dict 绑定 DUT 公开端口，并提供 clear_inputs 与 Step。python -m py_compile 通过，Check 已通过。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerBundleWrapper",
+                        "count_pass": 2,
+                        "count_fail": 0,
+                        "count_check": 2,
+                        "last_msg": {
+                            "message": "UnityChipCheckerBundleWrapper check for unity_test/tests/WayLookup_api.py passed."
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "4af78049d3ccb34caaf16c8b90927b0a7c407f9a",
+                    "message": "7.2-bundle_wrapper_design:\n\nStage completed."
+                }
+            }
+        },
+        "16": {
+            "task": {
+                "title": "7.6-env_fixture_implementation",
+                "description": [
+                    ". dut WayLookup/__init__.py",
+                    ". toffee.Bundlefrom_prefix, envio_group1.a, io_group2.b",
+                    ". toffee.Bundlefrom_dictenvioio.a, io.b",
+                    ". env fixtureWayLookupMockdut.StepRisMock",
+                    ". dut,reset, Finish, Step",
+                    ". Mockenv fixture",
+                    ". WayLookup"
+                ],
+                "reference_files": {
+                    "WayLookup/__init__.py": "Readed",
+                    "Guide_Doc/dut_fixture.md": "Readed"
+                },
+                "output_files": [],
+                "skill_list": {},
+                "upper_task": {
+                    "title": "7-test_environment_implementation",
+                    "description": [
+                        ". WayLookup",
+                        ". toffee.Bundlefrom_prefix",
+                        ". toffee.Bundlefrom_dict",
+                        ". MockWayLookup",
+                        ". env fixtureMock",
+                        ". env fixture"
+                    ],
+                    "reference_files": {},
+                    "output_files": [],
+                    "skill_list": {}
+                }
+            },
+            "section_index": "7.6",
+            "checker": [
+                "Check the fixture implementation for correctness."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 102.69146871566772,
+            "meta_data": {
+                "journal": "7.6 env fixture 实现完成。已重新读取 WayLookup/__init__.py 与 Guide_Doc/dut_fixture.md。unity_test/tests/WayLookup_api.py 中 env fixture 返回 WayLookupEnv 实例，WayLookupEnv 包含按接口分组的 Bundle 封装，并新增 clear_inputs、reset、flush、set_read_ready、drive_write、drive_update、sample_read、Step 等常用操作。未定义 Mock 组件，因为 WayLookup 的上下游依赖可通过 write/read/update 公开端口直接模拟。python -m py_compile 通过，Check 已通过。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerEnvFixture",
+                        "count_pass": 2,
+                        "count_fail": 0,
+                        "count_check": 2,
+                        "last_msg": {
+                            "message": "UnityChipCheckerEnvFixture fixture check for unity_test/tests/WayLookup_api.py passed."
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "5c3e679ed945ad28b7a46c36368bf56a871c260e",
+                    "message": "7.6-env_fixture_implementation:\n\nStage completed."
+                }
+            }
+        },
+        "17": {
+            "task": {
+                "title": "7.7-evaluate_env_fixture",
+                "description": [
+                    "env (pytest fixture)",
+                    "unity_test/tests/test_WayLookup_env_fixture.py",
+                    "RunTestCases('test_WayLookup_env_fixture.py')"
+                ],
+                "reference_files": {
+                    "Guide_Doc/dut_test_case.md": "Readed",
+                    "Guide_Doc/dut_fixture.md": "Readed"
+                },
+                "output_files": [
+                    "unity_test/tests/test_WayLookup_env_fixture.py"
+                ],
+                "skill_list": {},
+                "upper_task": {
+                    "title": "7-test_environment_implementation",
+                    "description": [
+                        ". WayLookup",
+                        ". toffee.Bundlefrom_prefix",
+                        ". toffee.Bundlefrom_dict",
+                        ". MockWayLookup",
+                        ". env fixtureMock",
+                        ". env fixture"
+                    ],
+                    "reference_files": {},
+                    "output_files": [],
+                    "skill_list": {}
+                }
+            },
+            "section_index": "7.7",
+            "checker": [
+                "Check if the specified file not exists.",
+                "Check the ptest test implementation for correctness."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 104.61789417266846,
+            "meta_data": {
+                "journal": "7.7 env fixture 测试与评估完成。已读取 Guide_Doc/dut_test_case.md、Guide_Doc/dut_fixture.md 和 WayLookup_api.py。新增 unity_test/tests/test_WayLookup_env_fixture.py，包含 test_api_WayLookup_env_bundle_binding 与 test_api_WayLookup_env_common_methods 两个用例，验证 env fixture、Bundle 分组、clear_inputs、reset、drive_write、drive_update、sample_read 等基础能力。使用 RunTestCases('test_WayLookup_env_fixture.py') 运行，2 个测试全部通过；阶段 Check 已通过。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "FilesMustNotExist",
+                        "count_pass": 2,
+                        "count_fail": 0,
+                        "count_check": 2,
+                        "last_msg": "File no exist check passed."
+                    },
+                    {
+                        "name": "UnityChipCheckerTestMustPass",
+                        "count_pass": 2,
+                        "count_fail": 0,
+                        "count_check": 2,
+                        "last_msg": {
+                            "message": "UnityChipCheckerTestMustPass check passed."
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "5dd738c7b21d04b976d65456f037c1935f0d47f3",
+                    "message": "7.7-evaluate_env_fixture:\n\nStage completed."
+                }
+            }
+        },
+        "18": {
+            "task": {
+                "title": "7.8-human_check_env_implementationenv",
+                "description": [
+                    ". env fixtureunity_test/WayLookup_env_specification.md",
+                    ". env fixture",
+                    ". env fixtureunity_test/WayLookup_env_implementation_review.md",
+                    ". env fixtureenv fixture"
+                ],
+                "reference_files": {},
+                "output_files": [
+                    "unity_test/WayLookup_env_implementation_review.md"
+                ],
+                "skill_list": {},
+                "upper_task": {
+                    "title": "7-test_environment_implementation",
+                    "description": [
+                        ". WayLookup",
+                        ". toffee.Bundlefrom_prefix",
+                        ". toffee.Bundlefrom_dict",
+                        ". MockWayLookup",
+                        ". env fixtureMock",
+                        ". env fixture"
+                    ],
+                    "reference_files": {},
+                    "output_files": [],
+                    "skill_list": {}
+                }
+            },
+            "section_index": "7.8",
+            "checker": [
+                "Perform a human-in-the-loop check.\n\n        Returns:\n            Tuple[bool, str]: A tuple where the first element is a boolean indicating success or failure,\n                              and the second element is a message string."
+            ],
+            "reached": false,
+            "is_completed": false,
+            "check_pass": false,
+            "fail_count": 0,
+            "is_skipped": true,
+            "needs_human_check": true,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 0.0,
+            "meta_data": {}
+        },
+        "19": {
+            "task": {
+                "title": "8-basic_api_implementationAPI",
+                "description": [
+                    "Guide_Doc/dut_api_instruction.mdAPI",
+                    "unity_test/tests/WayLookup_api.py",
+                    "APIALU api_WayLookup_operate(env, data1, data2, operation, max_cycles=100),  api_WayLookup_add(env, data1, data2, max_cycles=200)API",
+                    "- env (pytest fixture)",
+                    "DUT dut.StepRis",
+                    "Env dut.StepRis Mock"
+                ],
+                "reference_files": {
+                    "Guide_Doc/dut_api_instruction.md": "Readed"
+                },
+                "output_files": [],
+                "skill_list": {}
+            },
+            "section_index": "8",
+            "checker": [
+                "Check the DUT API implementation for correctness."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 126.69515681266785,
+            "meta_data": {
+                "journal": "8 基础 API 实现完成。已读取 Guide_Doc/dut_api_instruction.md 和 WayLookup_api.py。修改 unity_test/tests/WayLookup_api.py，新增 api_WayLookup_reset、api_WayLookup_clear_inputs、api_WayLookup_write_entry、api_WayLookup_read、api_WayLookup_update、api_WayLookup_flush；所有 API 均以 api_WayLookup_ 为前缀，第一个参数为 env，最后参数为 max_cycles，docstring 为中文，内部通过 env.Step/封装方法推进 DUT。python -m py_compile 通过，Check 已通过。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerDutApi",
+                        "count_pass": 2,
+                        "count_fail": 0,
+                        "count_check": 2,
+                        "last_msg": {
+                            "message": "UnityChipCheckerDutApi check for unity_test/tests/WayLookup_api.py passed."
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "a02d00f0ed5731bd6047f69ab1e98258d270d83d",
+                    "message": "8-basic_api_implementation:\n\nStage completed."
+                }
+            }
+        },
+        "20": {
+            "task": {
+                "title": "11-basic_api_functional_testAPI",
+                "description": [
+                    "API - Guide_Doc/dut_api_instruction.md'API'",
+                    "- unity_test/WayLookup_functions_and_checks.mdAPI",
+                    "API - unity_test/tests/test_WayLookup_api_*.py",
+                    "- test_api_WayLookup_add_basic, test_api_WayLookup_add_overflow",
+                    "- env (pytest fixture)",
+                    "- env.dut.fc_cover['FG-API'].mark_function('FC-API-NAME', your_test_function, ['CK-XXX1', ...])",
+                    "- RunTestCases('test_WayLookup_api[_name].py::your_test_function')",
+                    "- `from WayLookup_api import *` APIs  fixtures ( import *)",
+                    "- bugbugunity_test/WayLookup_bug_analysis.mdGuide_Doc/dut_bug_analysis.md",
+                    "- bug Fail Pass",
+                    "- unity_test/WayLookup_bug_analysis.mdunity_test/WayLookup_functions_and_checks.md",
+                    "- APIEnv fixtureMock",
+                    "- ref_model fixture"
+                ],
+                "reference_files": {
+                    "Guide_Doc/dut_api_instruction.md": "Readed",
+                    "Guide_Doc/dut_function_coverage_def.md": "Readed",
+                    "Guide_Doc/dut_bug_analysis.md": "Readed",
+                    "Guide_Doc/dut_test_case.md": "Readed"
+                },
+                "output_files": [],
+                "skill_list": {}
+            },
+            "section_index": "11",
+            "checker": [
+                "Check if the specified file not exists.",
+                "Perform the check for DUT API tests."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 1,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 243.26090693473816,
+            "meta_data": {
+                "llm_fail_suggestion": {
+                    "check_info": [
+                        {
+                            "name": "FilesMustNotExist",
+                            "count_pass": 1,
+                            "count_fail": 0,
+                            "count_check": 1,
+                            "last_msg": "File no exist check passed."
+                        },
+                        {
+                            "name": "UnityChipCheckerDutApiTest",
+                            "count_pass": 0,
+                            "count_fail": 1,
+                            "count_check": 1,
+                            "last_msg": {
+                                "error": [
+                                    "1 unanalyzed failed checkpoints (its check function is not called/sampled or the return not true) detected: FG-API/FC-API-DRIVE-SAMPLE/CK-API-UPDATE-DRIVE. The failed checkpoints must be properly analyzed and documented in file 'unity_test/WayLookup_bug_analysis.md'. Options:",
+                                    "1. Make sure you have called CovGroup.sample() to sample the failed check points in your test function or in StepRis/StepFal callback, otherwise the coverage cannot be collected correctly.",
+                                    "2. Make sure the check function of these checkpoints to ensure they are correctly implemented and returning the expected results.",
+                                    "3. If these are actual DUT bugs, document them use marks '<FG-*>, <FC-*>, <CK-*>, <BG-*>, <TC-*>' in 'unity_test/WayLookup_bug_analysis.md' with confidence bug ratings.",
+                                    "[Bug Analysis Document Format] (see Guide_Doc/dut_bug_analysis.md for details)",
+                                    "  Tag hierarchy: <FG-GROUP> / <FC-FUNCTION> / <CK-CHECKPOINT> / <BG-BUGNAME-XX> / <TC-FAILEDTESTCASE>",
+                                    "  - Confidence(XX): integer 0~100, indicating confidence level (0=known ignore/placeholder, 100=confirmed bug)",
+                                    "  - <TC-*> format: <TC-test_xxx.py::[ClassName::]test_func_name>, ClassName is optional",
+                                    "  - Each <BG-*> must have at least one FAILED <TC-*> test case",
+                                    "  - Failed checkpoints should also be recorded as bugs, using 'assert False' as placeholder if needed",
+                                    "  Format example:",
+                                    "    <FG-LOGIC>",
+                                    "            <FC-ADD>",
+                                    "                <CK-BASIC>",
+                                    "                    <BG-ADD_OVERFLOW-80> Addition overflow handling error, 80% confidence",
+                                    "                       <TC-test_add.py::test_add_overflow> Overflow boundary test",
+                                    "                       <TC-test_add.py::test_add_max_value> Max value test",
+                                    "                   Bug root cause analysis:",
+                                    "                   ```verilog",
+                                    "                     // Adder.v line 10, bit-width error",
+                                    "                     10: output [WIDTH-2:0] sum,  // BUG: should be [WIDTH-1:0]",
+                                    "                   ```",
+                                    "                   Fix suggestion:",
+                                    "                   ```verilog",
+                                    "                     10: output [WIDTH-1:0] sum,  // FIX: restore correct bit-width",
+                                    "                   ```",
+                                    "4. If these are implicitly covered the marked test cases, you can use arbitrary <checkpoint> function 'lambda x:True' to force pass them (need document it in the comments).",
+                                    "5. Review the related checkpoint's check function, the test implementation and the DUT behavior to determine root cause.",
+                                    "Note: Checkpoint is always referenced like `FG-*/FC-*/CK-*` by the `Check` and `Complete` tools, eg: `FG-LOGIC/FC-ADD/CK-BASIC`， but in the `*.md` file you should use the format: '<FG-*>, <FC-*>, <CK-*>Important: If it is determined to be a sampling or checking logic issue, you MUST fix it to ensure correct coverage collection and checking."
+                                ],
+                                "REPORT": {
+                                    "run_test_success": true,
+                                    "tests": {
+                                        "total": 7,
+                                        "fails": 0,
+                                        "test_cases": {
+                                            "unity_test/tests/test_WayLookup_api_basic.py:7-25::test_api_WayLookup_reset_basic": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api_basic.py:28-44::test_api_WayLookup_reset_error": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api_basic.py:47-68::test_api_WayLookup_clear_inputs_basic": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api_basic.py:71-95::test_api_WayLookup_write_entry_basic": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api_basic.py:98-116::test_api_WayLookup_read_basic": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api_basic.py:119-138::test_api_WayLookup_update_basic": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api_basic.py:141-160::test_api_WayLookup_flush_basic": "PASSED"
+                                        }
+                                    },
+                                    "total_funct_point": 25,
+                                    "total_check_point": 65,
+                                    "failed_funct_point": 19,
+                                    "failed_check_point": 40,
+                                    "failed_test_case_with_check_point_list": {},
+                                    "failed_check_point_list": [
+                                        "FG-API/FC-API-DRIVE-SAMPLE/CK-API-UPDATE-DRIVE",
+                                        "FG-FLUSH/FC-FLUSH-WITH-ACTIVITY/CK-FLUSH-WITH-WRITE",
+                                        "FG-FLUSH/FC-FLUSH-WITH-ACTIVITY/CK-FLUSH-WITH-READ",
+                                        "FG-FLUSH/FC-FLUSH-WITH-ACTIVITY/CK-FLUSH-WITH-UPDATE",
+                                        "FG-FIFO/FC-FIFO-ORDER/CK-FIFO-MULTI-ORDER",
+                                        "FG-FIFO/FC-FIFO-EMPTY-FULL/CK-FIFO-FULL-BLOCK",
+                                        "FG-FIFO/FC-FIFO-EMPTY-FULL/CK-FIFO-FULL-TO-NONFULL",
+                                        "FG-FIFO/FC-FIFO-WRAP/CK-FIFO-WRAP-ORDER",
+                                        "FG-READ/FC-READ-NORMAL/CK-READ-VALID-NONEMPTY",
+                                        "FG-READ/FC-READ-NORMAL/CK-READ-FIRE-ADVANCE",
+                                        "FG-READ/FC-READ-NORMAL/CK-READ-BITS-NORMAL",
+                                        "FG-READ/FC-READ-BYPASS/CK-BYPASS-ENTRY",
+                                        "FG-WRITE/FC-WRITE-BLOCK/CK-WRITE-BLOCK-FULL",
+                                        "FG-WRITE/FC-WRITE-BLOCK/CK-WRITE-BLOCK-GPF",
+                                        "FG-WRITE/FC-WRITE-FIELDS/CK-WRITE-GPF-FIELDS",
+                                        "FG-GPF/FC-GPF-DETECT/CK-GPF-DETECT-EXC2-LANE0",
+                                        "FG-GPF/FC-GPF-DETECT/CK-GPF-DETECT-EXC2-LANE1",
+                                        "FG-GPF/FC-GPF-STORE-READ/CK-GPF-STORE-NONBYPASS",
+                                        "FG-GPF/FC-GPF-STORE-READ/CK-GPF-HIT-PTR",
+                                        "FG-GPF/FC-GPF-STORE-READ/CK-GPF-FIRST-GPADDR",
+                                        "FG-GPF/FC-GPF-STALL/CK-GPF-STALL-BEFORE-HIT",
+                                        "FG-GPF/FC-GPF-STALL/CK-GPF-STALL-RELEASE-ON-HIT",
+                                        "FG-GPF/FC-GPF-STALL/CK-GPF-STALL-NO-OVERWRITE",
+                                        "FG-UPDATE/FC-UPDATE-HIT/CK-UPDATE-HIT-LANE0",
+                                        "FG-UPDATE/FC-UPDATE-HIT/CK-UPDATE-HIT-LANE1",
+                                        "FG-UPDATE/FC-UPDATE-HIT/CK-UPDATE-HIT-META",
+                                        "FG-UPDATE/FC-UPDATE-CONFLICT/CK-UPDATE-CONFLICT-LANE0",
+                                        "FG-UPDATE/FC-UPDATE-CONFLICT/CK-UPDATE-CONFLICT-LANE1",
+                                        "FG-UPDATE/FC-UPDATE-CONFLICT/CK-UPDATE-NO-CONFLICT-WAY",
+                                        "FG-UPDATE/FC-UPDATE-CORRUPT/CK-UPDATE-CORRUPT-HIT",
+                                        "FG-UPDATE/FC-UPDATE-CORRUPT/CK-UPDATE-CORRUPT-CONFLICT",
+                                        "FG-UPDATE/FC-UPDATE-SELECTIVE/CK-UPDATE-SELECT-VSET",
+                                        "FG-UPDATE/FC-UPDATE-SELECTIVE/CK-UPDATE-SELECT-PTAG",
+                                        "FG-UPDATE/FC-UPDATE-SELECTIVE/CK-UPDATE-MULTI-ENTRY",
+                                        "FG-PRIORITY/FC-PRIORITY-FLUSH/CK-PRIO-FLUSH-OVER-WRITE",
+                                        "FG-PRIORITY/FC-PRIORITY-FLUSH/CK-PRIO-FLUSH-OVER-GPF",
+                                        "FG-PRIORITY/FC-PRIORITY-BYPASS-GPF/CK-BYPASS-GPF-READ",
+                                        "FG-PRIORITY/FC-PRIORITY-UPDATE-IO/CK-UPDATE-BEFORE-READ",
+                                        "FG-PRIORITY/FC-PRIORITY-UPDATE-IO/CK-UPDATE-WITH-WRITE",
+                                        "FG-PRIORITY/FC-PRIORITY-UPDATE-IO/CK-UPDATE-WITH-BYPASS"
+                                    ],
+                                    "unmarked_check_points": 59,
+                                    "unmarked_check_point_list": [
+                                        "FG-FLUSH/FC-RESET-STATE/CK-RESET-EMPTY-READ",
+                                        "FG-FLUSH/FC-RESET-STATE/CK-RESET-WRITE-READY",
+                                        "FG-FLUSH/FC-FLUSH-STATE/CK-FLUSH-CLEAR-GPF",
+                                        "FG-FLUSH/FC-FLUSH-WITH-ACTIVITY/CK-FLUSH-WITH-WRITE",
+                                        "FG-FLUSH/FC-FLUSH-WITH-ACTIVITY/CK-FLUSH-WITH-READ",
+                                        "FG-FLUSH/FC-FLUSH-WITH-ACTIVITY/CK-FLUSH-WITH-UPDATE",
+                                        "FG-FIFO/FC-FIFO-ORDER/CK-FIFO-SINGLE-ORDER",
+                                        "FG-FIFO/FC-FIFO-ORDER/CK-FIFO-MULTI-ORDER",
+                                        "FG-FIFO/FC-FIFO-ORDER/CK-FIFO-READY-HOLD",
+                                        "FG-FIFO/FC-FIFO-EMPTY-FULL/CK-FIFO-EMPTY-INVALID",
+                                        "FG-FIFO/FC-FIFO-EMPTY-FULL/CK-FIFO-FULL-BLOCK",
+                                        "FG-FIFO/FC-FIFO-EMPTY-FULL/CK-FIFO-FULL-TO-NONFULL",
+                                        "FG-FIFO/FC-FIFO-WRAP/CK-FIFO-WRAP-WRITE",
+                                        "FG-FIFO/FC-FIFO-WRAP/CK-FIFO-WRAP-ORDER",
+                                        "FG-FIFO/FC-FIFO-WRAP/CK-FIFO-WRAP-FULL-EMPTY",
+                                        "FG-READ/FC-READ-NORMAL/CK-READ-VALID-NONEMPTY",
+                                        "FG-READ/FC-READ-NORMAL/CK-READ-FIRE-ADVANCE",
+                                        "FG-READ/FC-READ-NORMAL/CK-READ-BITS-NORMAL",
+                                        "FG-READ/FC-READ-EMPTY/CK-READ-EMPTY-NO-WRITE",
+                                        "FG-READ/FC-READ-EMPTY/CK-READ-EMPTY-READY-IGNORED",
+                                        "FG-READ/FC-READ-BYPASS/CK-BYPASS-ENTRY",
+                                        "FG-READ/FC-READ-BYPASS/CK-BYPASS-NO-QUEUE-LEFT",
+                                        "FG-READ/FC-READ-BYPASS/CK-BYPASS-READ-NOT-READY",
+                                        "FG-WRITE/FC-WRITE-NORMAL/CK-WRITE-READY-EMPTY",
+                                        "FG-WRITE/FC-WRITE-NORMAL/CK-WRITE-FIRE-STORES",
+                                        "FG-WRITE/FC-WRITE-BLOCK/CK-WRITE-BLOCK-FULL",
+                                        "FG-WRITE/FC-WRITE-BLOCK/CK-WRITE-BLOCK-GPF",
+                                        "FG-WRITE/FC-WRITE-FIELDS/CK-WRITE-FIELDS-LANE0",
+                                        "FG-WRITE/FC-WRITE-FIELDS/CK-WRITE-FIELDS-LANE1",
+                                        "FG-WRITE/FC-WRITE-FIELDS/CK-WRITE-GPF-FIELDS",
+                                        "FG-GPF/FC-GPF-DETECT/CK-GPF-DETECT-EXC2-LANE0",
+                                        "FG-GPF/FC-GPF-DETECT/CK-GPF-DETECT-EXC2-LANE1",
+                                        "FG-GPF/FC-GPF-DETECT/CK-GPF-NON-GPF-EXC",
+                                        "FG-GPF/FC-GPF-STORE-READ/CK-GPF-STORE-NONBYPASS",
+                                        "FG-GPF/FC-GPF-STORE-READ/CK-GPF-HIT-PTR",
+                                        "FG-GPF/FC-GPF-STORE-READ/CK-GPF-FIRST-GPADDR",
+                                        "FG-GPF/FC-GPF-CLEAR/CK-GPF-CLEAR-AFTER-FIRE",
+                                        "FG-GPF/FC-GPF-CLEAR/CK-GPF-MISS-ZERO",
+                                        "FG-GPF/FC-GPF-STALL/CK-GPF-STALL-BEFORE-HIT",
+                                        "FG-GPF/FC-GPF-STALL/CK-GPF-STALL-RELEASE-ON-HIT",
+                                        "FG-GPF/FC-GPF-STALL/CK-GPF-STALL-NO-OVERWRITE",
+                                        "FG-UPDATE/FC-UPDATE-HIT/CK-UPDATE-HIT-LANE0",
+                                        "FG-UPDATE/FC-UPDATE-HIT/CK-UPDATE-HIT-LANE1",
+                                        "FG-UPDATE/FC-UPDATE-HIT/CK-UPDATE-HIT-META",
+                                        "FG-UPDATE/FC-UPDATE-CONFLICT/CK-UPDATE-CONFLICT-LANE0",
+                                        "FG-UPDATE/FC-UPDATE-CONFLICT/CK-UPDATE-CONFLICT-LANE1",
+                                        "FG-UPDATE/FC-UPDATE-CONFLICT/CK-UPDATE-NO-CONFLICT-WAY",
+                                        "FG-UPDATE/FC-UPDATE-CORRUPT/CK-UPDATE-CORRUPT-HIT",
+                                        "FG-UPDATE/FC-UPDATE-CORRUPT/CK-UPDATE-CORRUPT-CONFLICT",
+                                        "FG-UPDATE/FC-UPDATE-SELECTIVE/CK-UPDATE-SELECT-VSET",
+                                        "FG-UPDATE/FC-UPDATE-SELECTIVE/CK-UPDATE-SELECT-PTAG",
+                                        "FG-UPDATE/FC-UPDATE-SELECTIVE/CK-UPDATE-MULTI-ENTRY",
+                                        "FG-PRIORITY/FC-PRIORITY-FLUSH/CK-PRIO-FLUSH-OVER-WRITE",
+                                        "FG-PRIORITY/FC-PRIORITY-FLUSH/CK-PRIO-FLUSH-OVER-GPF",
+                                        "FG-PRIORITY/FC-PRIORITY-BYPASS-GPF/CK-BYPASS-GPF-READ",
+                                        "FG-PRIORITY/FC-PRIORITY-BYPASS-GPF/CK-BYPASS-GPF-NO-STALL",
+                                        "FG-PRIORITY/FC-PRIORITY-UPDATE-IO/CK-UPDATE-BEFORE-READ",
+                                        "FG-PRIORITY/FC-PRIORITY-UPDATE-IO/CK-UPDATE-WITH-WRITE",
+                                        "FG-PRIORITY/FC-PRIORITY-UPDATE-IO/CK-UPDATE-WITH-BYPASS"
+                                    ],
+                                    "test_function_with_no_check_point_mark": 0
+                                },
+                                "STDOUT": "============================= test session starts ==============================\nplatform linux -- Python 3.12.2, pytest-9.0.2, pluggy-1.6.0\nrootdir: /home/sfangyy/work/UCAgent/output/workspace_WayLookup/unity_test\nconfigfile: .pytest.ini\nplugins: anyio-4.13.0, asyncio-1.3.0, langsmith-0.7.22, xdist-3.8.0, toffee-test-0.3.2.dev23+g4d2b59364, reporter-html1-0.9.0, reporter-0.5.3\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function\ncollected 7 items\n\nunity_test/tests/test_WayLookup_api_basic.py .......\n\n=============================== warnings summary ===============================\n../../../.venv/lib/python3.12/site-packages/pytest_reporter_html1/plugin.py:91\n../../../.venv/lib/python3.12/site-packages/pytest_reporter_html1/plugin.py:91\n../../../.venv/lib/python3.12/site-packages/pytest_reporter_html1/plugin.py:91\n../../../.venv/lib/python3.12/site-packages/pytest_reporter_html1/plugin.py:91\n../../../.venv/lib/python3.12/site-packages/pytest_reporter_html1/plugin.py:91\n../../../.venv/lib/python3.12/site-packages/pytest_reporter_html1/plugin.py:91\n../../../.venv/lib/python3.12/site-packages/pytest_reporter_html1/plugin.py:91\n  /home/sfangyy/work/.venv/lib/python3.12/site-packages/pytest_reporter_html1/plugin.py:91: PendingDeprecationWarning: Argument \"writer_name\" will be removed in Docutils 2.0.  Specify writer name in the \"writer\" argument.\n    env.filters[\"rst\"] = lambda s: publish_parts(source=s, writer_name=\"html5\")[\"body\"]\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n- generated report: /home/sfangyy/work/UCAgent/output/workspace_WayLookup/uc_test_report/index.html -\n======================== 7 passed, 7 warnings in 0.89s =========================\n",
+                                "STDERR": ""
+                            }
+                        }
+                    ],
+                    "check_pass": false,
+                    "action": "Please fix the issues reported in 'check_info.last_msg.error' according to the suggestions, and then use the `Check` tool again to re-validate your work."
+                },
+                "journal": "11 基础 API 功能测试完成。已读取 Guide_Doc/dut_api_instruction.md、Guide_Doc/dut_function_coverage_def.md、Guide_Doc/dut_bug_analysis.md、Guide_Doc/dut_test_case.md 和 WayLookup_functions_and_checks.md。新增 unity_test/tests/test_WayLookup_api_basic.py，覆盖 api_WayLookup_reset、api_WayLookup_clear_inputs、api_WayLookup_write_entry、api_WayLookup_read、api_WayLookup_update、api_WayLookup_flush，每个 API 至少一个测试。运行 RunTestCases('test_WayLookup_api_basic.py')：7 个测试全部通过。根据 Check 反馈修正 CK-API-UPDATE-DRIVE 的覆盖检查逻辑，使 API 层仅验证 update 端口驱动，update 功能效果保留给 FG-UPDATE 专项测试。最终 Check 已通过。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "FilesMustNotExist",
+                        "count_pass": 3,
+                        "count_fail": 0,
+                        "count_check": 3,
+                        "last_msg": "File no exist check passed."
+                    },
+                    {
+                        "name": "UnityChipCheckerDutApiTest",
+                        "count_pass": 2,
+                        "count_fail": 1,
+                        "count_check": 3,
+                        "last_msg": {
+                            "success": "UnityChipCheckerDutApiTest check for unity_test/tests/test_WayLookup_api*.py passed."
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "97cc887864a99fc08077454e05115a812591f7fb",
+                    "message": "11-basic_api_functional_test:\n\nStage completed."
+                }
+            }
+        },
+        "21": {
+            "task": {
+                "title": "12-create_test_case_templates[65/65|65]",
+                "description": [],
+                "reference_files": {
+                    "Guide_Doc/dut_test_template.md": "Readed"
+                },
+                "output_files": [],
+                "skill_list": {
+                    "create-test-case-templates": [
+                        "Listed",
+                        "Read",
+                        "Used"
+                    ]
+                }
+            },
+            "section_index": "12",
+            "checker": [
+                "Check if the specified file not exists.",
+                "Perform the check for test templates.\n\n        Returns:\n            Tuple[bool, str]: A tuple where the first element is a boolean indicating success or failure,\n                              and the second element is a message string."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 182.732951641083,
+            "meta_data": {
+                "skill_usage": {
+                    "create-test-case-templates": {
+                        "list": true,
+                        "read": true,
+                        "use": true
+                    }
+                },
+                "journal": "阶段 12 已阅读 create-test-case-templates 技能、Guide_Doc/dut_test_template.md、WayLookup_functions_and_checks.md、WayLookup_api.py、WayLookup_function_coverage_def.py 以及既有 API/env 测试文件。按技能要求通过 RunSkillScript 执行 .ucagent/skills/unitytest/create-test-case-templates/scripts/createtemplate.py，生成 WayLookup 各 FG 的测试模板文件，模板包含 mark_function 反标、TASK 注释与 assert False。注意脚本当前会生成 FG-API 对应 test_WayLookup_api.py，后续如 checker 要求排除 API 模板需删除该生成文件。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "FilesMustNotExist",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": "File no exist check passed."
+                    },
+                    {
+                        "name": "UnityChipCheckerTestTemplate",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": {
+                            "TEST_REPORT": {
+                                "run_test_success": true,
+                                "tests": {
+                                    "total": 65,
+                                    "fails": 65
+                                },
+                                "total_funct_point": 25,
+                                "total_check_point": 65,
+                                "failed_funct_point": 25,
+                                "failed_check_point": 65,
+                                "failed_check_point_list": [
+                                    "FG-API/FC-API-LIFECYCLE/CK-API-CREATE-DUT",
+                                    "FG-API/FC-API-LIFECYCLE/CK-API-RESET-STEP",
+                                    "FG-API/FC-API-DRIVE-SAMPLE/CK-API-CLEAR-INPUTS",
+                                    "FG-API/FC-API-DRIVE-SAMPLE/CK-API-WRITE-READ-ENTRY",
+                                    "FG-API/FC-API-DRIVE-SAMPLE/CK-API-UPDATE-DRIVE",
+                                    "FG-FLUSH/FC-RESET-STATE/CK-RESET-EMPTY-READ",
+                                    "FG-FLUSH/FC-RESET-STATE/CK-RESET-WRITE-READY",
+                                    "FG-FLUSH/FC-FLUSH-STATE/CK-FLUSH-CLEAR-QUEUE",
+                                    "FG-FLUSH/FC-FLUSH-STATE/CK-FLUSH-CLEAR-GPF",
+                                    "FG-FLUSH/FC-FLUSH-WITH-ACTIVITY/CK-FLUSH-WITH-WRITE",
+                                    "FG-FLUSH/FC-FLUSH-WITH-ACTIVITY/CK-FLUSH-WITH-READ",
+                                    "FG-FLUSH/FC-FLUSH-WITH-ACTIVITY/CK-FLUSH-WITH-UPDATE",
+                                    "FG-FIFO/FC-FIFO-ORDER/CK-FIFO-SINGLE-ORDER",
+                                    "FG-FIFO/FC-FIFO-ORDER/CK-FIFO-MULTI-ORDER",
+                                    "FG-FIFO/FC-FIFO-ORDER/CK-FIFO-READY-HOLD",
+                                    "FG-FIFO/FC-FIFO-EMPTY-FULL/CK-FIFO-EMPTY-INVALID",
+                                    "FG-FIFO/FC-FIFO-EMPTY-FULL/CK-FIFO-FULL-BLOCK",
+                                    "FG-FIFO/FC-FIFO-EMPTY-FULL/CK-FIFO-FULL-TO-NONFULL",
+                                    "FG-FIFO/FC-FIFO-WRAP/CK-FIFO-WRAP-WRITE",
+                                    "FG-FIFO/FC-FIFO-WRAP/CK-FIFO-WRAP-ORDER",
+                                    "FG-FIFO/FC-FIFO-WRAP/CK-FIFO-WRAP-FULL-EMPTY",
+                                    "FG-READ/FC-READ-NORMAL/CK-READ-VALID-NONEMPTY",
+                                    "FG-READ/FC-READ-NORMAL/CK-READ-FIRE-ADVANCE",
+                                    "FG-READ/FC-READ-NORMAL/CK-READ-BITS-NORMAL",
+                                    "FG-READ/FC-READ-EMPTY/CK-READ-EMPTY-NO-WRITE",
+                                    "FG-READ/FC-READ-EMPTY/CK-READ-EMPTY-READY-IGNORED",
+                                    "FG-READ/FC-READ-BYPASS/CK-BYPASS-ENTRY",
+                                    "FG-READ/FC-READ-BYPASS/CK-BYPASS-NO-QUEUE-LEFT",
+                                    "FG-READ/FC-READ-BYPASS/CK-BYPASS-READ-NOT-READY",
+                                    "FG-WRITE/FC-WRITE-NORMAL/CK-WRITE-READY-EMPTY",
+                                    "FG-WRITE/FC-WRITE-NORMAL/CK-WRITE-FIRE-STORES",
+                                    "FG-WRITE/FC-WRITE-BLOCK/CK-WRITE-BLOCK-FULL",
+                                    "FG-WRITE/FC-WRITE-BLOCK/CK-WRITE-BLOCK-GPF",
+                                    "FG-WRITE/FC-WRITE-FIELDS/CK-WRITE-FIELDS-LANE0",
+                                    "FG-WRITE/FC-WRITE-FIELDS/CK-WRITE-FIELDS-LANE1",
+                                    "FG-WRITE/FC-WRITE-FIELDS/CK-WRITE-GPF-FIELDS",
+                                    "FG-GPF/FC-GPF-DETECT/CK-GPF-DETECT-EXC2-LANE0",
+                                    "FG-GPF/FC-GPF-DETECT/CK-GPF-DETECT-EXC2-LANE1",
+                                    "FG-GPF/FC-GPF-DETECT/CK-GPF-NON-GPF-EXC",
+                                    "FG-GPF/FC-GPF-STORE-READ/CK-GPF-STORE-NONBYPASS",
+                                    "FG-GPF/FC-GPF-STORE-READ/CK-GPF-HIT-PTR",
+                                    "FG-GPF/FC-GPF-STORE-READ/CK-GPF-FIRST-GPADDR",
+                                    "FG-GPF/FC-GPF-CLEAR/CK-GPF-CLEAR-AFTER-FIRE",
+                                    "FG-GPF/FC-GPF-CLEAR/CK-GPF-MISS-ZERO",
+                                    "FG-GPF/FC-GPF-STALL/CK-GPF-STALL-BEFORE-HIT",
+                                    "FG-GPF/FC-GPF-STALL/CK-GPF-STALL-RELEASE-ON-HIT",
+                                    "FG-GPF/FC-GPF-STALL/CK-GPF-STALL-NO-OVERWRITE",
+                                    "FG-UPDATE/FC-UPDATE-HIT/CK-UPDATE-HIT-LANE0",
+                                    "FG-UPDATE/FC-UPDATE-HIT/CK-UPDATE-HIT-LANE1",
+                                    "FG-UPDATE/FC-UPDATE-HIT/CK-UPDATE-HIT-META",
+                                    "FG-UPDATE/FC-UPDATE-CONFLICT/CK-UPDATE-CONFLICT-LANE0",
+                                    "FG-UPDATE/FC-UPDATE-CONFLICT/CK-UPDATE-CONFLICT-LANE1",
+                                    "FG-UPDATE/FC-UPDATE-CONFLICT/CK-UPDATE-NO-CONFLICT-WAY",
+                                    "FG-UPDATE/FC-UPDATE-CORRUPT/CK-UPDATE-CORRUPT-HIT",
+                                    "FG-UPDATE/FC-UPDATE-CORRUPT/CK-UPDATE-CORRUPT-CONFLICT",
+                                    "FG-UPDATE/FC-UPDATE-SELECTIVE/CK-UPDATE-SELECT-VSET",
+                                    "FG-UPDATE/FC-UPDATE-SELECTIVE/CK-UPDATE-SELECT-PTAG",
+                                    "FG-UPDATE/FC-UPDATE-SELECTIVE/CK-UPDATE-MULTI-ENTRY",
+                                    "FG-PRIORITY/FC-PRIORITY-FLUSH/CK-PRIO-FLUSH-OVER-WRITE",
+                                    "FG-PRIORITY/FC-PRIORITY-FLUSH/CK-PRIO-FLUSH-OVER-GPF",
+                                    "FG-PRIORITY/FC-PRIORITY-BYPASS-GPF/CK-BYPASS-GPF-READ",
+                                    "FG-PRIORITY/FC-PRIORITY-BYPASS-GPF/CK-BYPASS-GPF-NO-STALL",
+                                    "FG-PRIORITY/FC-PRIORITY-UPDATE-IO/CK-UPDATE-BEFORE-READ",
+                                    "FG-PRIORITY/FC-PRIORITY-UPDATE-IO/CK-UPDATE-WITH-WRITE",
+                                    "FG-PRIORITY/FC-PRIORITY-UPDATE-IO/CK-UPDATE-WITH-BYPASS"
+                                ],
+                                "unmarked_check_points": 0,
+                                "test_function_with_no_check_point_mark": 0
+                            },
+                            "success": [
+                                "Test template validation successful!",
+                                "✓ Generated 65 test case templates (all properly failing as expected).",
+                                "✓ All 65 check points are properly documented and marked in test functions.",
+                                "✓ Coverage mapping is consistent between documentation and test implementation.",
+                                "✓ Template structure follows the required format with proper TODO comments and fail assertions.",
+                                "Your test templates are ready for implementation! Each test function provides clear guidance for the actual test logic to be implemented."
+                            ]
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "8ffa1c9792c8107c643522e92ec0a15dc0ab3ef5",
+                    "message": "12-create_test_case_templates:\n\nStage completed."
+                }
+            }
+        },
+        "22": {
+            "task": {
+                "title": "13.1-test_case_implementation_in_batchbug[65/65]",
+                "description": [],
+                "reference_files": {
+                    "unity_test/tests/WayLookup_function_coverage_def.py": "Readed",
+                    "Guide_Doc/dut_test_case.md": "Readed",
+                    "Guide_Doc/dut_bug_analysis.md": "Readed"
+                },
+                "output_files": [],
+                "skill_list": {
+                    "test-case-implementation-in-batch": [
+                        "Listed",
+                        "Read",
+                        "Used"
+                    ]
+                },
+                "upper_task": {
+                    "title": "13-comprehensive_verification_and_bug_analysis",
+                    "description": [
+                        "Guide_Doc/dut_test_case.mddut_bug_analysis.md",
+                        "- `from WayLookup_api import *` APIs  fixtures ( import *)",
+                        "- DUT bugFail",
+                        "- unity_test/WayLookup_static_bug_analysis.md/Bug",
+                        "- Bugunity_test/WayLookup_bug_analysis.md+"
+                    ],
+                    "reference_files": {
+                        "Guide_Doc/dut_test_case.md": "Readed",
+                        "Guide_Doc/dut_bug_analysis.md": "Readed"
+                    },
+                    "output_files": [],
+                    "skill_list": {}
+                }
+            },
+            "section_index": "13.1",
+            "checker": [
+                "Check if the specified file not exists.",
+                "run batch of tests and check result."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 8,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 2328.5720331668854,
+            "meta_data": {
+                "skill_usage": {
+                    "test-case-implementation-in-batch": {
+                        "list": true,
+                        "read": true,
+                        "use": true
+                    }
+                },
+                "journal": "阶段 13.1 第 7 批完成。已实现最后 5 个 write 用例：write_ready_empty、write_fire_stores、write_fields_lane0、write_fields_lane1、write_gpf_fields。所有用例通过公开 write/read 端口验证 ready、fire 保存、lane0/lane1 字段保持和 GPF 字段保持。按阶段指定 RunTestCases 运行 5 个用例，全部 PASSED。本批未发现需记录的动态设计 Bug。至此 65 个测试模板均已填充为可执行用例。",
+                "llm_fail_suggestion": {
+                    "check_info": [
+                        {
+                            "name": "FilesMustNotExist",
+                            "count_pass": 7,
+                            "count_fail": 0,
+                            "count_check": 7,
+                            "last_msg": "File no exist check passed."
+                        },
+                        {
+                            "name": "UnityChipCheckerBatchTestsImplementation",
+                            "count_pass": 0,
+                            "count_fail": 7,
+                            "count_check": 7,
+                            "last_msg": {
+                                "error": "There are still 5 test cases remaining to be implemented: unity_test/tests/test_WayLookup_write.py::test_write_fields_lane0, unity_test/tests/test_WayLookup_write.py::test_write_ready_empty, unity_test/tests/test_WayLookup_write.py::test_write_fields_lane1, unity_test/tests/test_WayLookup_write.py::test_write_gpf_fields, unity_test/tests/test_WayLookup_write.py::test_write_fire_stores. Test case implemention progress: 60/65. Please continue implementing the remaining test cases before completing this stage."
+                            }
+                        }
+                    ],
+                    "check_pass": false
+                },
+                "llm_pass_suggestion": [
+                    {
+                        "name": "FilesMustNotExist",
+                        "count_pass": 8,
+                        "count_fail": 0,
+                        "count_check": 8,
+                        "last_msg": "File no exist check passed."
+                    },
+                    {
+                        "name": "UnityChipCheckerBatchTestsImplementation",
+                        "count_pass": 1,
+                        "count_fail": 7,
+                        "count_check": 8,
+                        "last_msg": {
+                            "success": "Congratulations! All test cases have been implemented! Use tool `Complete to` finish this stage."
+                        }
+                    }
+                ],
+                "commit": {
+                    "hash": "8f2fe4ff8d1f24c7a198816d9c8e2bb8aa914478",
+                    "message": "13.1-test_case_implementation_in_batch:\n\nStage completed."
+                }
+            }
+        },
+        "23": {
+            "task": {
+                "title": "13-comprehensive_verification_and_bug_analysis",
+                "description": [
+                    "Guide_Doc/dut_test_case.mddut_bug_analysis.md",
+                    "- `from WayLookup_api import *` APIs  fixtures ( import *)",
+                    "- DUT bugFail",
+                    "- unity_test/WayLookup_static_bug_analysis.md/Bug",
+                    "- Bugunity_test/WayLookup_bug_analysis.md+"
+                ],
+                "reference_files": {
+                    "Guide_Doc/dut_test_case.md": "Readed",
+                    "Guide_Doc/dut_bug_analysis.md": "Readed"
+                },
+                "output_files": [],
+                "skill_list": {},
+                "notes": "You have complete this stage's submissions (13.1-test_case_implementation_in_batch-分批测试用例实现与对应bug分析[65/65]), now you need to check this stage is complete or not."
+            },
+            "section_index": "13",
+            "checker": [
+                "Perform comprehensive check for implemented test cases."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 906.7001917362213,
+            "meta_data": {
+                "journal": "阶段 13 全面验证与缺陷分析父阶段检查完成。已按要求重新读取 Guide_Doc/dut_test_case.md、Guide_Doc/dut_bug_analysis.md、unity_test/WayLookup_static_bug_analysis.md 和 unity_test/WayLookup_bug_analysis.md。阶段 13.1 已完成 65/65 个测试模板填充，当前父阶段 checker last_check_result 显示全部测试用例已实现，可使用 Complete 完成本阶段。静态分析文件仍保留 BG-STATIC-001-BYPASS-VALID-NO-READY 的 LINK-BUG-[BG-TBD]，将由下一阶段 static_bug_validation 处理动态关联。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerTestCase",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": [
+                            "Test case verification passed!",
+                            "+ Executed 74 test case(s).",
+                            "+ All 65 checkpoint(s) correctly implemented and consistent with documentation.",
+                            "+ Test-documentation consistency check passed.",
+                            "+ 0 bug(s) marked in bug analysis document unity_test/WayLookup_bug_analysis.md.",
+                            "Test implementation successfully verified DUT functionality!",
+                            "Warning: No bugs marked in the bug analysis document. If issues were found during testing, ensure they are properly documented in the bug analysis document (see Guide_Doc/dut_bug_analysis.md).",
+                            "[Bug Analysis Document Format] (see Guide_Doc/dut_bug_analysis.md for details)",
+                            "  Tag hierarchy: <FG-GROUP> / <FC-FUNCTION> / <CK-CHECKPOINT> / <BG-BUGNAME-XX> / <TC-FAILEDTESTCASE>",
+                            "  - Confidence(XX): integer 0~100, indicating confidence level (0=known ignore/placeholder, 100=confirmed bug)",
+                            "  - <TC-*> format: <TC-test_xxx.py::[ClassName::]test_func_name>, ClassName is optional",
+                            "  - Each <BG-*> must have at least one FAILED <TC-*> test case",
+                            "  - Failed checkpoints should also be recorded as bugs, using 'assert False' as placeholder if needed",
+                            "  Format example:",
+                            "    <FG-LOGIC>",
+                            "            <FC-ADD>",
+                            "                <CK-BASIC>",
+                            "                    <BG-ADD_OVERFLOW-80> Addition overflow handling error, 80% confidence",
+                            "                       <TC-test_add.py::test_add_overflow> Overflow boundary test",
+                            "                       <TC-test_add.py::test_add_max_value> Max value test",
+                            "                   Bug root cause analysis:",
+                            "                   ```verilog",
+                            "                     // Adder.v line 10, bit-width error",
+                            "                     10: output [WIDTH-2:0] sum,  // BUG: should be [WIDTH-1:0]",
+                            "                   ```",
+                            "                   Fix suggestion:",
+                            "                   ```verilog",
+                            "                     10: output [WIDTH-1:0] sum,  // FIX: restore correct bit-width",
+                            "                   ```"
+                        ]
+                    }
+                ],
+                "commit": {
+                    "hash": "8f2fe4ff8d1f24c7a198816d9c8e2bb8aa914478",
+                    "message": "13-comprehensive_verification_and_bug_analysis:\n\nStage completed."
+                }
+            }
+        },
+        "24": {
+            "task": {
+                "title": "14-static_bug_validationBug",
+                "description": [
+                    "unity_test/WayLookup_static_bug_analysis.md<LINK-BUG-[BG-TBD]>BugBug"
+                ],
+                "reference_files": {
+                    "Guide_Doc/dut_test_case.md": "Readed",
+                    "Guide_Doc/dut_bug_analysis.md": "Readed",
+                    "unity_test/WayLookup_bug_analysis.md": "Readed"
+                },
+                "output_files": [],
+                "skill_list": {
+                    "static-bug-validation": [
+                        "Listed",
+                        "Read",
+                        "Used"
+                    ]
+                }
+            },
+            "section_index": "14",
+            "checker": [
+                "Check if the specified file not exists.",
+                "Validate static bug analysis: resolve placeholders and cross-reference dynamic bugs.",
+                "Perform comprehensive check for implemented test cases."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 178.5099687576294,
+            "meta_data": {
+                "skill_usage": {
+                    "static-bug-validation": {
+                        "list": true,
+                        "read": true,
+                        "use": true
+                    }
+                },
+                "journal": "阶段 14 静态分析 Bug 验证与动态关联完成。已读取 static-bug-validation 技能、Guide_Doc/dut_test_case.md、Guide_Doc/dut_bug_analysis.md、unity_test/WayLookup_bug_analysis.md、unity_test/WayLookup_static_bug_analysis.md、WayLookup_RTL/WayLookup.scala、WayLookup_functions_and_checks.md、WayLookup_api.py 及相关测试。针对 BG-STATIC-001-BYPASS-VALID-NO-READY 新增 unity_test/tests/test_WayLookup_static_verify_bypass_valid_no_ready.py，通过 GPF stall 构造 write.ready=0 的可达场景，验证 read 端仍输出已有队首，不旁路未接受的当前写入。RunTestCases 单测通过，结论为静态疑点误报。已按技能要求使用 linkbug.py 将静态报告汇总表和详细分析中的 LINK-BUG-[BG-TBD] 回填为 LINK-BUG-[BG-NA]，当前静态报告无 BG-TBD 残留。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "FilesMustNotExist",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": "File no exist check passed."
+                    },
+                    {
+                        "name": "UnityChipCheckerStaticBugValidation",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": {
+                            "message": "UnityChipCheckerStaticBugValidation passed: no <LINK-BUG-[BG-TBD]> remaining, 0 confirmed tag reference(s) verified.",
+                            "confirmed_count": 0
+                        }
+                    },
+                    {
+                        "name": "UnityChipCheckerTestCase",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": [
+                            "Test case verification passed!",
+                            "+ Executed 75 test case(s).",
+                            "+ All 65 checkpoint(s) correctly implemented and consistent with documentation.",
+                            "+ Test-documentation consistency check passed.",
+                            "+ 0 bug(s) marked in bug analysis document unity_test/WayLookup_bug_analysis.md.",
+                            "Test implementation successfully verified DUT functionality!",
+                            "Warning: No bugs marked in the bug analysis document. If issues were found during testing, ensure they are properly documented in the bug analysis document (see Guide_Doc/dut_bug_analysis.md).",
+                            "[Bug Analysis Document Format] (see Guide_Doc/dut_bug_analysis.md for details)",
+                            "  Tag hierarchy: <FG-GROUP> / <FC-FUNCTION> / <CK-CHECKPOINT> / <BG-BUGNAME-XX> / <TC-FAILEDTESTCASE>",
+                            "  - Confidence(XX): integer 0~100, indicating confidence level (0=known ignore/placeholder, 100=confirmed bug)",
+                            "  - <TC-*> format: <TC-test_xxx.py::[ClassName::]test_func_name>, ClassName is optional",
+                            "  - Each <BG-*> must have at least one FAILED <TC-*> test case",
+                            "  - Failed checkpoints should also be recorded as bugs, using 'assert False' as placeholder if needed",
+                            "  Format example:",
+                            "    <FG-LOGIC>",
+                            "            <FC-ADD>",
+                            "                <CK-BASIC>",
+                            "                    <BG-ADD_OVERFLOW-80> Addition overflow handling error, 80% confidence",
+                            "                       <TC-test_add.py::test_add_overflow> Overflow boundary test",
+                            "                       <TC-test_add.py::test_add_max_value> Max value test",
+                            "                   Bug root cause analysis:",
+                            "                   ```verilog",
+                            "                     // Adder.v line 10, bit-width error",
+                            "                     10: output [WIDTH-2:0] sum,  // BUG: should be [WIDTH-1:0]",
+                            "                   ```",
+                            "                   Fix suggestion:",
+                            "                   ```verilog",
+                            "                     10: output [WIDTH-1:0] sum,  // FIX: restore correct bit-width",
+                            "                   ```"
+                        ]
+                    }
+                ],
+                "commit": {
+                    "hash": "4c45a038eea592d4fecb461ad0f06bfe8cb4b490",
+                    "message": "14-static_bug_validation:\n\nStage completed."
+                }
+            }
+        },
+        "25": {
+            "task": {
+                "title": "15-line_coverage_analysis_and_improvement(90.00)",
+                "description": [
+                    "- WayLookupverilogWayLookup/WayLookup_RTL/.v.sv.vh.scalaWayLookup_RTL/WayLookup.scala",
+                    "- ignoreunity_test/tests/WayLookup.ignore",
+                    "- ignorePattern*/*/path_in_workspace/to_be_ignored.sv[:line_number_start-line_number_end, ...]path_in_workspaceworkspace*/to_be_ignored.sv[:line_number_start-line_number_end, ...]",
+                    "- ignore Patternline_number_start-line_number_end1010-10"
+                ],
+                "reference_files": {
+                    "Guide_Doc/dut_line_coverage.md": "Not Read"
+                },
+                "output_files": [],
+                "skill_list": {}
+            },
+            "section_index": "15",
+            "checker": [
+                "check test case and line coverage."
+            ],
+            "reached": false,
+            "is_completed": false,
+            "check_pass": false,
+            "fail_count": 0,
+            "is_skipped": true,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 0.0,
+            "meta_data": {}
+        },
+        "26": {
+            "task": {
+                "title": "16-generate_random_test_cases",
+                "description": [
+                    "unity_test/WayLookup_functions_and_checks.md",
+                    "unity_test/tests/test_WayLookup_random_<name>.py",
+                    "- env (pytest fixture)",
+                    "- env.dut.fc_cover['FG-XXX'].mark_function('FC-YYY', test_func, ['CK-ZZZ', ...])",
+                    "- DUTAPI actual_output",
+                    "- DUT assert actual_output == expected_output, ...",
+                    "-  ucagent.repeat_count()",
+                    "-  Guide_Doc/dut_test_case.md"
+                ],
+                "reference_files": {
+                    "unity_test/WayLookup_functions_and_checks.md": "Readed",
+                    "Guide_Doc/dut_test_case.md": "Readed",
+                    "Guide_Doc/dut_test_case_random.md": "Readed",
+                    "Guide_Doc/dut_bug_analysis.md": "Readed"
+                },
+                "output_files": [
+                    "unity_test/tests/test_WayLookup_random*.py"
+                ],
+                "skill_list": {}
+            },
+            "section_index": "16",
+            "checker": [
+                "Check if the specified file not exists.",
+                "Check random test cases"
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 0,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 127.78203010559082,
+            "meta_data": {
+                "journal": "阶段 16 随机测试用例生成完成。已读取 WayLookup_functions_and_checks.md、Guide_Doc/dut_test_case.md、Guide_Doc/dut_test_case_random.md、Guide_Doc/dut_bug_analysis.md 和既有 test_WayLookup_random_example.py。新增 unity_test/tests/test_WayLookup_random_fifo_update.py：包含 test_random_fifo_order_fields 和参数化 test_random_update_modes，均使用固定随机种子与 ucagent.repeat_count()，通过公开 API/Step 验证随机 FIFO 多项顺序、read.ready 保持、两路字段保持，以及 update hit/conflict/corrupt 三类随机场景。RunTestCases('test_WayLookup_random_fifo_update.py') 通过，实际 4 个 pytest 用例全部 PASSED，未发现新的动态 Bug。",
+                "llm_pass_suggestion": [
+                    {
+                        "name": "FilesMustNotExist",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": "File no exist check passed."
+                    },
+                    {
+                        "name": "RandomTestCasesChecker",
+                        "count_pass": 1,
+                        "count_fail": 0,
+                        "count_check": 1,
+                        "last_msg": "Random test cases(2) check Pass"
+                    }
+                ],
+                "commit": {
+                    "hash": "a9db47826135bac40a9ee93c95803ea99149c7ed",
+                    "message": "16-generate_random_test_cases:\n\nStage completed."
+                }
+            }
+        },
+        "27": {
+            "task": {
+                "title": "17-verification_review_and_summary",
+                "description": [
+                    "unity_test/WayLookup_bug_analysis.mdbug",
+                    "unity_test/WayLookup_static_bug_analysis.mdBugBugunity_test/WayLookup_bug_analysis.md",
+                    "unity_test/WayLookup_test_summary.md",
+                    "unity_test/WayLookup_verification_needs_and_plan.md"
+                ],
+                "reference_files": {
+                    "Guide_Doc/dut_test_summary.md": "Readed",
+                    "Guide_Doc/dut_bug_analysis.md": "Readed"
+                },
+                "output_files": [
+                    "unity_test/WayLookup_test_summary.md"
+                ],
+                "skill_list": {}
+            },
+            "section_index": "17",
+            "checker": [
+                "Perform comprehensive check for implemented test cases."
+            ],
+            "reached": true,
+            "is_completed": true,
+            "check_pass": true,
+            "fail_count": 1,
+            "is_skipped": false,
+            "needs_human_check": false,
+            "last_human_check_result": null,
+            "last_human_check_msg": "",
+            "time_cost": 124.0924739837646,
+            "meta_data": {
+                "journal": "阶段 17 验证审查与总结完成并根据 Complete 反馈修正文档格式。已重新读取参考文档、RTL 源码、接口封装、验证计划、功能点文档、Bug 文档、静态 Bug 文档、主要测试文件与覆盖模型。已更新 unity_test/WayLookup_bug_analysis.md，记录动态验证未发现已证实设计 Bug、静态唯一疑点 BG-STATIC-001-BYPASS-VALID-NO-READY 已动态验证为误报并关联 LINK-BUG-[BG-NA]；根据 checker 反馈，将说明性 <BG-*> 文本改为不带尖括号的 BG-*，避免被解析为结构标签。已新增 unity_test/WayLookup_test_summary.md，总结验证范围、测试统计、覆盖结论、缺陷结论、需求满足情况和经验教训。全量 RunTestCases('') 结果：pytest 79 passed，failed_ck/failed_tc 为空，65 个检查点全部标记覆盖。当前无需 GoToStage 补充验证。",
+                "llm_fail_suggestion": {
+                    "check_info": [
+                        {
+                            "name": "UnityChipCheckerTestCase",
+                            "count_pass": 0,
+                            "count_fail": 1,
+                            "count_check": 1,
+                            "last_msg": {
+                                "STDOUT": "============================= test session starts ==============================\nplatform linux -- Python 3.12.2, pytest-9.0.2, pluggy-1.6.0\nrootdir: /home/sfangyy/work/UCAgent/output/workspace_WayLookup/unity_test\nconfigfile: .pytest.ini\nplugins: anyio-4.13.0, asyncio-1.3.0, langsmith-0.7.22, xdist-3.8.0, toffee-test-0.3.2.dev23+g4d2b59364, reporter-html1-0.9.0, reporter-0.5.3\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function\ncollected 79 items\n\ntest_WayLookup_api.py .....\ntest_WayLookup_api_basic.py .......\ntest_WayLookup_env_fixture.py ..\ntest_WayLookup_fifo.py .........\ntest_WayLookup_flush.py .......\ntest_WayLookup_gpf.py ...........\ntest_WayLookup_priority.py .......\ntest_WayLookup_random_fifo_update.py ....\ntest_WayLookup_read.py ........\ntest_WayLookup_static_verify_bypass_valid_no_ready.py .\ntest_WayLookup_update.py ...........\ntest_WayLookup_write.py .......\n\n=============================== warnings summary ===============================\n../../../../../.venv/lib/python3.12/site-packages/pytest_reporter_html1/plugin.py:91: 79 warnings\n  /home/sfangyy/work/.venv/lib/python3.12/site-packages/pytest_reporter_html1/plugin.py:91: PendingDeprecationWarning: Argument \"writer_name\" will be removed in Docutils 2.0.  Specify writer name in the \"writer\" argument.\n    env.filters[\"rst\"] = lambda s: publish_parts(source=s, writer_name=\"html5\")[\"body\"]\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n- generated report: /home/sfangyy/work/UCAgent/output/workspace_WayLookup/uc_test_report/index.html -\n======================= 79 passed, 79 warnings in 7.56s ========================\n",
+                                "STDERR": "",
+                                "TEST_REPORT": {
+                                    "run_test_success": true,
+                                    "tests": {
+                                        "total": 77,
+                                        "fails": 0,
+                                        "test_cases": {
+                                            "unity_test/tests/test_WayLookup_api.py:16-23::test_api_create_dut": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api.py:25-32::test_api_reset_step": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api.py:34-49::test_api_clear_inputs": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api.py:51-64::test_api_write_read_entry": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api.py:66-75::test_api_update_drive": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api_basic.py:7-25::test_api_WayLookup_reset_basic": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api_basic.py:28-44::test_api_WayLookup_reset_error": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api_basic.py:47-68::test_api_WayLookup_clear_inputs_basic": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api_basic.py:71-95::test_api_WayLookup_write_entry_basic": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api_basic.py:98-116::test_api_WayLookup_read_basic": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api_basic.py:119-145::test_api_WayLookup_update_basic": "PASSED",
+                                            "unity_test/tests/test_WayLookup_api_basic.py:148-167::test_api_WayLookup_flush_basic": "PASSED",
+                                            "unity_test/tests/test_WayLookup_env_fixture.py:6-24::test_api_WayLookup_env_bundle_binding": "PASSED",
+                                            "unity_test/tests/test_WayLookup_env_fixture.py:27-58::test_api_WayLookup_env_common_methods": "PASSED",
+                                            "unity_test/tests/test_WayLookup_fifo.py:34-44::test_fifo_single_order": "PASSED",
+                                            "unity_test/tests/test_WayLookup_fifo.py:46-62::test_fifo_multi_order": "PASSED",
+                                            "unity_test/tests/test_WayLookup_fifo.py:64-76::test_fifo_ready_hold": "PASSED",
+                                            "unity_test/tests/test_WayLookup_fifo.py:78-86::test_fifo_empty_invalid": "PASSED",
+                                            "unity_test/tests/test_WayLookup_fifo.py:88-107::test_fifo_full_block": "PASSED",
+                                            "unity_test/tests/test_WayLookup_fifo.py:109-125::test_fifo_full_to_nonfull": "PASSED",
+                                            "unity_test/tests/test_WayLookup_fifo.py:127-141::test_fifo_wrap_write": "PASSED",
+                                            "unity_test/tests/test_WayLookup_fifo.py:143-168::test_fifo_wrap_order": "PASSED",
+                                            "unity_test/tests/test_WayLookup_fifo.py:170-184::test_fifo_wrap_full_empty": "PASSED",
+                                            "unity_test/tests/test_WayLookup_flush.py:26-31::test_reset_empty_read": "PASSED",
+                                            "unity_test/tests/test_WayLookup_flush.py:33-38::test_reset_write_ready": "PASSED",
+                                            "unity_test/tests/test_WayLookup_flush.py:40-49::test_flush_clear_queue": "PASSED",
+                                            "unity_test/tests/test_WayLookup_flush.py:51-64::test_flush_clear_gpf": "PASSED",
+                                            "unity_test/tests/test_WayLookup_flush.py:66-79::test_flush_with_write": "PASSED",
+                                            "unity_test/tests/test_WayLookup_flush.py:81-93::test_flush_with_read": "PASSED",
+                                            "unity_test/tests/test_WayLookup_flush.py:95-108::test_flush_with_update": "PASSED",
+                                            "unity_test/tests/test_WayLookup_gpf.py:40-50::test_gpf_detect_exc2_lane0": "PASSED",
+                                            "unity_test/tests/test_WayLookup_gpf.py:52-62::test_gpf_detect_exc2_lane1": "PASSED",
+                                            "unity_test/tests/test_WayLookup_gpf.py:64-73::test_gpf_non_gpf_exc": "PASSED",
+                                            "unity_test/tests/test_WayLookup_gpf.py:75-85::test_gpf_store_nonbypass": "PASSED",
+                                            "unity_test/tests/test_WayLookup_gpf.py:87-100::test_gpf_hit_ptr": "PASSED",
+                                            "unity_test/tests/test_WayLookup_gpf.py:102-117::test_gpf_first_gpaddr": "PASSED",
+                                            "unity_test/tests/test_WayLookup_gpf.py:119-131::test_gpf_clear_after_fire": "PASSED",
+                                            "unity_test/tests/test_WayLookup_gpf.py:133-144::test_gpf_miss_zero": "PASSED",
+                                            "unity_test/tests/test_WayLookup_gpf.py:146-160::test_gpf_stall_before_hit": "PASSED",
+                                            "unity_test/tests/test_WayLookup_gpf.py:162-173::test_gpf_stall_release_on_hit": "PASSED",
+                                            "unity_test/tests/test_WayLookup_gpf.py:175-190::test_gpf_stall_no_overwrite": "PASSED",
+                                            "unity_test/tests/test_WayLookup_priority.py:30-42::test_prio_flush_over_write": "PASSED",
+                                            "unity_test/tests/test_WayLookup_priority.py:44-59::test_prio_flush_over_gpf": "PASSED",
+                                            "unity_test/tests/test_WayLookup_priority.py:61-70::test_bypass_gpf_read": "PASSED",
+                                            "unity_test/tests/test_WayLookup_priority.py:72-82::test_bypass_gpf_no_stall": "PASSED",
+                                            "unity_test/tests/test_WayLookup_priority.py:84-95::test_update_before_read": "PASSED",
+                                            "unity_test/tests/test_WayLookup_priority.py:97-115::test_update_with_write": "PASSED",
+                                            "unity_test/tests/test_WayLookup_priority.py:117-126::test_update_with_bypass": "PASSED",
+                                            "unity_test/tests/test_WayLookup_random_fifo_update.py:44-83::test_random_fifo_order_fields": "PASSED",
+                                            "unity_test/tests/test_WayLookup_random_fifo_update.py:86-149::test_random_update_modes": "PASSED",
+                                            "unity_test/tests/test_WayLookup_read.py:36-45::test_read_valid_nonempty": "PASSED",
+                                            "unity_test/tests/test_WayLookup_read.py:47-59::test_read_fire_advance": "PASSED",
+                                            "unity_test/tests/test_WayLookup_read.py:61-75::test_read_bits_normal": "PASSED",
+                                            "unity_test/tests/test_WayLookup_read.py:77-85::test_read_empty_no_write": "PASSED",
+                                            "unity_test/tests/test_WayLookup_read.py:87-99::test_read_empty_ready_ignored": "PASSED",
+                                            "unity_test/tests/test_WayLookup_read.py:101-110::test_bypass_entry": "PASSED",
+                                            "unity_test/tests/test_WayLookup_read.py:112-121::test_bypass_no_queue_left": "PASSED",
+                                            "unity_test/tests/test_WayLookup_read.py:123-133::test_bypass_read_not_ready": "PASSED",
+                                            "unity_test/tests/test_WayLookup_static_verify_bypass_valid_no_ready.py:30-57::test_static_WayLookup_bypass_valid_no_ready": "PASSED",
+                                            "unity_test/tests/test_WayLookup_update.py:41-51::test_update_hit_lane0": "PASSED",
+                                            "unity_test/tests/test_WayLookup_update.py:53-63::test_update_hit_lane1": "PASSED",
+                                            "unity_test/tests/test_WayLookup_update.py:65-76::test_update_hit_meta": "PASSED",
+                                            "unity_test/tests/test_WayLookup_update.py:78-88::test_update_conflict_lane0": "PASSED",
+                                            "unity_test/tests/test_WayLookup_update.py:90-100::test_update_conflict_lane1": "PASSED",
+                                            "unity_test/tests/test_WayLookup_update.py:102-113::test_update_no_conflict_way": "PASSED",
+                                            "unity_test/tests/test_WayLookup_update.py:115-126::test_update_corrupt_hit": "PASSED",
+                                            "unity_test/tests/test_WayLookup_update.py:128-139::test_update_corrupt_conflict": "PASSED",
+                                            "unity_test/tests/test_WayLookup_update.py:141-152::test_update_select_vset": "PASSED",
+                                            "unity_test/tests/test_WayLookup_update.py:154-166::test_update_select_ptag": "PASSED",
+                                            "unity_test/tests/test_WayLookup_update.py:168-191::test_update_multi_entry": "PASSED",
+                                            "unity_test/tests/test_WayLookup_write.py:30-36::test_write_ready_empty": "PASSED",
+                                            "unity_test/tests/test_WayLookup_write.py:38-49::test_write_fire_stores": "PASSED",
+                                            "unity_test/tests/test_WayLookup_write.py:51-67::test_write_block_full": "PASSED",
+                                            "unity_test/tests/test_WayLookup_write.py:69-83::test_write_block_gpf": "PASSED",
+                                            "unity_test/tests/test_WayLookup_write.py:85-94::test_write_fields_lane0": "PASSED",
+                                            "unity_test/tests/test_WayLookup_write.py:96-105::test_write_fields_lane1": "PASSED",
+                                            "unity_test/tests/test_WayLookup_write.py:107-116::test_write_gpf_fields": "PASSED"
+                                        }
+                                    },
+                                    "total_funct_point": 25,
+                                    "total_check_point": 65,
+                                    "failed_funct_point": 0,
+                                    "failed_check_point": 0,
+                                    "failed_test_case_with_check_point_list": {},
+                                    "unmarked_check_points": 0,
+                                    "test_function_with_no_check_point_mark": 0
+                                },
+                                "error": [
+                                    "[Parse Error] Bug analysis document 'unity_test/WayLookup_bug_analysis.md' failed to parse: At line (10): '当前无`<BG-*>`非零置信度动态Bug标签；也无检查点需要以`<BG-*-0>`形式占位。' should contain exactly one BG '<BG-'",
+                                    "[Possible Causes]",
+                                    "1. Malformed tags (e.g., missing angle brackets, unclosed tags, nesting errors)",
+                                    "[Bug Analysis Document Format] (see Guide_Doc/dut_bug_analysis.md for details)",
+                                    "  Tag hierarchy: <FG-GROUP> / <FC-FUNCTION> / <CK-CHECKPOINT> / <BG-BUGNAME-XX> / <TC-FAILEDTESTCASE>",
+                                    "  - Confidence(XX): integer 0~100, indicating confidence level (0=known ignore/placeholder, 100=confirmed bug)",
+                                    "  - <TC-*> format: <TC-test_xxx.py::[ClassName::]test_func_name>, ClassName is optional",
+                                    "  - Each <BG-*> must have at least one FAILED <TC-*> test case",
+                                    "  - Failed checkpoints should also be recorded as bugs, using 'assert False' as placeholder if needed",
+                                    "  Format example:",
+                                    "    <FG-LOGIC>",
+                                    "            <FC-ADD>",
+                                    "                <CK-BASIC>",
+                                    "                    <BG-ADD_OVERFLOW-80> Addition overflow handling error, 80% confidence",
+                                    "                       <TC-test_add.py::test_add_overflow> Overflow boundary test",
+                                    "                       <TC-test_add.py::test_add_max_value> Max value test",
+                                    "                   Bug root cause analysis:",
+                                    "                   ```verilog",
+                                    "                     // Adder.v line 10, bit-width error",
+                                    "                     10: output [WIDTH-2:0] sum,  // BUG: should be [WIDTH-1:0]",
+                                    "                   ```",
+                                    "                   Fix suggestion:",
+                                    "                   ```verilog",
+                                    "                     10: output [WIDTH-1:0] sum,  // FIX: restore correct bit-width",
+                                    "                   ```",
+                                    "2. Invalid confidence format (should be <BG-NAME-XX>, XX is integer 0-100)",
+                                    "3. File encoding or special character issues",
+                                    "[Solution] Please check and fix the document format according to Guide_Doc/dut_bug_analysis.md."
+                                ]
+                            }
+                        }
+                    ],
+                    "check_pass": false
+                },
+                "llm_pass_suggestion": [
+                    {
+                        "name": "UnityChipCheckerTestCase",
+                        "count_pass": 1,
+                        "count_fail": 1,
+                        "count_check": 2,
+                        "last_msg": [
+                            "Test case verification passed!",
+                            "+ Executed 77 test case(s).",
+                            "+ All 65 checkpoint(s) correctly implemented and consistent with documentation.",
+                            "+ Test-documentation consistency check passed.",
+                            "+ 0 bug(s) marked in bug analysis document unity_test/WayLookup_bug_analysis.md.",
+                            "Test implementation successfully verified DUT functionality!",
+                            "Warning: No bugs marked in the bug analysis document. If issues were found during testing, ensure they are properly documented in the bug analysis document (see Guide_Doc/dut_bug_analysis.md).",
+                            "[Bug Analysis Document Format] (see Guide_Doc/dut_bug_analysis.md for details)",
+                            "  Tag hierarchy: <FG-GROUP> / <FC-FUNCTION> / <CK-CHECKPOINT> / <BG-BUGNAME-XX> / <TC-FAILEDTESTCASE>",
+                            "  - Confidence(XX): integer 0~100, indicating confidence level (0=known ignore/placeholder, 100=confirmed bug)",
+                            "  - <TC-*> format: <TC-test_xxx.py::[ClassName::]test_func_name>, ClassName is optional",
+                            "  - Each <BG-*> must have at least one FAILED <TC-*> test case",
+                            "  - Failed checkpoints should also be recorded as bugs, using 'assert False' as placeholder if needed",
+                            "  Format example:",
+                            "    <FG-LOGIC>",
+                            "            <FC-ADD>",
+                            "                <CK-BASIC>",
+                            "                    <BG-ADD_OVERFLOW-80> Addition overflow handling error, 80% confidence",
+                            "                       <TC-test_add.py::test_add_overflow> Overflow boundary test",
+                            "                       <TC-test_add.py::test_add_max_value> Max value test",
+                            "                   Bug root cause analysis:",
+                            "                   ```verilog",
+                            "                     // Adder.v line 10, bit-width error",
+                            "                     10: output [WIDTH-2:0] sum,  // BUG: should be [WIDTH-1:0]",
+                            "                   ```",
+                            "                   Fix suggestion:",
+                            "                   ```verilog",
+                            "                     10: output [WIDTH-1:0] sum,  // FIX: restore correct bit-width",
+                            "                   ```"
+                        ]
+                    }
+                ],
+                "commit": {
+                    "hash": "8b6f8598f74ee6f62a271cc2052eb71a08aaf9ba",
+                    "message": "17-verification_review_and_summary:\n\nStage completed."
+                }
+            }
+        }
+    },
+    "is_wait_human_check": false
+}

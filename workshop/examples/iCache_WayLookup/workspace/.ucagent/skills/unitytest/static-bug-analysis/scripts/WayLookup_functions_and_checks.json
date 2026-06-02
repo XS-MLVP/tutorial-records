@@ -1,0 +1,133 @@
+{
+  "FG-API": {
+    "FC-API-LIFECYCLE": {
+      "CK-API-CREATE-DUT": {},
+      "CK-API-RESET-STEP": {}
+    },
+    "FC-API-DRIVE-SAMPLE": {
+      "CK-API-CLEAR-INPUTS": {},
+      "CK-API-WRITE-READ-ENTRY": {},
+      "CK-API-UPDATE-DRIVE": {}
+    }
+  },
+  "FG-FLUSH": {
+    "FC-RESET-STATE": {
+      "CK-RESET-EMPTY-READ": {},
+      "CK-RESET-WRITE-READY": {}
+    },
+    "FC-FLUSH-STATE": {
+      "CK-FLUSH-CLEAR-QUEUE": {},
+      "CK-FLUSH-CLEAR-GPF": {}
+    },
+    "FC-FLUSH-WITH-ACTIVITY": {
+      "CK-FLUSH-WITH-WRITE": {},
+      "CK-FLUSH-WITH-READ": {},
+      "CK-FLUSH-WITH-UPDATE": {}
+    }
+  },
+  "FG-FIFO": {
+    "FC-FIFO-ORDER": {
+      "CK-FIFO-SINGLE-ORDER": {},
+      "CK-FIFO-MULTI-ORDER": {},
+      "CK-FIFO-READY-HOLD": {}
+    },
+    "FC-FIFO-EMPTY-FULL": {
+      "CK-FIFO-EMPTY-INVALID": {},
+      "CK-FIFO-FULL-BLOCK": {},
+      "CK-FIFO-FULL-TO-NONFULL": {}
+    },
+    "FC-FIFO-WRAP": {
+      "CK-FIFO-WRAP-WRITE": {},
+      "CK-FIFO-WRAP-ORDER": {},
+      "CK-FIFO-WRAP-FULL-EMPTY": {}
+    }
+  },
+  "FG-READ": {
+    "FC-READ-NORMAL": {
+      "CK-READ-VALID-NONEMPTY": {},
+      "CK-READ-FIRE-ADVANCE": {},
+      "CK-READ-BITS-NORMAL": {}
+    },
+    "FC-READ-EMPTY": {
+      "CK-READ-EMPTY-NO-WRITE": {},
+      "CK-READ-EMPTY-READY-IGNORED": {}
+    },
+    "FC-READ-BYPASS": {
+      "CK-BYPASS-ENTRY": {},
+      "CK-BYPASS-NO-QUEUE-LEFT": {},
+      "CK-BYPASS-READ-NOT-READY": {}
+    }
+  },
+  "FG-WRITE": {
+    "FC-WRITE-NORMAL": {
+      "CK-WRITE-READY-EMPTY": {},
+      "CK-WRITE-FIRE-STORES": {}
+    },
+    "FC-WRITE-BLOCK": {
+      "CK-WRITE-BLOCK-FULL": {},
+      "CK-WRITE-BLOCK-GPF": {}
+    },
+    "FC-WRITE-FIELDS": {
+      "CK-WRITE-FIELDS-LANE0": {},
+      "CK-WRITE-FIELDS-LANE1": {},
+      "CK-WRITE-GPF-FIELDS": {}
+    }
+  },
+  "FG-GPF": {
+    "FC-GPF-DETECT": {
+      "CK-GPF-DETECT-EXC2-LANE0": {},
+      "CK-GPF-DETECT-EXC2-LANE1": {},
+      "CK-GPF-NON-GPF-EXC": {}
+    },
+    "FC-GPF-STORE-READ": {
+      "CK-GPF-STORE-NONBYPASS": {},
+      "CK-GPF-HIT-PTR": {},
+      "CK-GPF-FIRST-GPADDR": {}
+    },
+    "FC-GPF-CLEAR": {
+      "CK-GPF-CLEAR-AFTER-FIRE": {},
+      "CK-GPF-MISS-ZERO": {}
+    },
+    "FC-GPF-STALL": {
+      "CK-GPF-STALL-BEFORE-HIT": {},
+      "CK-GPF-STALL-RELEASE-ON-HIT": {},
+      "CK-GPF-STALL-NO-OVERWRITE": {}
+    }
+  },
+  "FG-UPDATE": {
+    "FC-UPDATE-HIT": {
+      "CK-UPDATE-HIT-LANE0": {},
+      "CK-UPDATE-HIT-LANE1": {},
+      "CK-UPDATE-HIT-META": {}
+    },
+    "FC-UPDATE-CONFLICT": {
+      "CK-UPDATE-CONFLICT-LANE0": {},
+      "CK-UPDATE-CONFLICT-LANE1": {},
+      "CK-UPDATE-NO-CONFLICT-WAY": {}
+    },
+    "FC-UPDATE-CORRUPT": {
+      "CK-UPDATE-CORRUPT-HIT": {},
+      "CK-UPDATE-CORRUPT-CONFLICT": {}
+    },
+    "FC-UPDATE-SELECTIVE": {
+      "CK-UPDATE-SELECT-VSET": {},
+      "CK-UPDATE-SELECT-PTAG": {},
+      "CK-UPDATE-MULTI-ENTRY": {}
+    }
+  },
+  "FG-PRIORITY": {
+    "FC-PRIORITY-FLUSH": {
+      "CK-PRIO-FLUSH-OVER-WRITE": {},
+      "CK-PRIO-FLUSH-OVER-GPF": {}
+    },
+    "FC-PRIORITY-BYPASS-GPF": {
+      "CK-BYPASS-GPF-READ": {},
+      "CK-BYPASS-GPF-NO-STALL": {}
+    },
+    "FC-PRIORITY-UPDATE-IO": {
+      "CK-UPDATE-BEFORE-READ": {},
+      "CK-UPDATE-WITH-WRITE": {},
+      "CK-UPDATE-WITH-BYPASS": {}
+    }
+  }
+}

@@ -1,0 +1,292 @@
+{
+    "clock": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    },
+    "io": {
+        "flush": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "read": {
+            "bits": {
+                "entry": {
+                    "itlb": {
+                        "exception": {
+                            "0": {
+                                "High": 1,
+                                "Low": 0,
+                                "Pin": "output",
+                                "_": true
+                            },
+                            "1": {
+                                "High": 1,
+                                "Low": 0,
+                                "Pin": "output",
+                                "_": true
+                            }
+                        },
+                        "pbmt": {
+                            "0": {
+                                "High": 1,
+                                "Low": 0,
+                                "Pin": "output",
+                                "_": true
+                            },
+                            "1": {
+                                "High": 1,
+                                "Low": 0,
+                                "Pin": "output",
+                                "_": true
+                            }
+                        }
+                    },
+                    "meta_codes": {
+                        "0": {
+                            "High": -1,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        },
+                        "1": {
+                            "High": -1,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        }
+                    },
+                    "ptag": {
+                        "0": {
+                            "High": 35,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        },
+                        "1": {
+                            "High": 35,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        }
+                    },
+                    "vSetIdx": {
+                        "0": {
+                            "High": 7,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        },
+                        "1": {
+                            "High": 7,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        }
+                    },
+                    "waymask": {
+                        "0": {
+                            "High": 3,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        },
+                        "1": {
+                            "High": 3,
+                            "Low": 0,
+                            "Pin": "output",
+                            "_": true
+                        }
+                    }
+                },
+                "gpf": {
+                    "gpaddr": {
+                        "High": 55,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    },
+                    "isForVSnonLeafPTE": {
+                        "High": -1,
+                        "Low": 0,
+                        "Pin": "output",
+                        "_": true
+                    }
+                }
+            },
+            "ready": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "input",
+                "_": true
+            },
+            "valid": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            }
+        },
+        "update": {
+            "bits": {
+                "blkPaddr": {
+                    "High": 41,
+                    "Low": 0,
+                    "Pin": "input",
+                    "_": true
+                },
+                "corrupt": {
+                    "High": -1,
+                    "Low": 0,
+                    "Pin": "input",
+                    "_": true
+                },
+                "vSetIdx": {
+                    "High": 7,
+                    "Low": 0,
+                    "Pin": "input",
+                    "_": true
+                },
+                "waymask": {
+                    "High": 3,
+                    "Low": 0,
+                    "Pin": "input",
+                    "_": true
+                }
+            },
+            "valid": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "input",
+                "_": true
+            }
+        },
+        "write": {
+            "bits": {
+                "entry": {
+                    "itlb": {
+                        "exception": {
+                            "0": {
+                                "High": 1,
+                                "Low": 0,
+                                "Pin": "input",
+                                "_": true
+                            },
+                            "1": {
+                                "High": 1,
+                                "Low": 0,
+                                "Pin": "input",
+                                "_": true
+                            }
+                        },
+                        "pbmt": {
+                            "0": {
+                                "High": 1,
+                                "Low": 0,
+                                "Pin": "input",
+                                "_": true
+                            },
+                            "1": {
+                                "High": 1,
+                                "Low": 0,
+                                "Pin": "input",
+                                "_": true
+                            }
+                        }
+                    },
+                    "meta_codes": {
+                        "0": {
+                            "High": -1,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        },
+                        "1": {
+                            "High": -1,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        }
+                    },
+                    "ptag": {
+                        "0": {
+                            "High": 35,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        },
+                        "1": {
+                            "High": 35,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        }
+                    },
+                    "vSetIdx": {
+                        "0": {
+                            "High": 7,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        },
+                        "1": {
+                            "High": 7,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        }
+                    },
+                    "waymask": {
+                        "0": {
+                            "High": 3,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        },
+                        "1": {
+                            "High": 3,
+                            "Low": 0,
+                            "Pin": "input",
+                            "_": true
+                        }
+                    }
+                },
+                "gpf": {
+                    "gpaddr": {
+                        "High": 55,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    },
+                    "isForVSnonLeafPTE": {
+                        "High": -1,
+                        "Low": 0,
+                        "Pin": "input",
+                        "_": true
+                    }
+                }
+            },
+            "ready": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "valid": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "input",
+                "_": true
+            }
+        }
+    },
+    "reset": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    }
+}

@@ -10,16 +10,32 @@ This repository contains everything needed to set up the Picker tool's complete 
 .
 ├── docker/                  # Docker configurations
 │   ├── Dockerfile           # Base image definition 
-│   ├── Dockerfile.full      # Full image definition
 │   ├── build-scripts/       # Automated build utilities
-│   └── compose/             # (Optional) Docker-compose files
-├── tutorials/               # Workshop materials
-│   ├── README.md            # ** IF YOU ARE IN TUTORIAL, READ THIS FIRST**
+├── tutorials/               # Traditional tutorial materials
+│   ├── README.md            # Basic environment setup guide
 │   ├── slides/              # Presentation slides
-│   └── code-samples/        # Demo scripts
+│   └── code-samples/        # Picker usage examples
+├── workshop/                # 🎓 UCAgent Workshop (LLM + Verification)
+│   ├── README.md            # Workshop Quick Start
+│   ├── env.template         # LLM API configuration template
+│   └── examples/            # Pre-loaded verification cases
 ├── LICENSE
-└── README.md                 # This document
+└── README.md                # This document
 ```
+
+---
+
+## 🎓 UCAgent Workshop
+
+The `workshop` directory provides a ready-to-use environment for exploring **AI-driven automated verification**. 
+
+- **Docker Image**: A one-stop, pre-configured environment containing the UCAgent toolkit and all necessary dependencies.
+- **Interactive UI**: Manage AI-driven verification tasks and review history via a unified Web interface (port 8800).
+- **Pre-loaded Cases**: Includes classic designs like `exu_alu` and `WayLookup` with historical records.
+
+👉 **Ready to start?** Head over to the [Workshop Quick Start](./workshop/README.md).
+
+---
 
 **If you are in the tutorial, please read the [README.md](./tutorials/README.md) in the tutorials directory first.**
 

@@ -1,0 +1,15 @@
+{
+    "source_task_list": [
+        "WayLookup_RTL/WayLookup.scala",
+        "WayLookup_RTL/WayLookup.v"
+    ],
+    "gen_task_list": [
+        "WayLookup_RTL/WayLookup.scala",
+        "WayLookup_RTL/WayLookup.v"
+    ],
+    "tbd_task_list": [],
+    "cmp_task_list": [],
+    "checker_name": "UnityChipBatchCheckerStaticBug",
+    "task_name": "RTL_file_to_analyze",
+    "stage_title": "4-static_bug_analysis-RTL源码静态Bug分析[2/2]"
+}

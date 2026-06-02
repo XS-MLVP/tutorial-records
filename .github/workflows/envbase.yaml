@@ -91,10 +91,6 @@ jobs:
 
   build-and-push-workshop:
     runs-on: ubuntu-latest
-    # Optional: depends on full image if we use it as base, 
-    # but here we use ucagent:latest which is built from main repo.
-    # To be safe, we can run it after build-and-push-full if we want to ensure base layers are available
-    needs: build-and-push-full
     permissions:
       contents: read
       packages: write
