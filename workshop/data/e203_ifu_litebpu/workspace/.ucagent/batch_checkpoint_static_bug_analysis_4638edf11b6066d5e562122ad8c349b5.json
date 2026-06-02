@@ -1,0 +1,21 @@
+{
+    "source_task_list": [
+        "e203_ifu_litebpu_RTL/config.v",
+        "e203_ifu_litebpu_RTL/e203_defines.v",
+        "e203_ifu_litebpu_RTL/e203_ifu_litebpu.v",
+        "e203_ifu_litebpu_RTL/sirv_gnrl_dffs.v",
+        "e203_ifu_litebpu_RTL/sirv_gnrl_xchecker.v"
+    ],
+    "gen_task_list": [
+        "e203_ifu_litebpu_RTL/config.v",
+        "e203_ifu_litebpu_RTL/e203_defines.v",
+        "e203_ifu_litebpu_RTL/e203_ifu_litebpu.v",
+        "e203_ifu_litebpu_RTL/sirv_gnrl_dffs.v",
+        "e203_ifu_litebpu_RTL/sirv_gnrl_xchecker.v"
+    ],
+    "tbd_task_list": [],
+    "cmp_task_list": [],
+    "checker_name": "UnityChipBatchCheckerStaticBug",
+    "task_name": "RTL_file_to_analyze",
+    "stage_title": "4-static_bug_analysis-RTL源码静态Bug分析[5/5]"
+}

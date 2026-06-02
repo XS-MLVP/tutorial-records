@@ -1,0 +1,132 @@
+{
+    "bpu2rf_rs1_ena": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "output",
+        "_": true
+    },
+    "bpu_wait": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "output",
+        "_": true
+    },
+    "clk": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    },
+    "dec": {
+        "bjp_imm": {
+            "High": 31,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "bxx": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "i_valid": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "jal": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "jalr_rs1idx": {
+            "High": 4,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        }
+    },
+    "ir": {
+        "empty": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "rs1en": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "valid_clr": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        }
+    },
+    "jalr_rs1idx_cam_irrdidx": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    },
+    "oitf_empty": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    },
+    "pc": {
+        "High": 31,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    },
+    "prdt": {
+        "pc_add": {
+            "op1": {
+                "High": 31,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            },
+            "op2": {
+                "High": 31,
+                "Low": 0,
+                "Pin": "output",
+                "_": true
+            }
+        },
+        "taken": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "output",
+            "_": true
+        }
+    },
+    "rf2bpu": {
+        "rs1": {
+            "High": 31,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        },
+        "x1": {
+            "High": 31,
+            "Low": 0,
+            "Pin": "input",
+            "_": true
+        }
+    },
+    "rst_n": {
+        "High": -1,
+        "Low": 0,
+        "Pin": "input",
+        "_": true
+    }
+}

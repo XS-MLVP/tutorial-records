@@ -1,0 +1,172 @@
+{
+  "description": "Code coverage summary. `data` field contains uncovered lines",
+  "simulator": "verilator",
+  "overview": {
+    "total": {
+      "line": 50,
+      "toggle": 460,
+      "branch": 8,
+      "expr": 0
+    },
+    "miss": {
+      "line": 0,
+      "toggle": 4,
+      "branch": 0,
+      "expr": 0
+    }
+  },
+  "uncovered": {
+    "schema": {
+      "file_path": {
+        "total": [
+          "line",
+          "toggle",
+          "branch",
+          "expr"
+        ],
+        "miss": [
+          "line",
+          "toggle",
+          "branch",
+          "expr"
+        ],
+        "modules": {
+          "module_name": {
+            "total": [
+              "line",
+              "toggle",
+              "branch",
+              "expr"
+            ],
+            "miss": [
+              "line",
+              "toggle",
+              "branch",
+              "expr"
+            ],
+            "line": [
+              "lines"
+            ],
+            "toggle": [
+              "lines"
+            ],
+            "branch": [
+              "lines"
+            ],
+            "expr": [
+              "lines"
+            ]
+          }
+        }
+      }
+    },
+    "data": {
+      "/home/sfangyy/work/UCAgent/output/workspace_e203_ifu_litebpu/e203_ifu_litebpu/e203_ifu_litebpu.v": {
+        "total": {
+          "line": 36,
+          "toggle": 444,
+          "branch": 6,
+          "expr": 0
+        },
+        "miss": {
+          "line": 0,
+          "toggle": 4,
+          "branch": 0,
+          "expr": 0
+        },
+        "modules": {
+          "e203_ifu_litebpu": {
+            "total": {
+              "line": 36,
+              "toggle": 444,
+              "branch": 6,
+              "expr": 0
+            },
+            "miss": {
+              "line": 0,
+              "toggle": 4,
+              "branch": 0,
+              "expr": 0
+            },
+            "line": [],
+            "toggle": [
+              "1134-1135",
+              "1183-1183",
+              "1188-1188"
+            ],
+            "branch": [],
+            "expr": []
+          }
+        }
+      },
+      "/home/sfangyy/work/UCAgent/output/workspace_e203_ifu_litebpu/e203_ifu_litebpu_RTL/sirv_gnrl_dffs.v": {
+        "total": {
+          "line": 12,
+          "toggle": 12,
+          "branch": 2,
+          "expr": 0
+        },
+        "miss": {
+          "line": 0,
+          "toggle": 0,
+          "branch": 0,
+          "expr": 0
+        },
+        "modules": {
+          "sirv_gnrl_dfflr__D1": {
+            "total": {
+              "line": 12,
+              "toggle": 12,
+              "branch": 2,
+              "expr": 0
+            },
+            "miss": {
+              "line": 0,
+              "toggle": 0,
+              "branch": 0,
+              "expr": 0
+            },
+            "line": [],
+            "toggle": [],
+            "branch": [],
+            "expr": []
+          }
+        }
+      },
+      "/home/sfangyy/work/UCAgent/output/workspace_e203_ifu_litebpu/e203_ifu_litebpu_RTL/sirv_gnrl_xchecker.v": {
+        "total": {
+          "line": 2,
+          "toggle": 4,
+          "branch": 0,
+          "expr": 0
+        },
+        "miss": {
+          "line": 0,
+          "toggle": 0,
+          "branch": 0,
+          "expr": 0
+        },
+        "modules": {
+          "sirv_gnrl_xchecker__D1": {
+            "total": {
+              "line": 2,
+              "toggle": 4,
+              "branch": 0,
+              "expr": 0
+            },
+            "miss": {
+              "line": 0,
+              "toggle": 0,
+              "branch": 0,
+              "expr": 0
+            },
+            "line": [],
+            "toggle": [],
+            "branch": [],
+            "expr": []
+          }
+        }
+      }
+    }
+  }
+}

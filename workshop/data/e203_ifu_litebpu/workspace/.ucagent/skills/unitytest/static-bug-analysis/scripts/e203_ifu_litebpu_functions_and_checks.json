@@ -1,0 +1,107 @@
+{
+  "FG-API": {
+    "FC-DUT-LIFECYCLE": {
+      "CK-CREATE-CLOCK": {},
+      "CK-COVERAGE-WAVE": {}
+    },
+    "FC-RESET-API": {
+      "CK-RESET-ASSERT": {},
+      "CK-RESET-RELEASE": {}
+    },
+    "FC-PREDICT-API": {
+      "CK-DRIVE-DEFAULTS": {},
+      "CK-SAMPLE-OUTPUTS": {}
+    }
+  },
+  "FG-PREDICT": {
+    "FC-JAL-PREDICT": {
+      "CK-JAL-TAKEN": {},
+      "CK-JAL-NO-WAIT": {}
+    },
+    "FC-JALR-PREDICT": {
+      "CK-JALR-X0-TAKEN": {},
+      "CK-JALR-X1-TAKEN-READY": {},
+      "CK-JALR-XN-TAKEN-AFTER-READ": {}
+    },
+    "FC-BXX-PREDICT": {
+      "CK-BXX-BACKWARD-TAKEN": {},
+      "CK-BXX-FORWARD-NOT-TAKEN": {},
+      "CK-BXX-ZERO-NOT-TAKEN": {}
+    },
+    "FC-NO-BRANCH": {
+      "CK-NO-DECODE-NOT-TAKEN": {},
+      "CK-INVALID-INSTRUCTION-GATING": {}
+    }
+  },
+  "FG-OPERAND": {
+    "FC-OP1-PC": {
+      "CK-JAL-OP1-PC": {},
+      "CK-BXX-OP1-PC": {}
+    },
+    "FC-OP1-JALR-X0": {
+      "CK-X0-OP1-ZERO": {}
+    },
+    "FC-OP1-JALR-X1": {
+      "CK-X1-OP1-VALUE": {},
+      "CK-X1-VALUE-BOUNDARY": {}
+    },
+    "FC-OP1-JALR-XN": {
+      "CK-XN-OP1-RS1": {},
+      "CK-XN-VALUE-BOUNDARY": {}
+    },
+    "FC-OP2-IMM": {
+      "CK-IMM-POSITIVE": {},
+      "CK-IMM-NEGATIVE": {},
+      "CK-IMM-EXTREME": {}
+    }
+  },
+  "FG-JALR-DEPENDENCY": {
+    "FC-X1-DEPENDENCY": {
+      "CK-X1-OITF-BUSY-WAIT": {},
+      "CK-X1-IR-CAM-WAIT": {},
+      "CK-X1-READY-NO-WAIT": {}
+    },
+    "FC-XN-DEPENDENCY": {
+      "CK-XN-OITF-BUSY-WAIT": {},
+      "CK-XN-IR-BUSY-CAM-WAIT": {},
+      "CK-XN-READY-NO-WAIT": {}
+    },
+    "FC-DEPENDENCY-BYPASS": {
+      "CK-IR-CLR-BYPASS": {},
+      "CK-IR-RS1-DISABLE-BYPASS": {},
+      "CK-DEPENDENCY-TRANSITION": {}
+    }
+  },
+  "FG-RS1-READ": {
+    "FC-RS1-READ-REQUEST": {
+      "CK-XN-READ-ENABLE": {},
+      "CK-READ-WITH-BYPASS": {}
+    },
+    "FC-RS1-READ-STATE": {
+      "CK-NO-REPEAT-READ": {},
+      "CK-READ-STATE-CLEAR": {}
+    },
+    "FC-RS1-READ-GATING": {
+      "CK-INVALID-NO-READ": {},
+      "CK-NON-JALR-NO-READ": {},
+      "CK-X0-X1-NO-XN-READ": {},
+      "CK-DEPENDENCY-NO-READ": {}
+    }
+  },
+  "FG-RESET-BOUNDARY": {
+    "FC-RESET-BEHAVIOR": {
+      "CK-RESET-CLEARS-READ": {},
+      "CK-FIRST-AFTER-RESET": {}
+    },
+    "FC-BOUNDARY-VALUES": {
+      "CK-PC-BOUNDARY": {},
+      "CK-REG-BOUNDARY": {},
+      "CK-IMM-SIGN-BOUNDARY": {}
+    },
+    "FC-DECODE-CONFLICT": {
+      "CK-JAL-JALR-CONFLICT": {},
+      "CK-JAL-BXX-CONFLICT": {},
+      "CK-JALR-BXX-CONFLICT": {}
+    }
+  }
+}

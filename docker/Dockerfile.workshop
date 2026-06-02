@@ -10,7 +10,7 @@ ENV SUMMIT_DATA_DIR=/workspace/UCAgent/summit_examples
 COPY workshop/data/ ${SUMMIT_DATA_DIR}/
 
 # Copy and setup startup script
-COPY docker/start_demo.sh /workspace/UCAgent/start_demo.sh
+COPY workshop/start_demo.sh /workspace/UCAgent/start_demo.sh
 RUN chmod +x /workspace/UCAgent/start_demo.sh
 
 # Expose ports for Web UI and Agents
